@@ -18,3 +18,6 @@ db.sequelize
     console.log('Database connection failure.');
     console.error(err);
   });
+
+
+

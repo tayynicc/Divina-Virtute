@@ -14,7 +14,7 @@ const routes = require('./routes');
 app.use(morgan('dev'));
 app.use(cookieParser());
 app.use(express.json());
-app.use(routes);
+
 
 
 
@@ -41,6 +41,8 @@ if (!isProduction) {
     })
   );
 
+  
+app.use(routes);
 // Catch unhandled requests and forward to error handler.
 app.use((_req, _res, next) => {
     const err = new Error("The requested resource couldn't be found.");
