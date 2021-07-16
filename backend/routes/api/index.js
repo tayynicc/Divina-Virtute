@@ -7,7 +7,9 @@ const usersRouter = require('./users.js');
 // const apiRouter = require('./api');
 
 // router.use('/api', apiRouter);
+router.use('/session', sessionRouter);
 
+router.use('/users', usersRouter);
 // Static routes
 // Serve React build files in production
 if (process.env.NODE_ENV === 'production') {
