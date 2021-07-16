@@ -1,9 +1,12 @@
 // backend/routes/api/index.js
 const express = require('express');
 const router = express.Router();
-const apiRouter = require('./api');
+const sessionRouter = require('./session.js');
+const usersRouter = require('./users.js');
 
-router.use('/api', apiRouter);
+// const apiRouter = require('./api');
+
+// router.use('/api', apiRouter);
 
 // Static routes
 // Serve React build files in production
