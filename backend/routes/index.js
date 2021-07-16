@@ -9,9 +9,9 @@ router.get('/hello/world', function(req, res) {
   res.send('Hello World!');
 });
 
-router.get('/', function(req, res) {
-    res.send(`server operational`)
-})
+// router.get('/', function(req, res) {
+//     res.send(`server operational`)
+// })
 
 if (process.env.NODE_ENV !== 'production') {
     router.get('/api/csrf/restore', (req, res) => {
