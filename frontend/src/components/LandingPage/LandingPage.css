@@ -1,0 +1,92 @@
+.bkg__layer1{
+    height: 100vh;
+    background-image: url(bkg__layer1.png);
+    background-repeat: no-repeat; 
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+}
+
+.bkg__layer2{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.bkg__logo{
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    left: 40px;
+    background-image: url(splashLogo.png);
+    background-repeat: no-repeat; 
+    background-size: 100% 100%;
+    animation: blink .40s linear infinite;
+}
+
+.bkg__logo:hover{
+    cursor: pointer;
+}
+
+@keyframes blink{
+    0%{opacity: 0;}
+    15%{opacity: .3;}
+    50%{opacity: .5;}
+    60%{opacity: .3;}
+    100%{opacity: 1;}
+}
+
+.content{
+    border: 2px solid black;
+    background: #d9dadb;
+    width: 570px;
+    height: 270px;
+    border-radius: 30px;
+    box-shadow: 0 0 5px 5px #FFD501;
+}  
+.txt__name{
+    color: black; 
+    width: 570px;
+    height:150px;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    
+}
+
+.txt__phrase{
+    color: black;
+    display: flex; 
+    justify-content: space-around;
+}
+
+.links{
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+button{
+    background:#d9dadb;
+    font-size: 20px;
+    border: 1px solid #d9dadb;
+}
+button:hover{
+    cursor: pointer;
+}
+
+
+a{
+    text-decoration: none;
+    font-size: 20px; 
+    display: flex;
+    align-items: center;
+    color: black;
+
+}
