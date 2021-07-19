@@ -1,5 +1,6 @@
 
 import './Home.css'
+// import Navigation from '../Navigation';
 
 
 
@@ -13,6 +14,7 @@ function Home(){
                 <div className='theme'></div>
                 
                 <div className='header'></div>
+                   
                 
                 <div className='previous'></div>
 
