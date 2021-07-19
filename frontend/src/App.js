@@ -6,6 +6,7 @@ import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import LandingPage from './components/LandingPage'
 import SlideShow from './components/SlideShow'
+import Home from './components/Home'
 
 function App() {
   const dispatch = useDispatch();
@@ -28,6 +29,9 @@ function App() {
           <Route path="/" exact>
             <LandingPage />
             <SlideShow />
+          </Route>
+          <Route path='/home'>
+            <Home />
           </Route>
         </Switch>
       )}
