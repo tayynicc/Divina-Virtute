@@ -12,19 +12,20 @@
     bottom: 0;
 
 }
-
+/* 
 .bkg__layer2{
     display: flex;
     justify-content: center;
     align-items:center;
-}
+} */
 
 .bkg__logo{
-    height: 100px;
-    width: 100px;
+    height: 60px;
+    width: 70px;
     position: fixed;
-    left: 40px;
-    background-image: url(splashLogo.png);
+    top:20px;
+    left:10px;
+    background-image: url(lightbulb.png);
     background-repeat: no-repeat; 
     background-size: 100% 100%;
     animation: blink .40s linear infinite;
@@ -43,12 +44,15 @@
 }
 
 .content{
-    border: 2px solid black;
+    
     background: #d9dadb;
     width: 570px;
     height: 270px;
     border-radius: 30px;
-    box-shadow: 0 0 5px 5px #FFD501;
+    box-shadow: 0 0 5px 5px grey;
+    position: fixed; 
+    top: 400px;
+    left: 300px;
 }  
 .txt__name{
     color: black; 
@@ -90,3 +94,39 @@ a{
     color: black;
 
 }
+
+
+/* coursels */
+/* 
+.bkg__layer3-coursel{
+    border: 10px blue solid;
+    width:800px;
+    height:70vh;
+    position: fixed; 
+    top: 100px;
+    right: 200px;
+    padding-top:70px;
+    
+    
+    
+    
+}
+
+.top__coursel{
+    border: 10px red solid;
+    width: 600px;
+    height: 250px;
+    margin-bottom: 70px;
+    
+}
+
+.bottom__coursel{
+    border: 10px green solid;
+    width: 600px;
+    height: 250px;
+    margin-left: 180px;
+}
+
+.mySlides {
+    display:none;
+} */
