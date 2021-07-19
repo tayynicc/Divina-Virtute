@@ -23,9 +23,11 @@ const landingPage = () => {
         // add className of slide to push content div to the left and display modal to the right
     }
 
-    return(
+  
+        return(
         <div className='bkg__layer1'>
-            <div className='bkg__logo blink'></div> 
+            <div className='bkg__logo blink' >
+            </div> 
                 <div className='bkg__layer2'>
                     
                     <div className='content'>
@@ -35,18 +37,24 @@ const landingPage = () => {
                         <div className='txt__phrase'>
                             <p> phrase </p>
                         </div>
-                        <div className='links' onClick="">
+                        <div className='links' >
                             {sessionLinks}
                         </div>
                     </div>
+                </div>
+{/* 
+                <div className='bkg__layer3-coursel'>
                     <div className='top__coursel'>
 
 
                     </div>
                     <div className='bottom__coursel'>
-
+                        <img className="mySlides" src="img_la.jpg" style="width:100%" />
+                        <img className="mySlides" src="img_ny.jpg" style="width:100%" />
+                        <img className="mySlides" src="img_chicago.jpg" style="width:100%" />
                     </div>
-                </div>
+                    
+                </div> */}
         </div>
     )
 }

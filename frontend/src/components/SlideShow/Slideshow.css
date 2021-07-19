@@ -1,0 +1,96 @@
+/* coursels */
+
+.bkg__layer3-coursel{
+    
+    width:590px;
+    height:65vh;
+    position: fixed; 
+    top: 100px;
+    right: 200px;
+    padding-top:70px;
+    background: lightgray ;
+    border-radius:20px;
+    box-shadow: 0 0 5px 5px grey;
+    
+    
+}
+
+.top__coursel{
+    border-radius:20px;
+    width: 376px;
+    height: 250px;
+    margin-bottom: 70px;
+    margin-left:40px;
+    display:flex;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 0 5px 5px grey;
+
+    
+}
+
+
+.bottom__coursel{
+    border-radius:20px;
+    width: 376px;
+    height: 250px;
+    margin-left: 180px;
+    overflow: hidden;
+    box-shadow: 0 0 5px 5px grey;
+
+}
+ 
+
+.img__1{
+    height:250px;
+}
+
+.img__container{
+    display:flex;
+    justify-content: center;
+    margin-left: 751px
+    
+}
+
+.img__container-bottom{
+    display:flex;
+    justify-content: center;
+    margin-left: 577px
+    
+}
+
+.position{
+    position:relative;
+    right:100;
+} 
+
+
+ 
+.slide:hover{
+    animation: slide 5s infinite;
+    animation-direction:  normal; 
+    
+}   
+
+
+@keyframes slide {
+   0%   {right: 0px;}
+   100% {right: 750px;}
+}  
+
+.slide__left:hover{
+    animation: slide 5s infinite;
+    animation-direction:  normal; 
+    
+}   
+
+
+@keyframes slide__left {
+   0%   {left: 0px;}
+   100% {left: 750px;}
+} 
+
+.hover_div:hover{
+    animation: slide 6s infinite;
+    animation-direction:  normal;
+}
