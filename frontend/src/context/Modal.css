@@ -17,14 +17,19 @@
     left: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.7);
-    border: 5px solid purple
+    
 }
   
 #modal-content {
     position: absolute;
     background-color:white;
+    height:500px;
     width: 500px;
     border: 5px solid red;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 30px;
+
 }
 
 input[type=text] {
@@ -41,11 +46,15 @@ input[type=text] {
 .user__input-div{
     border: 5px solid green;
     display: inline-block;
+    margin-left: 150px;
+    
 }
 
+label 
+
 .user__label{
-   font-size: large;
-   /* display: inline-block; */
+    font-size: x-large;
+   
 }
 
 input[type=password] {
