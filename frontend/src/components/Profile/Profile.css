@@ -1,0 +1,84 @@
+.pfp__bkg-layer1{
+    height:100vh;
+    background-image: url('./pfp__bkg-layer1.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.pfp__info{
+    height: 400px;
+    width: 70%;
+    border-radius: 30px;
+    box-shadow: 0 0 5px 5px grey;
+    background: lightgray;
+    position:fixed;
+    left:250px;
+    top:10%;
+}
+
+.pfp__image{
+    height:250px;
+    width:250px;
+    border-radius:50%;
+    border:5px solid black;
+    box-shadow: 0 0 5px 5px grey;
+    position:fixed;
+    top:17%;
+    left:17%;
+}
+
+.pfp__name{
+    border:5px solid black;
+    box-shadow: 0 0 5px 5px grey;
+    height: 50px;
+    width:400px;
+    position:fixed;
+    left:35%;
+    top:20%;
+}
+
+.pfp__discription{
+    border:5px solid black;
+    box-shadow: 0 0 5px 5px grey;
+    height: 150px;
+    width:750px;
+    position:fixed;
+    left:35%;
+    top:30%;
+}
+
+.pfp__buttons{
+    border:5px solid black;
+    height: 50px;
+    width:100px;
+    position:fixed;
+    left:77%;
+    top:44%;
+}
+
+.pfp__links-active{
+    height: 50px;
+    width: 40%;
+    border-radius: 30px;
+    box-shadow: 0 0 5px 5px grey;
+    background: lightgray;
+    position:fixed;
+    left:30%;
+    top:53%;
+}
+
+.pfp__upvotes{
+    height: 100vh;
+    width: 60%;
+    border-radius: 30px;
+    box-shadow: 0 0 5px 5px grey;
+    background: lightgray;
+    position:fixed;
+    left:18%;
+    top:65%;
+}
