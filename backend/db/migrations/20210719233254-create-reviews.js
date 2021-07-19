@@ -9,12 +9,15 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       userId: {
+        allowNull: false,
         type: Sequelize.INTEGER
       },
       productId: {
+        allowNull: false,
         type: Sequelize.INTEGER
       },
       review: {
+        allowNull: false,
         type: Sequelize.TEXT
       },
       createdAt: {

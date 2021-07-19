@@ -10,7 +10,7 @@ module.exports = {
         image:'./pd__image1.png',
         discription:'Sizes and shapes differ slightly, sizes range from 30 - 35 mm. Surface is bumpy on both sides and moon is puffy so its\'s thicker in the center and thinner towards the edges.',
         price:0.22,
-        puchaseLink:'https://www.etsy.com/listing/792634952/opalite-moon-crystal-healing-stone?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=crystals&ref=sr_gallery-1-13&organic_search_click=1&pro=1'
+        purchaseLink:'https://www.etsy.com/listing/792634952/opalite-moon-crystal-healing-stone?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=crystals&ref=sr_gallery-1-13&organic_search_click=1&pro=1'
     },
     {
         ownerId:1,
@@ -107,7 +107,7 @@ module.exports = {
         image:'./pd__image13',
         discription:' Amethyst attracts strength and boosts mental clarity while deflecting demons of fear, stress, and depression. In fact, it has been known to absorb negative energies from the body and reflect it as a deeper color within its peaks.',
         price:273,
-        pruchaseLink:'https://selenestone.com/collections/clusters/products/amethyst-druzes?variant=32691631226951'
+        purchaseLink:'https://selenestone.com/collections/clusters/products/amethyst-druzes?variant=32691631226951'
     },
     {
         ownerId:1,
