@@ -8,6 +8,7 @@ import LandingPage from './components/LandingPage'
 import SlideShow from './components/SlideShow'
 import Home from './components/Home'
 import Profile from './components/Profile'
+import ProductDisplay from './components/ProductDisplay'
 
 function App() {
   const dispatch = useDispatch();
@@ -33,6 +34,7 @@ function App() {
           </Route>
           <Route path='/home'>
             <Home />
+            <ProductDisplay />
             {/* <Navigation /> */}
           </Route>
           <Route path='/profile'>

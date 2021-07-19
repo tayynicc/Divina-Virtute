@@ -28,21 +28,12 @@ function Home(){
                     </div>
                 </div>
 
-                <div className='product__display'>
-                    <div className='pd__mockup'>
-                        <div className='pd__image'></div>
-                        <div className='pd__name'></div>
-                        <div className='pd__tagLine'></div>
-                        <div className='pd__commentNum'></div>
-                        <div className='pd__tag'></div>
-                        <div className='pd__voteCount'></div>
-                    </div>
-                </div>
-
                 <div className='newArival'>
-                    <div className='newArival__image'></div>
-                    <div className='newArival__name'></div>
-                    <div className='newArival__tagLine'></div>
+                    <div className='newArrivals__mockup'>
+                        <div className='newArival__image'></div>
+                        <div className='newArival__name'></div>
+                        <div className='newArival__tagLine'></div>
+                    </div>    
                 </div>
 
                 
