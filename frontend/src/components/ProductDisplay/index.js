@@ -1,10 +1,17 @@
 import './ProductDisplay.css'
+import { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+
+// import thunk creator 
+import { getProducts } from '../../store/products'
 
 
 
 
 
 function ProductDisplay(){
+    const dispatch = useDispatch();
+    const products = useSelector((state) => (state.products))
 
     return(
         <div className='product__display'>

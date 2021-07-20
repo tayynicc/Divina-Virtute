@@ -9,6 +9,7 @@ module.exports = (sequelize, DataTypes) => {
     purchaseLink: DataTypes.TEXT
   }, {});
   Products.associate = function(models) {
+    // Products.hasOne(models.User, { foreignKey: 'ownerId'})
     Products.belongsTo(models.User, { foreignKey:'ownerId'})
 
     Products.hasMany(models.Review, { foreignKey: 'productId'})

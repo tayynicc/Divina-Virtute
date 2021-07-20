@@ -3,14 +3,14 @@ const router = express.Router()
 const asyncHandler = require('express-async-handler'); 
 
 
-const { Product } = require('../../db/models')
-const { Users } = require('../../db/models')
+const { Product, Review, User } = require('../../db/models');
+
+// const { Users } = require('../../db/models')
 
 
 
-
-router.get('', asyncHandler(async(req, res) => {
-    const products = await Product.findAll();
+router.get('/', asyncHandler(async(req, res) => {
+    const products = await Product.findAll({include:{model:Review}});
     res.json(products)
 }))
 
