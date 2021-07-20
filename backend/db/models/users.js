@@ -89,9 +89,8 @@ module.exports = (sequelize, DataTypes) => {
 
   
   User.associate = function(models) {
-    User.belongsTo(models.Product, { foreignKey: 'productId'})
-
-    User.belongsTo(models.Review, { foreignKey: 'userId'})
+    User.hasMany(models.Product, { foreignKey: 'productId'})
+    User.hasMany(models.Review, { foreignKey: 'userId'})
 
   };
   return User;
