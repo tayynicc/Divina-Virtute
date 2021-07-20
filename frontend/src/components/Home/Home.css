@@ -11,68 +11,7 @@
 }
 
 
-/*  header  */
-.header{
-    height: 100px;
-    width: 90%;
-    border-radius: 30px;
-    box-shadow: 0 0 5px 5px grey;
-    background: lightgray;
-    margin:30px;
-    position:fixed;
-    left:70px;
 
-}
-
-.home__logo{
-    border:5px black solid;
-    box-shadow: 0 0 5px 5px grey;
-    height:70px;
-    width:70px;
-    position:fixed;
-    top:4%;
-    left:7%;
-}
-
-.home__search{
-    border:5px black solid;
-    box-shadow: 0 0 5px 5px grey;
-    border-radius:30px;
-    height:30px;
-    width:450px;
-    position:fixed;
-    top:6%;
-    left:15%;
-}
-
-.home__links{
-    border:5px black solid;
-    box-shadow: 0 0 5px 5px grey;
-    height:30px;
-    width:400px;
-    position:fixed;
-    top:6%;
-    left:47%;
-}
-.home__addProduct{
-    border:5px black solid;
-    height:40px;
-    width:40px;
-    position:fixed;
-    top:5.5%;
-    left:75%;
-}
-
-.home__pfp{
-    border:5px black solid;
-    box-shadow: 0 0 5px 5px grey;
-    height:70px;
-    width:70px;
-    border-radius:50%;
-    position:fixed;
-    top:4%;
-    left:90%; 
-}
 
 
 /*  in case you missed it  */

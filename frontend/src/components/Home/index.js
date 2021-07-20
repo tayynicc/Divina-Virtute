@@ -13,13 +13,6 @@ function Home(){
             <div className='bkg__login-layer1'>
                 <div className='theme'></div>
                 
-                <div className='header'></div>
-                    <div className='home__logo'></div>
-                    <div className='home__search'></div>
-                    <div className='home__links'></div>
-                    <div className='home__addProduct'></div>
-                    <div className='home__pfp'></div>
-                
                 <div className='previous'>
                     <div className='previous__mockup'>
                         <div className='previous__image'></div>

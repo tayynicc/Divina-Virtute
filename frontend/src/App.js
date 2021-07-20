@@ -9,6 +9,9 @@ import SlideShow from './components/SlideShow'
 import Home from './components/Home'
 import Profile from './components/Profile'
 import ProductDisplay from './components/ProductDisplay'
+import Headers from './components/Headers'
+
+
 
 function App() {
   const dispatch = useDispatch();
@@ -34,6 +37,7 @@ function App() {
           </Route>
           <Route path='/home'>
             <Home />
+            <Headers />
             <ProductDisplay />
             {/* <Navigation /> */}
           </Route>
