@@ -1,6 +1,6 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const Products = sequelize.define('Products', {
+  const Products = sequelize.define('Product', {
     ownerId: DataTypes.INTEGER,
     title: DataTypes.STRING,
     image: DataTypes.STRING,
@@ -9,7 +9,10 @@ module.exports = (sequelize, DataTypes) => {
     purchaseLink: DataTypes.TEXT
   }, {});
   Products.associate = function(models) {
-    // associations can be defined here
+    Products.hasOne(models.User, { foreignKey:'ownerId'})
+
+    Products.hasMany(models.Review, { foreignKey: 'productId'})
+
   };
   return Products;
 };

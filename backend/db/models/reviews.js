@@ -1,12 +1,14 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const Reviews = sequelize.define('Reviews', {
+  const Review = sequelize.define('Review', {
     userId: DataTypes.INTEGER,
     productId: DataTypes.INTEGER,
     review: DataTypes.TEXT
   }, {});
-  Reviews.associate = function(models) {
-    // associations can be defined here
+  Review.associate = function(models) {
+    Review.hasOne(models.User, { foreignKey: 'userId'})
+
+    Review.belongsTo(models.Product, { foreignKey:'productId'})
   };
-  return Reviews;
+  return Review;
 };
