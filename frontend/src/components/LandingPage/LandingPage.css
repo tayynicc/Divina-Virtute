@@ -96,37 +96,3 @@ a{
 }
 
 
-/* coursels */
-/* 
-.bkg__layer3-coursel{
-    border: 10px blue solid;
-    width:800px;
-    height:70vh;
-    position: fixed; 
-    top: 100px;
-    right: 200px;
-    padding-top:70px;
-    
-    
-    
-    
-}
-
-.top__coursel{
-    border: 10px red solid;
-    width: 600px;
-    height: 250px;
-    margin-bottom: 70px;
-    
-}
-
-.bottom__coursel{
-    border: 10px green solid;
-    width: 600px;
-    height: 250px;
-    margin-left: 180px;
-}
-
-.mySlides {
-    display:none;
-} */
