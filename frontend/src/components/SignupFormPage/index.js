@@ -33,7 +33,7 @@ function SignupFormPage() {
     <div className='signup__bkg-layer1'>
       <div className='signup__logo logoSpin' ></div>
           <div className='signup__form-container'>
-        <form onSubmit={handleSubmit}>
+        <form className='signup__form' onSubmit={handleSubmit}>
           <ul>
             {errors.map((error, idx) => <li key={idx}>{error}</li>)}
           </ul>

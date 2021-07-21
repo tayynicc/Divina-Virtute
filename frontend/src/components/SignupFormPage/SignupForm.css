@@ -18,18 +18,12 @@
     padding: 30px;
     position: fixed;
     left:55%;
-    /* display:flex;
-    flex-direction:column; */
-    
-    
-    
-
+ 
 }
 
-form{
+.signup__form{
     margin-top:220px;
     
-  
     
 }
 
