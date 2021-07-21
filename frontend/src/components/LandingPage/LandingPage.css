@@ -45,7 +45,7 @@
 
 .content{
     
-    background: #d9dadb;
+    background: lightgrey;
     width: 570px;
     height: 270px;
     border-radius: 30px;
@@ -77,22 +77,36 @@
 }
 
 button{
-    background:#d9dadb;
-    font-size: 20px;
-    border: 1px solid #d9dadb;
+    background:lightgrey;
+    font-weight:bold;
+    border-radius:30px;
+    font-size: 25px;
+    border: 1px solid lightgrey;
 }
 button:hover{
     cursor: pointer;
+    background:#312E2D;
+    color:white;
 }
 
 
 a{
     text-decoration: none;
-    font-size: 20px; 
+    font-size: 25px; 
     display: flex;
     align-items: center;
     color: black;
+    padding:3px;
+    
 
+}
+
+a:hover{
+    border:3px solid #312E2D;
+    padding:3px;
+    border-radius:30px;
+    background:#312E2D;
+    color:white;
 }
 
 
