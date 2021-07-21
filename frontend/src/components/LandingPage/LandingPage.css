@@ -90,7 +90,7 @@ button:hover{
 }
 
 
-a{
+/* a{
     text-decoration: none;
     font-size: 25px; 
     display: flex;
@@ -99,7 +99,7 @@ a{
     padding:3px;
     
 
-}
+} */
 
 a:hover{
     border:3px solid #312E2D;
@@ -108,5 +108,3 @@ a:hover{
     background:#312E2D;
     color:white;
 }
-
-

@@ -1,0 +1,14 @@
+#modal-content {
+    position: absolute;
+    background: lightgray;
+    background-image: url('./login__bkg-modal.png');
+    background-repeat: no-repeat;
+    background-size: 160% 100%;
+    border:3px solid black;
+    box-shadow: 0 0 5px 5px grey;
+    height:500px;
+    width: 500px;
+    border-radius: 30px;
+    padding:30px;
+
+}

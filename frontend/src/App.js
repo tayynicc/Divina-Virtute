@@ -10,7 +10,7 @@ import Home from './components/Home'
 import Profile from './components/Profile'
 import ProductDisplay from './components/ProductDisplay'
 import Headers from './components/Headers'
-
+import Product from './components/Product'
 
 
 function App() {
@@ -43,6 +43,9 @@ function App() {
           </Route>
           <Route path='/profile'>
             <Profile />
+          </Route>
+          <Route>
+              <Product />
           </Route>
         </Switch>
       )}

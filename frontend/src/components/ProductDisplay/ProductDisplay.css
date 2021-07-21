@@ -14,11 +14,14 @@
     position:fixed;
     left:14%; 
     top:50%;
-    display: grid;
+    /* display: grid;
     grid-template-rows: repeat(10, 1fr);
-    grid-template-columns: auto;
+    grid-template-columns: auto; */
 }
 
+.product__title{
+    height:10px;
+}
 .pd__image{
     
     box-shadow: 0 0 5px 5px grey;
@@ -51,9 +54,13 @@
 
 }
 
-a{
+.pd__title{
     font-weight: bold;
-    font-size: 30px;
+    font-size: 25px;
+    text-decoration: none;
+    color:black;
+    position:absolute;
+    left: 15%;
 }
 
 /* .pd__tagLine{
