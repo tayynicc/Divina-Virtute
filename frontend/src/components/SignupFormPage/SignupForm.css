@@ -1,0 +1,99 @@
+.signup__bkg-layer1{
+   height: 100vh;
+   background-image: url('./signup__bkg-layer1.png');
+   background-repeat: no-repeat;
+   background-size: 100% 100%;
+   position: fixed;
+   top: 0;
+   right: 0;
+   left: 0;
+   bottom: 0;
+}
+
+.signup__form-container{
+    height:100vh;
+    width:500px;
+    background: lightgray;
+    box-shadow: 0 0 5px 5px grey;
+    padding: 30px;
+    position: fixed;
+    left:55%;
+    /* display:flex;
+    flex-direction:column; */
+    
+    
+    
+
+}
+
+form{
+    margin-top:220px;
+    
+  
+    
+}
+
+
+.signup__label{
+    display:flex;
+    justify-content: center;
+    font-size:25px;
+    margin:10px;
+    
+}
+
+.signup__button{
+    margin-left:200px;
+    margin-top:50px;
+    padding:7px;
+    border-radius:30px;
+}
+
+.signup__button:hover{
+    background:#312E2D;
+    color:white;
+    
+}
+
+
+.grow:hover{
+    transition: all .1s ease-in-out; 
+    transform: scale(1.1);
+    cursor:pointer;
+}
+
+.signup__logo{
+    height:500px;
+    width:500px;
+    background-image: url('./signup__logo-1.png');
+    background-repeat: no-repeat; 
+    background-size: 100% 100%;
+    margin:0;
+    padding:0;
+    position:fixed;
+    left:200px;
+    top:220px;
+
+
+}
+
+
+
+
+.logoSpin{
+    animation-name: spin;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+   
+   }
+
+
+@keyframes spin {
+    from{
+    transform: rotateY(0deg);
+    }
+    to{
+    transform: rotateY(360deg);
+    }
+   }
