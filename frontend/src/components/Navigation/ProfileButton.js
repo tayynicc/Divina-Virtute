@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 import * as sessionActions from '../../store/session';
+import './Navigation.css'
+
 
 function ProfileButton({ user }) {
   const dispatch = useDispatch();
@@ -26,22 +29,27 @@ function ProfileButton({ user }) {
   const logout = (e) => {
     e.preventDefault();
     dispatch(sessionActions.logout());
+    <Redirect to='/' />
   };
 
+ 
   return (
     <>
-      <button onClick={openMenu}>
-        <i className="fas fa-user-circle" />
-      </button>
-      {showMenu && (
-        <ul className="profile-dropdown">
-          <li>{user.username}</li>
-          <li>{user.email}</li>
-          <li>
-            <button onClick={logout}>Log Out</button>
-          </li>
-        </ul>
-      )}
+        <div className='home__pfp'>
+          <button className='profile__icon-button'onClick={openMenu}>
+            <i className="fas fa-user-circle" />
+          </button>
+        </div>  
+        {showMenu && (
+          <ul className="profile-dropdown">
+            <li><a className='nav__dropdown'href='/profile'>Profile</a></li>
+            <li><a className='nav__dropdown'href='/home'>Home</a></li>
+            <li>
+              <button className='nav__dropdown logout__button'onClick={logout}>Log Out</button>
+            </li>
+          </ul>
+        )}
+      
     </>
   );
 }
