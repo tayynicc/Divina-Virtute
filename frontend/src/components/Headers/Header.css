@@ -30,7 +30,7 @@
     width:450px;
     position:fixed;
     top:6%;
-    left:15%;
+    left:17%;
 }
 
 .search__input{
@@ -42,11 +42,11 @@
     height:40px;
     width:40px;
     position: fixed;
-    left:760px;
-    top:65px;
-    background-image: url('./search__icon.png');
+    left:13%;
+    top:69px;
+    /* background-image: url('./search__icon.png');
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% 100%; */
 }
 
 .home__links{
@@ -61,14 +61,14 @@
 .home__addProduct{
     border:5px black solid;
     height:40px;
-    width:40px;
+    width:80px;
     position:fixed;
     top:5.5%;
     left:75%;
 }
 
-.home__pfp{
-    border:5px black solid;
+/* .home__pfp{
+    border:5px black solid; 
     box-shadow: 0 0 5px 5px grey;
     height:70px;
     width:70px;
@@ -76,4 +76,4 @@
     position:fixed;
     top:4%;
     left:90%; 
-}
+} */
