@@ -11,6 +11,7 @@ import Profile from './components/Profile'
 import ProductDisplay from './components/ProductDisplay'
 import Headers from './components/Headers'
 import Product from './components/Product'
+import AddProductForm from "./components/AddProductForm";
 
 
 function App() {
@@ -44,8 +45,11 @@ function App() {
           <Route path='/profile'>
             <Profile />
           </Route>
-          <Route>
+          <Route path='/products'>
               <Product />
+          </Route>
+          <Route path='/newProduct'>
+              <AddProductForm />
           </Route>
         </Switch>
       )}

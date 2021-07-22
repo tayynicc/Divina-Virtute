@@ -27,14 +27,10 @@ function Headers(){
             </button>
             <div className='home__links'></div>
             <div className='home__addProduct'>
-            <>
-                <button className='addProduct__form-button'onClick={() => setShowModal(true)}>Add Product</button>
-                {showModal && (
-                    <Modal onClose={() => setShowModal(false)}>
-                        {/* <LoginForm /> */}
-                    </Modal>
-                )}
-            </>
+            
+               
+              <a href='/newProduct'>Add Product</a>
+            
             </div>
             <div className='home__pfp'>
                 {sessionLinks}
