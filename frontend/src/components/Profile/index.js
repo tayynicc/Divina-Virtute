@@ -22,7 +22,13 @@ function Profile(){
 
                 <div className='pfp__links-active'></div>
 
-                <div className='pfp__upvotes'></div>
+                <div className='add__product-form'>
+                    <a href='/'></a>
+
+                </div>
+                <div className='pfp__upvotes'>
+
+                </div>
 
             </div>
 

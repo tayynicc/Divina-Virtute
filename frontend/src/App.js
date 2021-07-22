@@ -45,10 +45,11 @@ function App() {
           <Route path='/profile'>
             <Profile />
           </Route>
-          <Route path='/products'>
+          <Route path='/products/:id'>
               <Product />
+              <AddProductForm />
           </Route>
-          <Route path='/newProduct'>
+          <Route path='/new'>
               <AddProductForm />
           </Route>
         </Switch>

@@ -29,7 +29,7 @@ function Headers(){
             <div className='home__addProduct'>
             
                
-              <a href='/newProduct'>Add Product</a>
+              <a href='/new'>Add Product</a>
             
             </div>
             <div className='home__pfp'>

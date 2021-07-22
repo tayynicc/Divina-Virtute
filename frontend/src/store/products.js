@@ -1,9 +1,11 @@
-
+import { csrfFetch } from './csrf';
 // 6. Define Action Types as Constants 
 // getting all products
 const SET_PRODUCTS = 'products/setProducts'
 // adding one product 
 const SHOW_ONE = 'products/oneProduct'
+
+const ADD_ONE = 'products/addOneProduct'
 
 // 5. Define Action Creators 
 
@@ -20,6 +22,11 @@ const oneProduct = (product) => ({
     product,
 });
 
+
+const addOneProduct = (product) => ({
+    type: ADD_ONE,
+    product,
+})
 
 // updateing a single product 
 // const update = (product.id) => {
@@ -52,7 +59,7 @@ export const getOneProduct = (id) => async (dispatch) => {
 
 // creating a new product --> 2 CREATE
 export const createProduct = data => async dispatch => {
-    const response = await fetch(`/api/products`, {
+    const response = await csrfFetch(`/api/products`, {
       method: 'post',
       headers: {
         'Content-Type': 'application/json',
@@ -61,9 +68,9 @@ export const createProduct = data => async dispatch => {
     });
   
     if (response.ok) {
-      const Product = await response.json();
-      dispatch(oneProduct(Product));
-      return Product;
+      const product = await response.json();
+      dispatch(addOneProduct(product));
+      return product;
     }
   };
 
@@ -87,15 +94,14 @@ const productReducer = ( state = initalState, action ) => {
 				// productList.push(action.product);
 				// newState.list = sortList(productList);
 				return newState;
-			// }
-            // default:
-            //     return {
-            //         ...state,
-            //         [action.product.id]: {
-            //             ...state[action.product.id],
-            //             ...action.product,
-            //         },
-            //     }; 
+        case ADD_ONE:
+            const addState = {
+                ...state,
+                [action.product.id]: action.product,
+            }; 
+
+            return addState;
+			
          default:
             return state; 
     }

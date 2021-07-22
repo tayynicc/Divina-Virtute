@@ -28,9 +28,22 @@ router.post(
     '/',
     asyncHandler(async function (req, res) {
       const product = await Product.create(req.body);
-      return res.json(product)
-    //   return res.redirect(`${req.baseUrl}/${id}`);
+      res.json(product)
+      return res.redirect(`/products/${product.id}`);
     })
   );
 
+
+
+// edit a product 
+router.put(
+    '/:id',
+    asyncHandler(async function (req, res) {
+      const id = await Product.update(req.body);
+
+      console.log(id)
+    //   const product = await Product.one(id);
+      return res.json(pokemon);
+    })
+  );
 module.exports = router
