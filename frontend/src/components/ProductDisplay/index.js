@@ -2,7 +2,7 @@ import './ProductDisplay.css'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-// import thunk creator 
+
 import { getProducts } from '../../store/products'
 
 
@@ -13,13 +13,13 @@ function ProductDisplay(){
     const dispatch = useDispatch();
     const products = useSelector((state) => Object.values(state.product))
 
-    // console.log(products)
+    
 
     useEffect(() => {
         dispatch(getProducts());
     }, [dispatch])
 
-    // const product={products}
+  
 
     return(
         <div className='product__display'>
@@ -27,10 +27,13 @@ function ProductDisplay(){
                
             {products.map((product) => 
                 <div className='pd__mockup'>
-                    {/* <img src={product.imageUrl} alt="BigCo Inc. logo"/> */}
+                    
                     <a href='/product' className='pd__title'>{product.title}</a>
-                    <p>{product.discription}</p>
-                    <p className='pd__price'>{product.price}</p>
+                    <p className='pd__tagLine'>{product.discription}</p>
+                    <p className='pd__price'>{`$ ${product.price}`}</p>
+                    <img className='pd__image' src={product.imageUrl} alt="BigCo Inc. logo"/>
+                    
+                    
                 </div>
             )} 
 
