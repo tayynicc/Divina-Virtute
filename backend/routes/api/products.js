@@ -11,7 +11,7 @@ const { Product, Review, User } = require('../../db/models');
 
 // getting all products
 router.get('/', asyncHandler(async(req, res) => {
-    const products = await Product.findAll({include:{model:Review}});
+    const products = await Product.findAll({include:{model:Images}});
     let productList = await res.json(products)
     return productList
 }))

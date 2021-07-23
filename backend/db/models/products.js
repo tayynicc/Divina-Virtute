@@ -2,8 +2,8 @@
 module.exports = (sequelize, DataTypes) => {
   const Products = sequelize.define('Product', {
     ownerId: DataTypes.INTEGER,
-    title: DataTypes.STRING,
-    imageUrl: DataTypes.STRING,
+    title: DataTypes.TEXT,
+    tagLine: DataTypes.TEXT,
     discription: DataTypes.TEXT,
     price: DataTypes.DECIMAL,
     purchaseLink: DataTypes.TEXT
@@ -13,6 +13,8 @@ module.exports = (sequelize, DataTypes) => {
     Products.belongsTo(models.User, { foreignKey:'ownerId'})
 
     Products.hasMany(models.Review, { foreignKey: 'productId'})
+
+    Products.hasMany(models.Images, { foreignKey: 'productId'})
 
   };
   return Products;
