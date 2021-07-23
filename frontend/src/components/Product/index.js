@@ -46,9 +46,15 @@ function Product(){
                         <img className='product__image'src={product.imageUrl}></img>
                     </div>
 
-                    <h3 className='product__price'>{`$ ${product.price}`}</h3>
+                    <div className='price__container'>
+                        <h3 className='product__price'>{`$ ${product.price}`}</h3>
+                    </div>
 
-                    <p className='product__discription'>{product.discription}</p>
+                    
+                    <div className='product__discription-container'>
+                        <p className='product__discription'>{product.discription}</p>
+                    </div>
+                    
 
                 </div>
             )}
