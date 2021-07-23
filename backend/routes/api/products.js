@@ -4,14 +4,14 @@ const asyncHandler = require('express-async-handler');
 
 
 
-const { Product, Review, User } = require('../../db/models');
+const { Product, Review, User, Images } = require('../../db/models');
 
 
 
 
 // getting all products
 router.get('/', asyncHandler(async(req, res) => {
-    const products = await Product.findAll({include:{model:Images}});
+    const products = await Product.findAll({include:{model:Review}});
     let productList = await res.json(products)
     return productList
 }))
@@ -66,12 +66,12 @@ router.delete("/:id", asyncHandler(async function (req, res) {
 
 // getting all products of specific user 
 
-router.get('/', asyncHandler(async(req, res) => {
-    const id = parseInt(req.params.ownerid)
-    const products = await Product.findAll({ where: { ownerId: id } });
-    let productList = await res.json(products)
-    return productList
-}))
+// router.get('/', asyncHandler(async(req, res) => {
+//     const id = parseInt(req.params.ownerid)
+//     const products = await Product.findAll({ where: { ownerId: id } });
+//     let productList = await res.json(products)
+//     return productList
+// }))
 
 
 module.exports = router

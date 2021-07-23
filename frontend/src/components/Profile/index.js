@@ -1,17 +1,24 @@
 // import Navigation from '../Navigation'
-import { getProducts } from '../../store/products'
+// import { getProducts } from '../../store/products'
 import './Profile.css'
+import { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { useParams } from 'react-router'
+import { getOneUser } from '../../store/session'
 
 function Profile(){
 
-    // const dispatch = useDispatch();
-    // const products = useSelector((state) => Object.values(state.product))
+    const dispatch = useDispatch();
+    const users = useSelector((state) => Object.values(state.session))
 
-    // const { id } = useParams()
+    const { id } = useParams()
 
-    // useEffect(() => {
-    //     dispatch(getProducts());
-    // }, [dispatch])
+    useEffect(() => {
+        dispatch(getOneUser(id));
+    }, [dispatch])
+
+    console.log(`users:`, users)
+
 
 
     return (
@@ -20,16 +27,19 @@ function Profile(){
 
             <div className='pfp__bkg-layer1'>
                 <h1>Profile</h1>
-                <div className='pfp__info'> 
+                {users.map((user) => 
+                    <div className='pfp__info'> 
 
-                    <div className='pfp__image'></div>
+                        <div className='pfp__image'></div>
 
-                    <div className='pfp__name'></div>
+                        <div className='pfp__name'>{user.username}</div>
 
-                    <div className='pfp__discription'></div>
+                        <div className='pfp__discription'></div>
 
-                    <div className='pfp__buttons'></div>
-                </div>
+                        <div className='pfp__buttons'></div>
+                    </div>
+                )}
+                
 
                 <div className='pfp__links-active'></div>
 
@@ -37,9 +47,11 @@ function Profile(){
                     <a href='/'></a>
 
                 </div>
-                <div className='pfp__upvotes'>
+                
+                
+                {/* <div className='pfp__upvotes'>
 
-                </div>
+                </div> */}
 
             </div>
 

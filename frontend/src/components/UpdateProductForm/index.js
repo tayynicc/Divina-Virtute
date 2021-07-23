@@ -37,7 +37,7 @@ function UpdateProductForm(){
           e.preventDefault();
       
           const payload = {
-        //   productId:product,
+          id:+id,
           ownerId,
           title,
           imageUrl,
@@ -46,7 +46,7 @@ function UpdateProductForm(){
           purchaseLink,
         };
     
-      const product = await dispatch(updateProduct(payload, id))
+      const product = await dispatch(updateProduct(payload))
         if (product) {
           history.push(`/products/${product.id}`);
         }
@@ -58,22 +58,22 @@ function UpdateProductForm(){
         <div>
         <h1>UpdateProductForm</h1>
         <form onSubmit={handleSubmit}>
-            <label>ID</label>
+            <label>ownerId</label>
             <input value={ownerId}onChange={updateOwnerId}></input>
 
-            <label>userid</label>
+            <label>title</label>
             <input value={title} onChange={updateTitle}></input>
             
-            <label>title</label>
+            <label>imageUrl</label>
             <input value={imageUrl} onChange={updateimageUrl}></input>
 
-            <label>imageURL</label>
+            <label>discription</label>
             <input value={discription} onChange={updatediscription}></input>
 
-            <label>discription</label>
+            <label>price</label>
             <input value={price} onChange={updatePrice}></input>
 
-            <label>price</label>
+            <label>purchaseLink</label>
             <input value={purchaseLink} onChange={updatePurchaseLink}></input>
             
             <button type="submit">Add New Product</button>

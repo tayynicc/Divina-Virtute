@@ -3,12 +3,13 @@ const express = require('express');
 const asyncHandler = require('express-async-handler');
 
 const { setTokenCookie, restoreUser } = require('../../utils/auth');
-const { User } = require('../../db/models');
+const { User, Product } = require('../../db/models');
 
 const router = express.Router();
 
 const { check } = require('express-validator');
 const { handleValidationErrors } = require('../../utils/validation');
+// const { default: UsersProducts } = require('../../../frontend/src/components/UsersProducts');
 
 
 const validateSignup = [
@@ -40,7 +41,23 @@ router.get('/', asyncHandler(async(req, res) => {
 
 
 
+// get a single user AND that users Products 
+router.get('/:id', asyncHandler(async (req, res) => {
 
+    // const userId = parseInt(req.params.id)
+    // const user = await User.findByPk(userId);
+    // const userProducts = await User.findAll({
+    //     where: { id: userId },
+    //     include:{model:Product}
+    // });
+
+    const userProducts = await User.findOne({
+        where: {id:req.params.id},
+        include:{model:Product}
+    })
+
+    return res.json(userProducts);
+}));
 
 
 // Sign up

@@ -13,6 +13,7 @@ import Headers from './components/Headers'
 import Product from './components/Product'
 import AddProductForm from "./components/AddProductForm";
 import UpdateProductForm from './components/UpdateProductForm';
+import UsersProducts from './components/UsersProducts'
 
 
 function App() {
@@ -43,10 +44,11 @@ function App() {
             <ProductDisplay />
             {/* <Navigation /> */}
           </Route>
-          <Route path='/profile'>
+          <Route path='/profile/:id'>
             <Profile />
+            <UsersProducts />
           </Route>
-          <Route path='/products/:id'>
+          <Route path='/products/:id' exact>
               <Product />
               <AddProductForm />
           </Route>

@@ -99,7 +99,7 @@ export const createProduct = data => async dispatch => {
 
 
 // updating product --> 3 UPDATE
-export const updateProduct = data => async dispatch => {
+export const updateProduct = (data) => async dispatch => {
     const response = await csrfFetch(`/api/products/${data.id}`, {
         method: 'put',
         headers: {
