@@ -61,4 +61,17 @@ router.delete("/:id", asyncHandler(async function (req, res) {
 }));
 
 
+
+
+
+// getting all products of specific user 
+
+router.get('/', asyncHandler(async(req, res) => {
+    const id = parseInt(req.params.ownerid)
+    const products = await Product.findAll({ where: { ownerId: id } });
+    let productList = await res.json(products)
+    return productList
+}))
+
+
 module.exports = router

@@ -4,14 +4,17 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { updateProduct } from '../../store/products'
+import { useParams } from 'react-router';
 
 
 
 function UpdateProductForm(){
     const dispatch = useDispatch();
     const history = useHistory();
-    const product = useSelector(state => state.product[productId])
+    // const product = useSelector(state => state.product[productId])
   //   const products = useSelector((state) => Object.values(state.product))
+// const products = useSelector((state) => Object.values(state.product))
+  const { id } = useParams()
   
     const [title, setTitle] = useState('');
     const [ownerId, setOwnerId] = useState('');
@@ -34,7 +37,7 @@ function UpdateProductForm(){
           e.preventDefault();
       
           const payload = {
-          ...product,
+        //   productId:product,
           ownerId,
           title,
           imageUrl,
@@ -43,7 +46,7 @@ function UpdateProductForm(){
           purchaseLink,
         };
     
-      const product = await dispatch(updateProduct(payload, productId))
+      const product = await dispatch(updateProduct(payload, id))
         if (product) {
           history.push(`/products/${product.id}`);
         }

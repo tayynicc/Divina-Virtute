@@ -1,7 +1,18 @@
-import Navigation from '../Navigation'
+// import Navigation from '../Navigation'
+import { getProducts } from '../../store/products'
 import './Profile.css'
 
 function Profile(){
+
+    // const dispatch = useDispatch();
+    // const products = useSelector((state) => Object.values(state.product))
+
+    // const { id } = useParams()
+
+    // useEffect(() => {
+    //     dispatch(getProducts());
+    // }, [dispatch])
+
 
     return (
         <div>
