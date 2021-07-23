@@ -54,8 +54,15 @@ router.put(
 
 router.delete("/:id", asyncHandler(async function (req, res) {
   const productId = parseInt(req.params.id)
+
+ const currProduct = await Product.findByPk(productId)
+ const product = await currProduct.destroy()
   
-  const product = await Product.destroy({ where: { id: productId } });
+//   const product = await Product.destroy({ 
+//       where: { id: req.params.id },
+//     //   include: { model: Images }
+    
+//     });
   
   return res.json(product);
 }));

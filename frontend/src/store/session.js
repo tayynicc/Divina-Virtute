@@ -47,7 +47,7 @@ export const login = (user) => async (dispatch) => {
 
 // getting one user 
 export const getOneUser = (id) => async (dispatch) => {
-	const response = await fetch(`/api/session/${id}`);
+	const response = await fetch(`/api/users/${id}`);
 
 	if (response.ok) {
 		const user = await response.json();
@@ -73,7 +73,7 @@ const sessionReducer = (state = initialState, action) => {
     case SHOW_ONE:
         const userState = {
             ...state,
-            [action.session.id]: action.session,
+            [action.user.id]: action.user,
         }
         return userState
     default:

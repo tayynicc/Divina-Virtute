@@ -7,20 +7,38 @@ import { getOneUser } from '../../store/session'
 function UsersProducts (){
 
     const dispatch = useDispatch();
-    const users = useSelector((state) => Object.values(state.session))
 
     const { id } = useParams()
+    const users = useSelector((state) => (state.session[id]))
+
+    
 
     useEffect(() => {
         dispatch(getOneUser(id));
     }, [dispatch])
 
+    console.log(`users:`, users)
 
     return (
         <div className='pfp__upvotes'>
+            <div>{users?.Products.map((product) => (
+                <p>{product.title}</p>
+            ))}</div>
+            
+            
             {/* {users.map((user) => (
-                <div>{users.product}</div>
+                <div>{user.Products.title}</div>
             ))} */}
+
+            {/* {users.Products.map((product) => (
+                <div>{product.title}</div>
+            ))} */}
+
+            {/* {users[1].map((product) => (
+                <div>{product.title}</div>
+            ))} */}
+
+
 
         </div> 
     )
