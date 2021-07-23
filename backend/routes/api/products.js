@@ -35,15 +35,30 @@ router.post(
 
 
 
-// edit a product 
+// edit / update a product 
 router.put(
     '/:id',
     asyncHandler(async function (req, res) {
-      const id = await Product.update(req.body);
+        const productId = parseInt(req.params.id)
+        const singleProduct = await Product.findByPk(productId);
+        const updatedProduct = await singleProduct.update(req.body)
 
-      console.log(id)
-    //   const product = await Product.one(id);
-      return res.json(pokemon);
+      return res.json(updatedProduct);
     })
   );
+
+
+
+
+// Delete a post
+
+router.delete("/:id", asyncHandler(async function (req, res) {
+  const productId = parseInt(req.params.id)
+  
+  const product = await Product.destroy({ where: { id: productId } });
+  
+  return res.json(product);
+}));
+
+
 module.exports = router

@@ -12,6 +12,7 @@ import ProductDisplay from './components/ProductDisplay'
 import Headers from './components/Headers'
 import Product from './components/Product'
 import AddProductForm from "./components/AddProductForm";
+import UpdateProductForm from './components/UpdateProductForm';
 
 
 function App() {
@@ -51,6 +52,9 @@ function App() {
           </Route>
           <Route path='/new'>
               <AddProductForm />
+          </Route>
+          <Route path='/update'>
+              <UpdateProductForm />
           </Route>
         </Switch>
       )}

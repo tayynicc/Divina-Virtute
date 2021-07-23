@@ -1,11 +1,25 @@
 import { csrfFetch } from './csrf';
+
+
 // 6. Define Action Types as Constants 
+
 // getting all products
 const SET_PRODUCTS = 'products/setProducts'
+
 // adding one product 
 const SHOW_ONE = 'products/oneProduct'
 
+// create product
 const ADD_ONE = 'products/addOneProduct'
+
+// update product
+const UPDATE_PRODUCT = 'products/updateProduct'
+
+
+
+
+
+
 
 // 5. Define Action Creators 
 
@@ -23,21 +37,29 @@ const oneProduct = (product) => ({
 });
 
 
+// create product 
 const addOneProduct = (product) => ({
     type: ADD_ONE,
     product,
 })
 
+
+
 // updateing a single product 
-// const update = (product.id) => {
-//     type: UPDATE_PRODUCT,
-//     product,
-// }
+const update = (product) => ({
+    type: UPDATE_PRODUCT,
+    product,
+})
+
+
+
+
+
 
 // 4. Define THunks 
 
 
-// getting all products --> 1 Read
+// getting all products --> home display
 export const getProducts = () => async (dispatch) => {
     const res = await fetch('/api/products')
     const products = await res.json();
@@ -45,7 +67,7 @@ export const getProducts = () => async (dispatch) => {
 
 }
 
-// get one product 
+// get one product --> 1 Read
 export const getOneProduct = (id) => async (dispatch) => {
 	const response = await fetch(`/api/products/${id}`);
 
@@ -74,6 +96,28 @@ export const createProduct = data => async dispatch => {
     }
   };
 
+
+
+// updating product --> 3 UPDATE
+export const updateProduct = data => async dispatch => {
+    const response = await csrfFetch(`/api/products/${data.id}`, {
+        method: 'put',
+        headers: {
+        'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    });
+    
+    console.log(data)
+    if (response.ok) {
+        const product = await response.json();
+        dispatch(update(product));
+        return product;
+    }
+    };
+
+
+
 // 2.  Define an inital states
 const initalState = {}
 
@@ -95,6 +139,7 @@ const productReducer = ( state = initalState, action ) => {
 				// newState.list = sortList(productList);
 				return newState;
         case ADD_ONE:
+        case UPDATE_PRODUCT:
             const addState = {
                 ...state,
                 [action.product.id]: action.product,
