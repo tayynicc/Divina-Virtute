@@ -29,7 +29,7 @@ function ProductDisplay(){
                 <div className='pd__mockup'>
                     
                     <a href={`/products/${product.id}`} className='pd__title'>{product.title}</a>
-                    <p className='pd__tagLine'>{product.discription}</p>
+                    <p className='pd__tagLine'>{product.tagLine}</p>
                     <p className='pd__price'>{`$ ${product.price}`}</p>
                     <img className='pd__image' src={product.imageUrl} alt="BigCo Inc. logo"/>
                     

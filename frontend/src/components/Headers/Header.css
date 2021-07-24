@@ -50,21 +50,79 @@
 }
 
 .home__links{
-    border:5px black solid;
-    box-shadow: 0 0 5px 5px grey;
-    height:30px;
+    /* border:5px black solid; */
+    /* box-shadow: 0 0 5px 5px grey; */
+    /* height:30px; */
     width:400px;
     position:fixed;
-    top:6%;
+    padding:3px;
+    top:5%;
     left:47%;
+    display: flex;
+    justify-content: space-around;
 }
-.home__addProduct{
-    border:5px black solid;
-    height:40px;
-    width:80px;
+
+/* .link__label{
+    
     position:fixed;
-    top:5.5%;
+    top:4px;
+    color:transparent;
+    padding:0px;
+}
+
+.link__label:hover{
+    color:black;
+} */
+
+.header__links{
+    width:60px;
+}
+
+.etsy__link{
+    height:80px;
+    width:80px;
+    margin:0px;
+}
+
+.moon__link{
+    height:50px;
+    width:50px;
+    margin-top:12px;
+}
+
+.crystal__link{
+    margin-top:7px;
+    height:60px;
+}
+
+
+.home__addProduct{
+    /* border:5px black solid; */
+    height:40px;
+    width:150px;
+    position:fixed;
+    top:7%;
     left:75%;
+    text-align:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:30px;
+    padding:3px;
+}
+
+.home__addProduct:hover{
+    transition: all .1s ease-in-out; 
+    transform: scale(1.1);
+    cursor:pointer;
+    background:black;
+    border:3px solid black
+
+}
+
+.add__link-header:hover{
+    
+    color:white;
 }
 
 /* .home__pfp{
@@ -76,4 +134,14 @@
     position:fixed;
     top:4%;
     left:90%; 
+} */
+
+.add__link-header{
+    font-size:26px;
+    font-weight:bold;
+    color:black;
+}
+
+/* .header__pfp{
+    border: 3px solid blue;
 } */

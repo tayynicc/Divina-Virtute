@@ -2,6 +2,7 @@ import './Product.css'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router'
+import { NavLink } from 'react-router-dom'
 
 
 import { getOneProduct } from '../../store/products'
@@ -37,6 +38,9 @@ function Product(){
 
     return (
     <div className='products__bkg-layer1'>
+        <NavLink to='/home' className='back__button-home'>
+            <img className='back__button' src="https://img.icons8.com/plumpy/24/000000/back--v1.png"/>
+        </NavLink>
         <div className='product__read-div'>
             {products.map((product) => 
                 <div className='pd__display'>
@@ -47,7 +51,7 @@ function Product(){
                     </div>
 
                     <div className='price__container'>
-                        <h3 className='product__price'>{`$ ${product.price}`}</h3>
+                        <a className='product__price' href={`${product.purchaseLink}`}>{`$ ${product.price}`}</a>
                     </div>
 
                     
@@ -63,7 +67,7 @@ function Product(){
 
         {products.map((product) => 
             <div className='product__purchase'>
-                <a href={`${product.purchaseLink}`}>Purchase</a>
+                <a className='link grow' href={`${product.purchaseLink}`}>Purchase</a>
             </div>
         )}
     </div> 

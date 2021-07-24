@@ -16,6 +16,7 @@ import UpdateProductForm from './components/UpdateProductForm';
 import UsersProducts from './components/UsersProducts'
 
 
+
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
@@ -50,10 +51,11 @@ function App() {
           </Route>
           <Route path='/products/:id' exact>
               <Product />
-              <AddProductForm />
+      
           </Route>
           <Route path='/new'>
               <AddProductForm />
+              
           </Route>
           <Route path='/products/:id/update'>
               <UpdateProductForm />
