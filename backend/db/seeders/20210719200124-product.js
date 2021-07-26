@@ -46,7 +46,7 @@ module.exports = {
         tagLine:'Starbust Aragonite Cluster', 
         discription:'Aragonite is a stabilising stone that centres and grounds physical energies, being useful in time of stress. It helps to prepare for meditation and stabilises spiritual development. It provides insight into the causes of problems and situations. Aragonite aids concentration and brings tolerance and flexibility to the mind. It teaches acceptance and patience, especially helpful to those who feel they have too much responsibility. Aragonite provides strength and support, helping to combat anger and emotional stress. Aragonite is attuned to the Earth Goddess, encouraging conservation and recycling. It is a reliable earth-healer and grounding stone. Aragonite transforms geopathic stress. Aragonite brings warmth to the extremities. It combats deficiencies in Vitamins A and D. Aragonite combats dis-ease and can stop night twitches and muscle spasms. It also helps with general aches and pains.',
         price:12.99,
-        imageUrl:'',
+        imageUrl:'https://divinavitute.s3.us-west-1.amazonaws.com/Screenshot+(131).png',
         purchaseLink:'https://www.etsy.com/listing/850644002/aragonite-cluster-aragonite-cluster-raw?ref=related-3&pro=1&frs=1',
     },
     {
