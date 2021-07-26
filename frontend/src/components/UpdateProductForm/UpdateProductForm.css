@@ -1,0 +1,57 @@
+.edit__form-div{
+    width: 400px;
+    height:580px;
+    border: 5px solid black;
+    text-align: center;
+    padding:20px;
+    display:flex;
+    align-items:center;
+    position:absolute;
+    left:310px;
+    bottom:160px;
+    border-radius:30px;
+    background:lightgrey;
+    box-shadow: 0 0 5px 5px grey;
+
+}
+
+.outer__div{
+    height:100vh;
+    width:100%;
+    background-image:url('./edit-info-bkg1.png');
+    background-size:100% 100%
+}
+
+
+
+.lising__display{
+    margin-left:500px;
+
+}
+.edit{
+    min-width:800px;
+    position:absolute;
+    top:0px;
+    left:10%;
+    height:100vh;
+    padding-top:170px;
+    
+    
+}
+
+.pd__display-update{
+    height:100vh;
+    background:transparent;
+    width:790px;
+    
+    position:fixed;
+    top:0;
+    right:70px;
+    overflow: auto;
+    background:lightgrey;
+    box-shadow: 0 0 5px 5px grey;
+}
+
+.updateForm__label{
+    font-size:22px;
+}

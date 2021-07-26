@@ -16,9 +16,33 @@ router.get('/', asyncHandler(async(req, res) => {
     return productList
 }))
 
+
+
+// //get all images
+// router.get('/home', asyncHandler(async(req, res) => {
+//   const images = await Images.findAll({include:{model:Product}});
+  
+//   return res.json(images)
+// }))
+
+//get all images and products
+router.get('/profile/:id', asyncHandler(async(req, res) => {
+  const images = await Images.findAll({include:{model:Product}});
+  
+  return res.json(images)
+}))
+
+
+
+
+
 // get a single product 
 router.get('/:id', asyncHandler(async (req, res) => {
-    const product = await Product.findByPk(req.params.id);
+    
+    const product = await Product.findOne({ 
+      where:{id:req.params.id},
+      include:{model: Images}
+    });
     return res.json(product);
 }));
 

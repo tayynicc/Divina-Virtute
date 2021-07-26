@@ -10,13 +10,20 @@ function Headers(){
     const [showModal, setShowModal] = useState(false);
 
     const sessionUser = useSelector(state => state.session.user);
+
+
+    
+    console.log(sessionUser)
     const sessionLinks = (
         <ProfileButton user={sessionUser} />
         
-      );
         // if (sessionUser) return (
         //     <Redirect to="/profile" />
         //   );
+      );
+
+     
+        
     return (
         <div className='header'>
             <div className='home__logo'></div>

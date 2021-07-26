@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from 'react-redux';
 import { Redirect } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { NavLink } from 'react-router-dom'
 import * as sessionActions from '../../store/session';
 import './Navigation.css'
 
@@ -8,6 +10,8 @@ import './Navigation.css'
 function ProfileButton({ user }) {
   const dispatch = useDispatch();
   const [showMenu, setShowMenu] = useState(false);
+
+  const sessionUser = useSelector(state => state.session.user);
   
   const openMenu = () => {
     if (showMenu) return;
@@ -42,7 +46,8 @@ function ProfileButton({ user }) {
         </div>  
         {showMenu && (
           <ul className="profile-dropdown nav__dropdown">
-            <li><button className='label'href='/profile'>Profile</button></li>
+            {/* <li><button ></button></li> */}
+            <li><NavLink className='label' to={`/profile/${sessionUser.id}`}>Profile</NavLink></li>
             {/* <li><button className='label'href='/home'>Home</button></li> */}
             <li>
               <button className='label logout__button'onClick={logout}>Log Out</button>

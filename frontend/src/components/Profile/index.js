@@ -17,37 +17,45 @@ function Profile(){
         dispatch(getOneUser(id));
     }, [dispatch])
 
-    console.log(`users:`, users)
+    // console.log(`users profile:`, users.userName)
+
+    const currentUser = users[0]
 
 
+    console.log(`currentUser`, currentUser.Products)
+    
+    // const pfpImage = currentUser.find((user) => {
+    //     return +id === user.id
+    // })
 
     return (
         <div>
             
 
             <div className='pfp__bkg-layer1'>
-                <h1>Profile</h1>
                 {users.map((user) => 
                     <div className='pfp__info'> 
 
-                        <div className='pfp__image'></div>
+                        <div className='pfp__image-div'>
+                            {/* <img src={user.imageURL}></img> */}
+                            <img className='pfp__image'src='https://divinavitute.s3.us-west-1.amazonaws.com/userDefault-4.png' />
+                        </div>
 
                         <div className='pfp__name'>{user.username}</div>
 
+                        <label className='bio__label'> Biography </label>
                         <div className='pfp__discription'></div>
 
-                        <div className='pfp__buttons'></div>
+                        <div className='pfp__buttons'>
+                            <img src="https://img.icons8.com/ios-glyphs/30/000000/edit--v2.png"/>
+                        </div>
                     </div>
                 )}
                 
 
-                <div className='pfp__links-active'></div>
-
-                <div className='add__product-form'>
-                    <a href='/'></a>
-
+                <div className='pfp__links-active'>
+                    <a className='profile__newpd'href='/new'>Add Product</a>   
                 </div>
-                
                 
                 {/* <div className='pfp__upvotes'>
 

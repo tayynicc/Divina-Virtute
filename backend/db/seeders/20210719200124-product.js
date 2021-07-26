@@ -83,6 +83,7 @@ module.exports = {
         tagLine:'STONE OF CLEARING NEGATIVE ENERGY',
         discription:'Yellow Obsidian is a powerful stone that burns away negative energy and promotes a well-balanced atmosphere.',
         price:2.95,
+        imageUrl:'https://divinavitute.s3.us-west-1.amazonaws.com/pd__image1.png',
         purchaseLink:'https://crystalgemstoneshop.com/collections/yellow-obsidian/products/yellowobsidian'
     },
     {

@@ -59,6 +59,7 @@ function App() {
           </Route>
           <Route path='/products/:id/update'>
               <UpdateProductForm />
+              {/* <Product /> */}
           </Route>
         </Switch>
       )}

@@ -33,42 +33,75 @@
 }
 
 .pfp__name{
-    border:5px solid black;
-    box-shadow: 0 0 5px 5px grey;
+   
     height: 50px;
     width:400px;
     position:fixed;
     left:35%;
     top:20%;
+    text-align:center;
+    padding:5px;
+    color:teal;
+    font-size:40px;
+
 }
 
+.bio__label{
+    position: fixed;
+    top:275px;
+    left:630px;
+    
+    box-shadow: 0 0 5px 5px grey;
+    border-radius:30px;
+    padding:5px;
+}   
 .pfp__discription{
-    border:5px solid black;
+    
     box-shadow: 0 0 5px 5px grey;
     height: 150px;
-    width:750px;
-    position:fixed;
-    left:35%;
-    top:30%;
+    width:650px;
+    position: fixed;
+    top:310px;
+    left:630px;
 }
 
+.profile__newpd{
+    font-size:22px;
+    color:black;
+}
+
+
+
 .pfp__buttons{
-    border:5px solid black;
-    height: 50px;
-    width:100px;
+    height: 30px;
+    width:30px;
     position:fixed;
-    left:77%;
-    top:44%;
+    left:80%;
+    top:46%;
+    display:flex;
+
 }
 
 .pfp__links-active{
     height: 50px;
-    width: 40%;
+    width: 150px;
     border-radius: 30px;
     box-shadow: 0 0 5px 5px grey;
     background: lightgray;
     position:fixed;
-    left:30%;
+    left:43%;
     top:53%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    
+}
+
+.pfp__links-active:hover{
+    transition: all .1s ease-in-out; 
+    transform: scale(1.1);
+    cursor:pointer;
+   
+   
 }
 

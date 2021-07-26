@@ -3,7 +3,7 @@ const express = require('express');
 const asyncHandler = require('express-async-handler');
 
 const { setTokenCookie, restoreUser } = require('../../utils/auth');
-const { User, Product } = require('../../db/models');
+const { User, Product, Images} = require('../../db/models');
 
 const router = express.Router();
 
@@ -33,6 +33,7 @@ const validateSignup = [
   ];
 
 
+  
 // get 
 router.get('/', asyncHandler(async(req, res) => {
     const users = await User.findAll();
@@ -55,9 +56,13 @@ router.get('/:id', asyncHandler(async (req, res) => {
         where: {id:req.params.id},
         include:{model:Product}
     })
+    
 
     return res.json(userProducts);
 }));
+
+
+
 
 
 // Sign up

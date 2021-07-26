@@ -1,10 +1,87 @@
 .pfp__upvotes{
-    height: 100vh;
+    height: 320px;;
     width: 60%;
     border-radius: 30px;
-    box-shadow: 0 0 5px 5px grey;
-    background: lightgray;
+    padding:30px;
+    
     position:fixed;
     left:18%;
     top:65%;
+    overflow:auto;
+}
+
+.product__title{
+    height:10px;
+    
+}
+.pd__image{
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height:90px;
+    width:90px;
+    border-radius:50%;
+    margin:5px;
+    
+}
+.pd__name{
+    position: fixed;
+    left: 22%;
+    top:51%;
+    
+
+}
+
+.pd__title{
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: none;
+    color:black;
+    position:absolute;
+    left: 12%;
+    
+}
+
+.pd__tagLine{
+    
+    width:750px;
+    position: absolute;
+    left:13%;
+    margin-top:50px;
+    text-align:center;
+    
+}
+
+.pd__price{
+    width:70px;
+    height: 30px;
+    position: absolute;
+    right:50px;
+    margin:40px;
+    font-weight:bold;
+    font-size:22px;
+    color:green;
+}
+
+.pd__mockup{
+    border: 3px solid black;
+    box-shadow: 0 0 5px 5px grey;
+    height:100px;
+    border-radius: 30px;
+    background:lightgrey;
+}
+
+.edit__icons-edit{
+    position: absolute;
+    right:50px;
+    margin-top:5px;
+}
+
+.edit__icons-delete{
+    /* position: absolute;
+    right:50px;
+    top:80px;
+    margin-top:5px; */
+    position:absolute;
+    right:50px;
+    margin-top:60px;
 }

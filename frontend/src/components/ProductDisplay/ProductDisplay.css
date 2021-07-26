@@ -68,26 +68,21 @@
     left:22%
 } */
 
-.pd__tagLine{
-    
-    width:750px;
-    position: absolute;
-    left:13%;
-    margin-top:50px;
-    
+.pd__name{
+    position: fixed;
+    left: 22%;
+    top:51%;
+
 }
 
-.pd__price{
-    width:70px;
-    height: 30px;
-    position: absolute;
-    right:0;
-    margin:40px;
-    font-weight:bold;
-    font-size:22px;
-    color:green;
+.pd__title{
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: none;
+    color:black;
+    position:absolute;
+    left: 10%;
 }
-
 /* .pd__commentNum{ */
     /* border:5px black solid;
     box-shadow: 0 0 5px 5px grey;

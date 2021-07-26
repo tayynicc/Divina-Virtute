@@ -29,6 +29,9 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DECIMAL
       },
+      imageUrl: {
+        type: Sequelize.TEXT
+      },
       purchaseLink: {
         allowNull: false,
         type: Sequelize.TEXT
