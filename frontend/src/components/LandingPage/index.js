@@ -15,7 +15,7 @@ const landingPage = () => {
     const sessionLinks = (
         <>
           <LoginFormModal />
-          <NavLink to="/signup">Sign Up</NavLink>
+          <NavLink className='signup_btn' to="/signup">Sign Up</NavLink>
         </>
       );
 
@@ -35,7 +35,7 @@ const landingPage = () => {
                             <h1>Divina Vitute</h1>
                         </div>
                         <div className='txt__phrase'>
-                            <p> phrase </p>
+                            
                         </div>
                         <div className='links' >
                             {sessionLinks}

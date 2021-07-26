@@ -11,7 +11,10 @@
 }
 
 .product__title{
-    height:10px;
+    height:50px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
     
 }
 .pd__image{
@@ -38,6 +41,9 @@
     color:black;
     position:absolute;
     left: 12%;
+    height:50px;
+    display: flex;
+    align-items:center;
     
 }
 

@@ -1,13 +1,14 @@
-
+import { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { useParams } from 'react-router'
 import './Home.css'
 // import Navigation from '../Navigation';
 
 
 
 
-
 function Home(){
-
+  
     return (
         <div>
             <div className='bkg__login-layer1'>

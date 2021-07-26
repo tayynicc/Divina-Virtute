@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { createProduct } from '../../store/products'
 import { NavLink } from 'react-router-dom'
+import { useParams } from 'react-router';
 
 import waterfallImage1 from '../../Images/waterfall-1.png'
 import waterfallImage2 from '../../Images/waterfall-2.png'
@@ -25,6 +26,7 @@ function AddProductForm(){
   const [discription, setDiscription] = useState('');
   const [price, setPrice] = useState('');
   const [purchaseLink, setPurchaseLink] = useState('');
+  const [tagLine, setTagLine] = useState('')
   
 
   const updateTitle = (e) => setTitle(e.target.value);
@@ -33,15 +35,21 @@ function AddProductForm(){
   const updatediscription = (e) => setDiscription(e.target.value);
   const updatePrice = (e) => setPrice(e.target.value);
   const updatePurchaseLink = (e) => setPurchaseLink(e.target.value);
+  const updateTagLine = (e) => setTagLine(e.target.value)
 
 
+  const sessionUser = useSelector(state => state.session.user);
+
+ 
+  const { id } = useParams()
 
     const handleSubmit = async (e) => {
         e.preventDefault();
     
         const payload = {
-        ownerId,
+        ownerId: sessionUser.id,
         title,
+        tagLine,
         imageUrl,
         discription,
         price,
@@ -86,22 +94,26 @@ function AddProductForm(){
               
               
               <form onSubmit={handleSubmit}>
-                  <label className='addPd__label'>ID</label>
-                  <input type='text'value={ownerId}onChange={updateOwnerId}></input>
+                  {/* <label className='addPd__label'>ID</label>
+                  <input type='text'value={ownerId}onChange={updateOwnerId}></input> */}
 
-                  <label className='addPd__label'>userid</label>
+                  <label className='addPd__label'> Title </label>
                   <input type='text' value={title} onChange={updateTitle}></input>
                   
-                  <label className='addPd__label' >title</label>
+                  <label className='addPd__label'> Tag Line </label>
+                  <input type='text' value={title} onChange={updateTitle}></input>
+                  
+                  <label className='addPd__label' > Image Url</label>
                   <input type='text' value={imageUrl} onChange={updateimageUrl}></input>
 
-                  <label className='addPd__label' >imageURL</label>
+                  
+                  <label className='addPd__label' >Discription</label>
                   <input type='text' value={discription} onChange={updatediscription}></input>
 
-                  <label className='addPd__label' >discription</label>
+                  <label className='addPd__label' > Price </label>
                   <input type='text' value={price} onChange={updatePrice}></input>
 
-                  <label className='addPd__label' >price</label>
+                  <label className='addPd__label' > Purchase Link </label>
                   <input type='text' value={purchaseLink} onChange={updatePurchaseLink}></input>
                   
                   <button type="submit" className='addPd__button'>Add New Product</button>

@@ -4,14 +4,14 @@ const asyncHandler = require('express-async-handler');
 
 
 
-const { Product, Review, User, Images } = require('../../db/models');
+const { Product, Review, User } = require('../../db/models');
 
 
 
 
 // getting all products
 router.get('/', asyncHandler(async(req, res) => {
-    const products = await Product.findAll({include:{model:Images}});
+    const products = await Product.findAll({include:{model:Review}});
     let productList = await res.json(products)
     return productList
 }))
@@ -25,12 +25,12 @@ router.get('/', asyncHandler(async(req, res) => {
 //   return res.json(images)
 // }))
 
-//get all images and products
-router.get('/profile/:id', asyncHandler(async(req, res) => {
-  const images = await Images.findAll({include:{model:Product}});
+// //get all images and products
+// router.get('/profile/:id', asyncHandler(async(req, res) => {
+//   const images = await Images.findAll({include:{model:Product}});
   
-  return res.json(images)
-}))
+//   return res.json(images)
+// }))
 
 
 
@@ -41,7 +41,7 @@ router.get('/:id', asyncHandler(async (req, res) => {
     
     const product = await Product.findOne({ 
       where:{id:req.params.id},
-      include:{model: Images}
+      include:{model: Review}
     });
     return res.json(product);
 }));
@@ -90,8 +90,6 @@ router.delete("/:id", asyncHandler(async function (req, res) {
   
   return res.json(product);
 }));
-
-
 
 
 

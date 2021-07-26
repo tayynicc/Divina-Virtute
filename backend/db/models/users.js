@@ -30,7 +30,8 @@ module.exports = (sequelize, DataTypes) => {
         len: [60, 60]
       },
     },
-    imageUrl: DataTypes.STRING
+    imageUrl: DataTypes.STRING,
+    discription: DataTypes.TEXT
   },
   {
     defaultScope: {

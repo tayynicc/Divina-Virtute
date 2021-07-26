@@ -68,37 +68,41 @@ function UpdateProductForm(){
           <NavLink to={`/profile/${sessionUser.id}`} className='back__button-home'>
               <img className='back__button' src="https://img.icons8.com/plumpy/24/000000/back--v1.png"/>
           </NavLink>
+          <h1 className='form__label'>Update Your Listing</h1>
+          
           <div className='edit__form-div'>
             <form onSubmit={handleSubmit}>
                 {/* <label className='updateForm__label'>ownerId</label>
                 <input type='text'value={ownerId}onChange={updateOwnerId} ></input> */}
 
-                <label className='updateForm__label'>title</label>
-                <input type='text' value={title} onChange={updateTitle} ></input>
+                <label className='updateForm__label'>Title</label>
+                <input type='text' value={title} onChange={updateTitle} placeHolder='Descriptive Title'></input>
 
                 <label className='updateForm__label'>Tag Line</label>
-                <input type='text' value={tagLine} onChange={updateTagLine} ></input>
+                <input type='text' value={tagLine} onChange={updateTagLine} placeHolder='Grab some attention!'></input>
                 
-                <label className='updateForm__label'>imageUrl</label>
-                <input type='text' value={imageUrl} onChange={updateimageUrl}></input>
+                <label className='updateForm__label'>Image Url</label>
+                <input type='text' value={imageUrl} onChange={updateimageUrl} placeHolder='Image Link'></input>
 
-                <label className='updateForm__label'>discription</label>
-                <input type='text' value={discription} onChange={updatediscription}></input>
+                <label className='updateForm__label'>Discription</label>
+                <input type='text' value={discription} onChange={updatediscription} placeHolder='Tell Us What You Got!'></input>
 
-                <label className='updateForm__label'>price</label>
-                <input type='text' value={price} onChange={updatePrice}></input>
+                <label className='updateForm__label'>Price</label>
+                <input type='text' value={price} onChange={updatePrice} placeHolder='Price'></input>
 
-                <label className='updateForm__label'>purchaseLink</label>
-                <input type='text' value={purchaseLink} onChange={updatePurchaseLink}></input>
+                <label className='updateForm__label'>Purchase Link</label>
+                <input type='text' value={purchaseLink} onChange={updatePurchaseLink} placeHolder='Link to your other listings'></input>
                 
                 <button type="submit">Add New Product</button>
             </form>
           </div>
 
             <div className='lising__display'> 
+              
               <div className='edit__read-div'>
                 {products.map((product) => 
                     <div className='pd__display-update'>
+                      <h3 className='previous__listing-label'>Previous Listing</h3>
                         <h1 className='product__title'>{product.title}</h1>
 
                         <div className='product__image-container'>

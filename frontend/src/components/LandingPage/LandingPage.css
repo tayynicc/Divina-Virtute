@@ -89,6 +89,25 @@ button:hover{
     color:white;
 }
 
+.signup_btn{
+    color:black;
+    background:lightgrey;
+    font-weight:bold;
+    border-radius:30px;
+    font-size: 25px;
+    border: 1px solid lightgrey;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:5px;
+}
+
+.signup_btn:hover{
+    cursor: pointer;
+    background:#312E2D;
+    color:white;
+}
+
 
 /* a{
     text-decoration: none;

@@ -82,6 +82,7 @@ function SignupFormPage() {
             />
           
           <button type="submit" className='signup__button grow'>Sign Up</button>
+          <a href='/' className='cancel_btn grow'> Cancel </a>
         </form>
       </div>  
     </div>

@@ -50,7 +50,7 @@ function ProfileButton({ user }) {
             <li><NavLink className='label' to={`/profile/${sessionUser.id}`}>Profile</NavLink></li>
             {/* <li><button className='label'href='/home'>Home</button></li> */}
             <li>
-              <button className='label logout__button'onClick={logout}>Log Out</button>
+              <a href='/' className='label logout__button'onClick={logout}>Log Out</a>
             </li>
           </ul>
         )}

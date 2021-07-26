@@ -15,11 +15,40 @@
 
 }
 
+.form__label{
+    border:3px solid black;
+    width:300px;
+    padding:10px;
+    border-radius:30px;
+    position:fixed;
+    left:50px;
+    top:70px;
+    background:lightgray;
+    box-shadow: 0 0 5px 5px grey;
+    text-align:center;
+}
+
+.previous__listing-label{
+    border:3px solid black;
+    width:200px;
+    position:fixed;
+    right:648px;
+    padding:3px;
+    text-align:center;
+    background:black;
+    color:white;    
+
+}
 .outer__div{
     height:100vh;
     width:100%;
     background-image:url('./edit-info-bkg1.png');
-    background-size:100% 100%
+    background-size:100% 100%;
+    position:fixed;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
 }
 
 

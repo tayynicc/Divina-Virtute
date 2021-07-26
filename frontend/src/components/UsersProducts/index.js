@@ -31,12 +31,13 @@ function UsersProducts (){
     useEffect(() => {
         dispatch(getOneUser(id));
         dispatch(getProducts());
-    }, [dispatch])
+    }, [dispatch, id])
 
     
 
     return (
         <div className='pfp__upvotes'>
+            
             {userProducts.map((product) => (
                 <div className='pd__mockup'>
                     <a href={`/products/${product.id}`} className='pd__title'>{product.title}</a>
