@@ -107,7 +107,7 @@ function AddProductForm(){
                   <input type='text' value={imageUrl} onChange={updateimageUrl}></input>
 
                   
-                  <label className='addPd__label' >Discription</label>
+                  <label className='addPd__label' >Description</label>
                   <input type='text' value={discription} onChange={updatediscription}></input>
 
                   <label className='addPd__label' > Price </label>

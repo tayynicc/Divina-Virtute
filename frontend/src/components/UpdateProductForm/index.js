@@ -84,7 +84,7 @@ function UpdateProductForm(){
                 <label className='updateForm__label'>Image Url</label>
                 <input type='text' value={imageUrl} onChange={updateimageUrl} placeHolder='Image Link'></input>
 
-                <label className='updateForm__label'>Discription</label>
+                <label className='updateForm__label'>Description</label>
                 <input type='text' value={discription} onChange={updatediscription} placeHolder='Tell Us What You Got!'></input>
 
                 <label className='updateForm__label'>Price</label>
