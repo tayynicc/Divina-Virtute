@@ -96,6 +96,13 @@
 }
 
 
+.collection__link{
+    position: absolute;
+    top:40px;
+    right: 920px;
+
+}
+
 .home__addProduct{
     /* border:5px black solid; */
     height:40px;
