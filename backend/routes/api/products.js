@@ -17,6 +17,16 @@ router.get('/', asyncHandler(async(req, res) => {
 }))
 
 
+//get all products of a specific colleciton 
+router.get('/collection/:id', asyncHandler(async(req, res) => {
+    const products = await Product.findAll({
+        where:{collectionId: req.params.id}
+    });
+    const singleCollection = await res.json(products)
+    return singleCollection
+}))
+
+
 
 // //get all images
 // router.get('/home', asyncHandler(async(req, res) => {

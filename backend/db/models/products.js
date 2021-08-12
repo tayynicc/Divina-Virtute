@@ -8,7 +8,8 @@ module.exports = (sequelize, DataTypes) => {
     price: DataTypes.DECIMAL,
     imageUrl: DataTypes.STRING,
     purchaseLink: DataTypes.TEXT,
-    collectionTag: DataTypes.TEXT
+    collectionTag: DataTypes.TEXT,
+    collectionId: DataTypes.INTEGER,
   }, {});
   Products.associate = function(models) {
     // Products.hasOne(models.User, { foreignKey: 'ownerId'})

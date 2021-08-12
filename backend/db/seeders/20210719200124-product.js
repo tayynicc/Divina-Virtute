@@ -12,7 +12,8 @@ module.exports = {
         price:.22,
         imageUrl:'https://divinavitute.s3.us-west-1.amazonaws.com/pd__image1.png',
         purchaseLink:'https://www.etsy.com/listing/792634952/opalite-moon-crystal-healing-stone?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=crystals&ref=sr_gallery-1-13&organic_search_click=1&pro=1',
-        collectionTag:'Unique Shape'
+        collectionTag:'Unique Shape',
+        collectionId: 1
     },
     {
         ownerId:1,
@@ -42,7 +43,8 @@ module.exports = {
         price:14.99,
         imageUrl:'https://divinavitute.s3.us-west-1.amazonaws.com/pd__image4.png',
         purchaseLink:'https://www.etsy.com/listing/829633599/celestite-blue-celestite-cluster-healing?ref=internal_similar_listing_bot-6&pro=1&frs=1',
-        collectionTag:'Raw'
+        collectionTag:'Raw',
+        collectionId: 2
     },
     {
         ownerId:2,
@@ -62,7 +64,8 @@ module.exports = {
         price:193.50,
         imageUrl:'https://divinavitute.s3.us-west-1.amazonaws.com/pd__image5.png',
         purchaseLink:'https://crystalgemstoneshop.com/collections/angel-phantom-quartz/products/angel-phantom-quartz-amphibole-unique-specimens',
-        collectionTag:'Raw'
+        collectionTag:'Raw',
+        collectionId: 2
     },
     {
         ownerId:3,
@@ -72,7 +75,8 @@ module.exports = {
         price:4.50,
         imageUrl:'https://divinavitute.s3.us-west-1.amazonaws.com/pd__images6.png',
         purchaseLink:'https://crystalgemstoneshop.com/collections/bismuth/products/bismuth-gemstone-large-the-stone-of-clarity-focus',
-        collectionTag:'Raw'
+        collectionTag:'Raw',
+        collectionId: 2
     },
     {
         ownerId:3,
@@ -186,7 +190,8 @@ module.exports = {
         price:89.00,
         imageUrl:'https://divinavitute.s3.us-west-1.amazonaws.com/pd__fairy-quartz-19-3.png',
         purchaseLink:'http://www.quartzcrystals.net/fairy-20.htm',
-        collectionTag:'Raw'
+        collectionTag:'Raw',
+        collectionId: 2
     },
     {
         ownerId:3,
@@ -196,7 +201,8 @@ module.exports = {
         price:64.00,
         imageUrl:'https://divinavitute.s3.us-west-1.amazonaws.com/pd__purple-flo-19-3.png',
         purchaseLink:'https://www.crystals.com/products/purple-fluorite-106?variant=39263096635426&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&gclid=CjwKCAjwi9-HBhACEiwAPzUhHMsxkskxMwigWxC_xvK6wvLSqGzuxmeClvtb7cV_URN761RWZkCOUxoCLTgQAvD_BwE',
-        collectionTag:'Raw'
+        collectionTag:'Raw',
+        collectionId: 2
     },
     {
         ownerId:1,
@@ -216,7 +222,8 @@ module.exports = {
         price:'3.75',
         imageUrl:'https://divinavitute.s3.us-west-1.amazonaws.com/pd__Honey-21-1.png',
         purchaseLink:'https://mysticelements.shop/collections/crystals-stones-rough/products/honey-calcite-rough',
-        collectionTag:'Raw'
+        collectionTag:'Raw',
+        collectionId: 2
     },
     {
         ownerId:2,
@@ -226,7 +233,8 @@ module.exports = {
         price:12.75,
         imageUrl:'https://divinavitute.s3.us-west-1.amazonaws.com/pd__desert-rose-22-1.png',
         purchaseLink:'https://mysticelements.shop/collections/crystals-stones-clusters/products/desert-rose-cluster',
-        collectionTag:'Raw'
+        collectionTag:'Raw',
+        collectionId: 2
     },
     {
         ownerId:4,
@@ -236,7 +244,8 @@ module.exports = {
         price:75.00,
         imageUrl:'https://divinavitute.s3.us-west-1.amazonaws.com/pd__folurite-natural-23-1.png',
         purchaseLink:'https://mysticelements.shop/collections/crystals-stones-clusters/products/fluorite-natural-cluster',
-        collectionTag:'Raw'
+        collectionTag:'Raw',
+        collectionId: 2
     },
     {
         ownerId:3,
@@ -246,7 +255,8 @@ module.exports = {
         price:55.55,
         imageUrl:'https://divinavitute.s3.us-west-1.amazonaws.com/pd__image-GreePh-2.png',
         purchaseLink:'https://www.etsy.com/listing/820323221/green-phantom-ghost-quartz-crystal?gpla=1&gao=1&&utm_source=google&utm_medium=cpc&utm_campaign=shopping_us_ps-a-home_and_living-spirituality_and_religion-religious_jewelry_and_charms-religious_crystals&utm_custom1=_k_CjwKCAjwi9-HBhACEiwAPzUhHKirLoc-R3EK0IChijbPJsXfcMKi9SR-OP0s00t9LFr36fqWs053ohoCKyQQAvD_BwE_k_&utm_content=go_12567673668_122422076071_507300153059_aud-318222619806:pla-307783309625_c__820323221_147048360&utm_custom2=12567673668&gclid=CjwKCAjwi9-HBhACEiwAPzUhHKirLoc-R3EK0IChijbPJsXfcMKi9SR-OP0s00t9LFr36fqWs053ohoCKyQQAvD_BwE',
-        collectionTag:'Raw'
+        collectionTag:'Raw',
+        collectionId: 2
     },
 
       ], {});

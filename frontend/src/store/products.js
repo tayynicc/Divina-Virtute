@@ -77,7 +77,15 @@ export const getOneProduct = (id) => async (dispatch) => {
 	}
 };
 
+// get products for a collection based on id 
+export const getCollectionProduct = (id) => async (dispatch) => {
+    const response = await fetch(`/api/products/collection/${id}`);
 
+    if (response.ok){
+        const products = await response.json();
+        dispatch(setProducts(products))
+    }
+} 
 
 // creating a new product --> 2 CREATE
 export const createProduct = data => async dispatch => {
