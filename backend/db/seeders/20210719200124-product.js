@@ -23,7 +23,8 @@ module.exports = {
         price:19.95,
         imageUrl:'https://divinavitute.s3.us-west-1.amazonaws.com/pd__image2.png',
         purchaseLink:'https://www.etsy.com/listing/1045617291/opal-cabochon-oval-orange-with-flash?ref=listing_page_ad_row-4&plkey=cdf6c30d6fc1e71e86d66662ec2f259d41c978dd%3A1045617291&pro=1&frs=1',
-        collectionTag:'Opal'
+        collectionTag:'Opal',
+        collectionId: 10
     },
     {
         ownerId:1,
@@ -33,7 +34,8 @@ module.exports = {
         price:35.95,
         imageUrl:'https://divinavitute.s3.us-west-1.amazonaws.com/pd__image3.png',
         purchaseLink:'https://www.etsy.com/listing/739846633/beginners-crystal-kit-10-pcs-in-velvet?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=crystals&ref=sr_gallery-1-2&organic_search_click=1&frs=1&bes=1',
-        collectionTag:'Kits'
+        collectionTag:'Kits',
+        collectionId: 3
     },
     {
         ownerId:2,
@@ -54,7 +56,8 @@ module.exports = {
         price:12.99,
         imageUrl:'https://divinavitute.s3.us-west-1.amazonaws.com/Screenshot+(131).png',
         purchaseLink:'https://www.etsy.com/listing/850644002/aragonite-cluster-aragonite-cluster-raw?ref=related-3&pro=1&frs=1',
-        collectionTag:'Raw'
+        collectionTag:'Raw',
+        collectionId: 2
     },
     {
         ownerId:3,
@@ -86,7 +89,8 @@ module.exports = {
         price:18.00,
         imageUrl:'https://divinavitute.s3.us-west-1.amazonaws.com/pd__image7.png',
         purchaseLink:'https://crystalgemstoneshop.com/collections/blue-lace-agate/products/blue-lace-agate-natural-gemstone-slice-slab-by-the-bag',
-        collectionTag:'Tumbled Stones'
+        collectionTag:'Tumbled Stones',
+        collectionId: 4
 
     },
     {
@@ -97,7 +101,8 @@ module.exports = {
         price:15.00,
         imageUrl:'https://divinavitute.s3.us-west-1.amazonaws.com/pd__image8.png',
         purchaseLink:'https://crystalgemstoneshop.com/collections/tangerine-aura-quartz/products/tangerine-aura-quartz-gemstone-pendant',
-        collectionTag:'Jewlrey'
+        collectionTag:'Jewlrey',
+        collectionId: 6
     },
     {
         ownerId:4,
@@ -107,7 +112,8 @@ module.exports = {
         price:2.95,
         imageUrl:'https://divinavitute.s3.us-west-1.amazonaws.com/pd__image9.png',
         purchaseLink:'https://crystalgemstoneshop.com/collections/yellow-obsidian/products/yellowobsidian',
-        collectionTag:'Tumbled Stones'
+        collectionTag:'Tumbled Stones',
+        collectionId: 4
     },
     {
         ownerId:4,
@@ -117,7 +123,8 @@ module.exports = {
         price:56.00,
         imageUrl:'https://divinavitute.s3.us-west-1.amazonaws.com/pd__image10.png',
         purchaseLink:'https://selenestone.com/collections/new-crystals/products/polychrome-jasper-free-form?variant=39409480106055',
-        collectionTag:'Tumbled Stones'
+        collectionTag:'Tumbled Stones',
+        collectionId: 4
     },
     {
         ownerId:4,
@@ -127,7 +134,8 @@ module.exports = {
         price:18.00,
         imageUrl:'https://divinavitute.s3.us-west-1.amazonaws.com/pd__image11.png',
         purchaseLink:'https://selenestone.com/collections/new-crystals/products/small-smoky-quartz-polished-point',
-        collectionTag:'Point'
+        collectionTag:'Point',
+        collectionId: 7
     },
     {
         ownerId:4,
@@ -137,7 +145,8 @@ module.exports = {
         price:273.00,
         imageUrl:'https://divinavitute.s3.us-west-1.amazonaws.com/pd__image13.png',
         purchaseLink:'https://selenestone.com/collections/clusters/products/amethyst-druzes?variant=32691631226951',
-        collectionTag:'Geode'
+        collectionTag:'Geode',
+        collectionId: 8
     },
     {
         ownerId:1,
@@ -147,7 +156,8 @@ module.exports = {
         price:8.99,
         imageUrl:'https://divinavitute.s3.us-west-1.amazonaws.com/pd__image14.png',
         purchaseLink:'https://zengems.co/collections/crystal-points/products/tourmaline-crystal-point',
-        collectionTag:'Point'
+        collectionTag:'Point',
+        collectionId: 7
 
     },
     {
@@ -158,7 +168,8 @@ module.exports = {
         price:44.99,
         imageUrl:'https://divinavitute.s3.us-west-1.amazonaws.com/pd__image15.png',
         purchaseLink:'https://zengems.co/collections/bundles/products/healing-pillar-gift-bundle',
-        collectionTag:'Kits'
+        collectionTag:'Kits',
+        collectionId: 3
 
 
     },
@@ -170,7 +181,8 @@ module.exports = {
         price:7.25,
         imageUrl:'https://divinavitute.s3.us-west-1.amazonaws.com/pd__image16.png',
         purchaseLink:'https://tamedwild.com/collections/crystals-stones/products/agate-plates',
-        collectionTag:'Slice'
+        collectionTag:'Slice',
+        collectionId: 11
     },
     {
         ownerId:3,
@@ -180,7 +192,8 @@ module.exports = {
         price:22.00,
         imageUrl:'https://divinavitute.s3.us-west-1.amazonaws.com/pd__image17.png',
         purchaseLink:'https://www.exquisitecrystals.com/fluorite-worry-stone-209-jak-06',
-        collectionTag:'Worry Stones'
+        collectionTag:'Worry Stones',
+        collectionId: 9
     },
     {
         ownerId:2,
@@ -212,7 +225,8 @@ module.exports = {
         price:276.00,
         imageUrl:'https://divinavitute.s3.us-west-1.amazonaws.com/pd__Mala-free-20-1.png',
         purchaseLink:'https://mysticelements.shop/products/malachite-freeform?variant=32319926501438&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&utm_campaign=gs-2020-04-17&utm_source=google&utm_medium=smart_campaign&gclid=CjwKCAjwi9-HBhACEiwAPzUhHK4BpQhgUczpcBLrjTfcH0aH_dEQYMJWHs2_VVFpOoqdJO_c2e3FMRoCfWgQAvD_BwE',
-        collectionTag:'Tumbled Stones'
+        collectionTag:'Tumbled Stones',
+        collectionId: 4,
     },
     {
         ownerId:4,

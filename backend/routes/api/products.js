@@ -84,7 +84,7 @@ router.put(
 
 
 
-// Delete a post
+// Delete a product
 
 router.delete("/:id", asyncHandler(async function (req, res) {
   const productId = parseInt(req.params.id)
