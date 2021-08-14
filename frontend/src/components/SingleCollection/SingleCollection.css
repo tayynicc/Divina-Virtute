@@ -1,14 +1,27 @@
+
+.singleCollection__bkg-layer1{
+    height: 100vh;
+    background-image: url('./singleCollection__bkg.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute; 
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+}
+
 .singleCollection__product-container{
     height: 650px;
     width: 80%;
-    border: 3px solid blue;
+    
     position: fixed; 
-    top: 300px;
+    top: 230px;
     left: 150px;
     background: lightgrey;
     overflow:auto;
     padding-left: 90px;
-    
+    border-radius:30px;
 }
 
 

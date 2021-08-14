@@ -18,7 +18,10 @@ function AddProductForm(){
 
   const dispatch = useDispatch();
   const history = useHistory();
-//   const products = useSelector((state) => Object.values(state.product))
+
+
+
+  //   const products = useSelector((state) => Object.values(state.product))
 
   const [title, setTitle] = useState('');
   const [ownerId, setOwnerId] = useState('');
@@ -27,6 +30,7 @@ function AddProductForm(){
   const [price, setPrice] = useState('');
   const [purchaseLink, setPurchaseLink] = useState('');
   const [tagLine, setTagLine] = useState('')
+  const [collectionId, setCollectionId] = useState()
   
 
   const updateTitle = (e) => setTitle(e.target.value);
@@ -36,6 +40,7 @@ function AddProductForm(){
   const updatePrice = (e) => setPrice(e.target.value);
   const updatePurchaseLink = (e) => setPurchaseLink(e.target.value);
   const updateTagLine = (e) => setTagLine(e.target.value)
+  const updateCollectionId = (e) => setCollectionId(e.target.value)
 
 
   const sessionUser = useSelector(state => state.session.user);
@@ -46,6 +51,8 @@ function AddProductForm(){
     const handleSubmit = async (e) => {
         e.preventDefault();
     
+        const tags = ["Unique Shape", "Raw", "Kits", "Tumbled Stones", "Holiday", "Jewlrey", "Point", "Geode", "Worry Stones", "Opal", "Slice" ]
+        
         const payload = {
         ownerId: sessionUser.id,
         title,
@@ -54,6 +61,8 @@ function AddProductForm(){
         discription,
         price,
         purchaseLink,
+        collectionId: +collectionId,
+        collectionTag: tags[+collectionId -1]
       };
   
     const product = await dispatch(createProduct(payload))
@@ -62,17 +71,7 @@ function AddProductForm(){
       }
     };
 
-    // const waterfall= [
-    //   waterfallImage1,
-    //   waterfallImage2,
-    //   waterfallImage3,
-    //   waterfallImage4,
-    //   waterfallImage5
-
-    // ]
   
-
-
     return (
       <div>
         <div className='newPd__bkg-layer1'>
@@ -93,7 +92,7 @@ function AddProductForm(){
           <div className='form__container'>
               
               
-              <form onSubmit={handleSubmit}>
+              <form className='addPD__form' onSubmit={handleSubmit}>
                   {/* <label className='addPd__label'>ID</label>
                   <input type='text'value={ownerId}onChange={updateOwnerId}></input> */}
 
@@ -101,7 +100,7 @@ function AddProductForm(){
                   <input type='text' value={title} onChange={updateTitle}></input>
                   
                   <label className='addPd__label'> Tag Line </label>
-                  <input type='text' value={title} onChange={updateTitle}></input>
+                  <input type='text' value={tagLine} onChange={updateTagLine}></input>
                   
                   <label className='addPd__label' > Image Url</label>
                   <input type='text' value={imageUrl} onChange={updateimageUrl}></input>
@@ -115,6 +114,22 @@ function AddProductForm(){
 
                   <label className='addPd__label' > Purchase Link </label>
                   <input type='text' value={purchaseLink} onChange={updatePurchaseLink}></input>
+
+                  <label className='addPd__label' > Collection Tag </label>
+                  <select className='collectionTag__selector' onChange={updateCollectionId}>
+                      <option className='collectionTag__option' value="1" > Unique Shape </option>
+                      <option className='collectionTag__option' value='2' > Raw </option>
+                      <option className='collectionTag__option' value='3' > Kits </option>
+                      <option className='collectionTag__option' value='4' > Tumbled Stones </option>
+                      <option className='collectionTag__option' value='5' > Holiday </option>
+                      <option className='collectionTag__option' value='6' > Jewlrey </option>
+                      <option className='collectionTag__option' value='7' > Point </option>
+                      <option className='collectionTag__option' value='8' > Geode </option>
+                      <option className='collectionTag__option' value='9' > Worry Stones </option>
+                      <option className='collectionTag__option' value='10'> Opal </option>
+                      <option className='collectionTag__option' value='11'> Slice </option>
+
+                  </select>
                   
                   <button type="submit" className='addPd__button'>Add New Product</button>
               </form>

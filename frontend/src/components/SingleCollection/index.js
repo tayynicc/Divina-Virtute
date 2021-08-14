@@ -11,35 +11,35 @@ import { getCollectionProduct } from '../../store/products'
 function SingleCollection (){
     const { id } = useParams()
     const dispatch = useDispatch();
-    const products = useSelector((state) => Object.values(state.product).filter((ele) => ele.id === +id))
+    
+    const products = useSelector((state) => Object.values(state.product))
+
+    
 
     useEffect(() => {
         dispatch(getCollectionProduct(id));
-    }, [dispatch])
+    }, [dispatch, id])
 
-   
+
+    
+    const product = products.filter((ele) => ele.collectionId === +id)
+  
 
 
 
     
 
-    const name = 'Angel Phantom Quartz'
+ 
+    
+    
     function bubblelables(name){
-    //    const names = products.map((product) =>  product.title)
-
-    //    const letters = names.map((name) => name.split(''))
-    //    return letters
-
         const letters = name.split('')
-        console.log(letters)
         return letters
 
     }
 
 
-    function identifyLetter(arr){
-
-    }
+    
 
 
     return(
@@ -66,8 +66,10 @@ function SingleCollection (){
                     </div>
                 )} */}
 
-                {products.map((product) => 
-                     <a href={`/products/${product.id}`}><img className='image__bubble' src={product.imageUrl}></img></a>
+               
+
+                {product.map((item) => 
+                     <a href={`/products/${item.id}`}><img className='image__bubble' src={item.imageUrl}></img></a>
                 )}
                 
                     <div className='bubbleLabels letters' >{bubblelables('Angel Phantom Quartz')}</div>

@@ -15,6 +15,9 @@ const ADD_ONE = 'products/addOneProduct'
 // update product
 const UPDATE_PRODUCT = 'products/updateProduct'
 
+// removing product 
+const REMOVE_PRODUCT = 'products/removeProduct'
+
 
 
 
@@ -51,7 +54,11 @@ const update = (product) => ({
     product,
 })
 
-
+// removing one product 
+const removeOne = (product) => ({
+    type: REMOVE_PRODUCT, 
+    product
+})
 
 
 
@@ -125,6 +132,23 @@ export const updateProduct = (data) => async dispatch => {
     };
 
 
+// Delete Product --> Delete
+
+export const deleteProduct = (data) => async dispatch => {
+    const response = await csrfFetch(`/api/products/${data}`, {
+      method: 'delete',
+    });
+  
+
+    if (response.ok) {
+    
+      dispatch(removeOne(data));
+      
+    }
+    return response;
+  };
+
+
 
 // 2.  Define an inital states
 const initalState = {}
@@ -154,7 +178,10 @@ const productReducer = ( state = initalState, action ) => {
             }; 
 
             return addState;
-			
+		case REMOVE_PRODUCT:
+            delete state[action.productId]
+            return {...state};
+
          default:
             return state; 
     }

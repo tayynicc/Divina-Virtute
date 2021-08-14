@@ -27,17 +27,19 @@
 }
 
 .form__container{
+    position: absolute;
+    top:50px;
     width:500px;
+    height:750px;
     padding:30px;
     background-color: lightgrey;
     border-radius:30px;
     box-shadow: 0 0 5px 5px grey;
     margin-left:210px;
     margin-top:90px;
-    
-    
-
 }
+
+
 
 .addPd__label{
     display:flex;
@@ -48,10 +50,15 @@
     
 }
 
+
+
 .addPd__button{
     margin-left:130px;
     margin-top:15px;
 }
+
+
+
 
 .leaf__left{
     /* border: 5px solid red; */
@@ -66,16 +73,19 @@
     padding:0px;
 }
 
+
+
 .leaf__right{
     height:550px;
     width:350px;
     position: absolute;
-    top:400px;
+    top:440px;
     left: 100px;
     background-image: url('./2.png');
     background-repeat: no-repeat;
     background-size:100% 100%;
     padding:0px;
+    
 }
 
 .waterfall__outter-div{
@@ -157,3 +167,31 @@
     box-shadow: 0 0 5px 5px grey;
     padding:2px;
 } 
+
+
+.collectionTag__selector{
+    /* position:absolute;
+    bottom:120px;
+    left:240px; */
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.collectionTag__option{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding-left:50px;
+}
+
+
+.addPD__form{
+    position: absolute;
+    top:4px
+}
