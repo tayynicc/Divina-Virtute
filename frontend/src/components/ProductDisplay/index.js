@@ -14,7 +14,7 @@ function ProductDisplay(){
     const products = useSelector((state) => Object.values(state.product))
 
     
-    console.log(products)
+    // console.log(products)
 
     useEffect(() => {
         dispatch(getProducts());

@@ -39,6 +39,9 @@ module.exports = {
       collectionTag: {
         type: Sequelize.TEXT
       },
+      collectionId: {
+        type: Sequelize.INTEGER,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

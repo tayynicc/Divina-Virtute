@@ -15,6 +15,9 @@ const ADD_ONE = 'products/addOneProduct'
 // update product
 const UPDATE_PRODUCT = 'products/updateProduct'
 
+// removing product 
+const REMOVE_PRODUCT = 'products/removeProduct'
+
 
 
 
@@ -51,7 +54,11 @@ const update = (product) => ({
     product,
 })
 
-
+// removing one product 
+const removeOne = (product) => ({
+    type: REMOVE_PRODUCT, 
+    product
+})
 
 
 
@@ -77,7 +84,15 @@ export const getOneProduct = (id) => async (dispatch) => {
 	}
 };
 
+// get products for a collection based on id 
+export const getCollectionProduct = (id) => async (dispatch) => {
+    const response = await fetch(`/api/products/collection/${id}`);
 
+    if (response.ok){
+        const products = await response.json();
+        dispatch(setProducts(products))
+    }
+} 
 
 // creating a new product --> 2 CREATE
 export const createProduct = data => async dispatch => {
@@ -117,6 +132,23 @@ export const updateProduct = (data) => async dispatch => {
     };
 
 
+// Delete Product --> Delete
+
+export const deleteProduct = (data) => async dispatch => {
+    const response = await csrfFetch(`/api/products/${data}`, {
+      method: 'delete',
+    });
+  
+
+    if (response.ok) {
+    
+      dispatch(removeOne(data));
+      
+    }
+    return response;
+  };
+
+
 
 // 2.  Define an inital states
 const initalState = {}
@@ -146,7 +178,10 @@ const productReducer = ( state = initalState, action ) => {
             }; 
 
             return addState;
-			
+		case REMOVE_PRODUCT:
+            delete state[action.productId]
+            return {...state};
+
          default:
             return state; 
     }

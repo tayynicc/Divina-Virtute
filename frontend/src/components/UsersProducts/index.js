@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router'
 import { getOneUser } from '../../store/session'
 import { getProducts } from '../../store/products'
+import { deleteProduct } from '../../store/products'
 
 function UsersProducts (){
 
@@ -27,10 +28,17 @@ function UsersProducts (){
         userProductsIds.includes(product.id)
     ))
 
+    const handleDelete = (id) => {
+        console.log(id)
+        dispatch(deleteProduct(Number(id)))
+            
+    }
+
    
     useEffect(() => {
         dispatch(getOneUser(id));
         dispatch(getProducts());
+        
     }, [dispatch, id])
 
     
@@ -43,9 +51,9 @@ function UsersProducts (){
                     <a href={`/products/${product.id}`} className='pd__title'>{product.title}</a>
                     <p className='pd__tagLine'>{product.tagLine}</p>
                     <p className='pd__price'>{`$ ${product.price}`}</p>
-                    <a href={`/products/${product.id}/update`}><img className='edit__icons-edit'src="https://img.icons8.com/ios-glyphs/30/000000/edit--v2.png"/>
-</a>
-                    <img className='edit__icons-delete'src="https://img.icons8.com/material-outlined/24/000000/trash--v1.png"/>
+                    <a href={`/products/${product.id}/update`}><img className='edit__icons-edit'src="https://img.icons8.com/ios-glyphs/30/000000/edit--v2.png"/></a>
+
+                    <button onClick={() => handleDelete(+product.id)}><img className='edit__icons-delete'src="https://img.icons8.com/material-outlined/24/000000/trash--v1.png"/></button>
                     <img className='pd__image' src={product.imageUrl}></img>
                 </div>    
             ))}

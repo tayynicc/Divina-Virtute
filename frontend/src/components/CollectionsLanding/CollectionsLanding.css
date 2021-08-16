@@ -1,15 +1,30 @@
+.collectionsLanding__bkg-layer1{
+    height: 100vh; 
+    background-image:  url(collectionsBackGround.png);
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+
+
+
+
 .collections__container{
-    width: 80%;
+    width: 75%;
     height: 650px;
-    border: 3px solid black;
-    position: absolute; 
+    position: fixed; 
     top: 300px;
     /* bottom: 0; */
-    right: 200px;
+    right: 220px;
     overflow: auto; 
     border-radius: 30px;
     box-shadow: 0 0 5px 5px grey;
     background:lightgrey;
+    
 
 }
 
@@ -17,28 +32,31 @@
 .collection__card{
     height: 260px;
     width: 250px;
-    border: 3px solid red;
     margin: 40px;
     margin-left: 50px;
     border-radius: 30px;
-    box-shadow: 0 0 5px 5px grey
+    box-shadow: 0 0 5px 5px grey;
+    display: inline-block
+
 
 }
 
 .collection__title{
     height: 50px;
     width: 246px;
-    border: 3px solid purple; 
+    border-top: 3px solid grey;
     position: absolute;
-    top: 250px;
+    margin-top:207px;
+    margin-left:2px;
+    /* top: 250px; */
     border-radius: 0 0 30px 30px;
     font-size:33px;
     text-align: center;
 }
 
 .collection__image{
-    height: 204px;
-    width: 246px; 
-    border: 3px solid green;
+    height: 207px;
+    width: 250px; 
+    
     border-radius: 30px 30px 0 0 ;
 }
