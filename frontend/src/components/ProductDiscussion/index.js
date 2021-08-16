@@ -23,7 +23,9 @@ function ProductDisplay(){
     
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+        
+        const textbox = document.getElementById('textbox')
+        
         const payload = {
             userId: sessionUser.id,
             productId: +id,
@@ -31,7 +33,12 @@ function ProductDisplay(){
         }
 
         await dispatch(createReview(payload))
-        history.push(`/products/${+id}`)
+        console.log(textbox)
+        
+        textbox.innerText = "";
+
+        
+        // history.push(`/products/${+id}`)
     }
 
     useEffect(() => {
@@ -46,13 +53,13 @@ function ProductDisplay(){
             </div>
             <div className='product-discussion__outerDiv'>
                 <form onSubmit={handleSubmit} className='commentInput__container'>
-                    <textarea  value={review} onChange={updateReview}className='input__box'></textarea>
+                    <textarea  id='textbox' value={review} onChange={updateReview}className='input__box'></textarea>
                     <button type='submit' className='addComment__button'>Add Comment</button>
 
                 </form>
 
                 <div className='comments__container-outter'>
-                    {reviews.map((review) => 
+                    {reviews?.map((review) => 
                         <div className='comment'>
                            <a href={`/profile/${review.User.id}`}>
                            <img className='pfp__image-comment' src={review.User.imageUrl}></img></a>

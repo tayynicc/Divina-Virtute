@@ -25,8 +25,14 @@ router.post(
     '/',
     asyncHandler(async function (req, res) {
         const review = await Review.create(req.body);
+        const newReview = await Review.findByPk(review.id,{
+            // where: { productId: req.params.id }, 
+            include: { model: User }
+
         
-        return res.json(review)
+        })
+        
+        return res.json(newReview)
     })
 )
 
