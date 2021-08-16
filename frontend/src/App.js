@@ -14,8 +14,13 @@ import Product from './components/Product'
 import AddProductForm from "./components/AddProductForm";
 import UpdateProductForm from './components/UpdateProductForm';
 import UsersProducts from './components/UsersProducts'
+<<<<<<< HEAD
 import ProductDiscussion from "./components/ProductDiscussion";
 
+=======
+import CollectionsLanding from "./components/CollectionsLanding";
+import SingleCollection from "./components/SingleCollection";
+>>>>>>> 85d0ee951a5845e83fe481722b321ac81944fd07
 
 
 function App() {
@@ -62,6 +67,12 @@ function App() {
           <Route path='/products/:id/update'>
               <UpdateProductForm />
               {/* <Product /> */}
+          </Route>
+          <Route path='/collections'>
+              <CollectionsLanding />
+          </Route>
+          <Route path='/collection/:id'>
+              <SingleCollection />
           </Route>
         </Switch>
       )}

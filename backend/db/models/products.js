@@ -7,7 +7,9 @@ module.exports = (sequelize, DataTypes) => {
     discription: DataTypes.TEXT,
     price: DataTypes.DECIMAL,
     imageUrl: DataTypes.STRING,
-    purchaseLink: DataTypes.TEXT
+    purchaseLink: DataTypes.TEXT,
+    collectionTag: DataTypes.TEXT,
+    collectionId: DataTypes.INTEGER,
   }, {});
   Products.associate = function(models) {
     // Products.hasOne(models.User, { foreignKey: 'ownerId'})

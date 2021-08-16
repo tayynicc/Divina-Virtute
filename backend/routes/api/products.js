@@ -17,7 +17,14 @@ router.get('/', asyncHandler(async(req, res) => {
 }))
 
 
-// get the most recent products 
+//get all products of a specific colleciton 
+router.get('/collection/:id', asyncHandler(async(req, res) => {
+    const products = await Product.findAll({
+        where:{collectionId: req.params.id}
+    });
+    const singleCollection = await res.json(products)
+    return singleCollection
+}))
 
 
 
@@ -77,7 +84,7 @@ router.put(
 
 
 
-// Delete a post
+// Delete a product
 
 router.delete("/:id", asyncHandler(async function (req, res) {
   const productId = parseInt(req.params.id)

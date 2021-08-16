@@ -93,7 +93,7 @@ function UpdateProductForm(){
                 <label className='updateForm__label'>Purchase Link</label>
                 <input type='text' value={purchaseLink} onChange={updatePurchaseLink} placeHolder='Link to your other listings'></input>
                 
-                <button type="submit">Add New Product</button>
+                <button type="submit">Update Product</button>
             </form>
           </div>
 

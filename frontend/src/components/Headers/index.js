@@ -34,6 +34,12 @@ function Headers(){
                 <img src="https://img.icons8.com/material-rounded/24/000000/search.png"/>
             </button>
 
+            <NavLink to='/collections' className='collection__link'> Collections </NavLink>
+
+            
+
+            {/* make site links into drop down menu  */}
+
             <div className='home__links'>
                 <NavLink to='https://etsy.me/3i3jl2K' >
                    

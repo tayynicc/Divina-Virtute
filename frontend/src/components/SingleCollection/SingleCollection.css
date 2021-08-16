@@ -1,0 +1,110 @@
+
+.singleCollection__bkg-layer1{
+    height: 100vh;
+    background-image: url('./singleCollection__bkg.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute; 
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+}
+
+.singleCollection__product-container{
+    height: 650px;
+    width: 80%;
+    
+    position: fixed; 
+    top: 230px;
+    left: 150px;
+    background: lightgrey;
+    overflow:auto;
+    padding-left: 90px;
+    border-radius:30px;
+}
+
+
+.SC__product-card{
+    border: 3px solid green; 
+    height: 600px;
+    width: 500px;
+    margin: 30px;
+    border-radius: 30px;
+    box-shadow: 0 0 5px 5px grey;
+    background:white; 
+
+}
+
+.SC__product-title{
+    border: 3px solid purple ; 
+    height: 75px;
+    border-radius: 30px 30px 0 0;
+    position:absolute;
+    width: 495px;
+    background: gray;
+    text-align: center;
+}
+
+.SC__product-image{
+    border: 3px solid black; 
+    margin-top:40px;
+    height: 450px; 
+    position: absolute; 
+    /* top: 75px;  */
+    width:495px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+}
+
+
+.SC__product-tagLine{
+    border: 3px solid orange;
+    height: 100px;
+    position: absolute; 
+    /* bottom: 32px; */
+    margin-top: 495px;
+    width: 495px;
+    border-radius:0 0 30px 30px ;
+    background: grey; 
+    text-align: center;
+}
+
+
+
+/*  bubbles */
+
+.image__bubble{
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    margin:30px;
+}
+
+
+.bubbleLabels{
+    height: 30px;
+    width: 200px;
+    border: 3px solid green;
+    display: inline-block;
+}
+
+
+
+
+.letter{
+    display:inline-block;
+    border:1px dotted red;
+    position: absolute;
+    padding-bottom:50px;
+    transform-origin: bottom;
+}
+
+.letter{
+    transform: rotate(24deg);
+}
+
+.rotate{
+    transform:rotate(12deg)
+}
