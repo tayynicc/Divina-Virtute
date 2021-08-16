@@ -17,7 +17,7 @@ function Home(){
     const products = useSelector((state) => Object.values(state.product))
     const sessionUser = useSelector(state => state.session.user);
 
-    console.log('current user:', sessionUser.id)
+    // console.log('current user:', sessionUser.id)
     // this is returning the current users id can be used to get products with that user id
 
     console.log(`users home display:`, users)

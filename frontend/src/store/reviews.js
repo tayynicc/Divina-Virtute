@@ -1,12 +1,15 @@
-import { csurfFetch } from './csrf'
+import { csrfFetch } from './csrf'
 
 
 //////// Action Types 
 
 
 // getting review of a specific product
-const SHOW_ONE = '/reviews/setReviews'
+const SHOW_ONE = '/reviews/oneReview'
 
+
+// adding one review 
+const ADD_ONE = 'reviews/addOneReview'
 
 
 
@@ -21,13 +24,20 @@ const oneReview = (review) => ({
     review,
 })
 
+// new review 
+const addOneReview = (review) => ({
+    type: ADD_ONE,
+    review,
+})
+
 
 
 
 /////////// Thunk 
 
 
-export const getOneReview = (id) => async (dispatch) => {
+// get reviews for one project 
+export const getReview = (id) => async (dispatch) => {
     const response = await fetch(`/api/reviews/${id}`);
 
     if (response.ok) {
@@ -36,6 +46,24 @@ export const getOneReview = (id) => async (dispatch) => {
     }
 }
 
+
+
+// Create review for a product 
+
+export const createReview = data => async (dispatch) => {
+    const response = await csrfFetch('/api/reviews', {
+        method:'post',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    })
+
+    if(response.ok) {
+        const review = await response.json();
+        dispatch(addOneReview(review))
+    }
+}
 
 
 
@@ -47,5 +75,27 @@ const initalState = {}
 // reducer
 
 const reviewReducer = (state = initalState, action ) => {
-    switch (action.type )
+    switch (action.type){
+        case SHOW_ONE: 
+            const newState = {
+                ...state,
+
+            };
+            action.review.forEach((ele) => newState[ele.id] = ele)
+            return newState;
+        case ADD_ONE:
+        // case UPDATE_REVIEW:
+            const addState = {
+                ...state,
+                [action.review.id]: action.review,
+            }; 
+
+            return addState;
+
+        default:
+            return state;
+    }
 }
+
+
+export default reviewReducer

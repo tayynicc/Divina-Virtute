@@ -1,0 +1,147 @@
+.product-discussion__label-div{
+    position: fixed;
+    right:550px;
+    top: 430px;
+    height: 50px;
+    width:300px;
+    
+    display: flex;
+    align-items: center;
+}
+
+.product-display__label{
+    font-size:33px;
+    color: lightgray
+}
+
+.product-discussion__outerDiv{
+    background:lightgray;
+    border-radius:30px;
+    box-shadow: 0 0 5px 5px grey;
+    height: 500px;
+    width:800px;
+    position: fixed;
+    right:70px;
+    top: 500px;
+    overflow: auto;
+    
+}
+
+.commentInput__container{
+    height: 150px;
+    width:800px;
+    border-bottom: 3px solid black;
+    margin-top: 20px;
+}
+
+.input__box{
+    width:660px;
+    height:100px;
+    margin:15px;
+    border-radius:10px;
+    margin-left:65px;
+}
+
+.addComment__button{
+    position:fixed;
+    right:140px;
+    bottom: 280px;
+}
+
+.comments__container-outter{
+    height: 300px;
+    width:795px;
+    position: fixed;
+    right:70px;
+    top: 700px;
+    /* border: 3px solid black; */
+    overflow: auto;
+    
+}
+
+.comment{
+    width:795px;
+    height: 150px;
+    /* display:flex;
+    right:70px;
+    top: 700px; */
+    border: 3px solid black;
+    margin-bottom: 10px;
+    
+}
+
+.pfp__image-comment{
+    width:60px;
+    height:60px;
+    /* border: 3px solid green; */
+    display:flex;
+    margin-top:40px;
+    margin-left:5px;
+    border-radius: 50%;
+}
+.pfp__username{
+    height:20px;
+    width: 150px;
+    /* border: 3px solid orange; */
+    position:relative;
+    bottom: 120px;
+    left:80px;
+    display:flex; 
+    justify-content: center;
+    
+    
+
+    /*margin-top:9px;
+    margin-left:10px; */
+
+}
+
+.comment__body{
+    /* border: 3px solid blue; */
+    border-radius:10px;
+    background-color: honeydew;
+    height: 70px;
+    width: 680px;
+    /* display:flex;
+    margin-left:80px;
+    margin-bottom: 80px;
+    justify-content: center; 
+     */
+    position:relative;
+    bottom:180px;
+    left:80px;
+    padding-left:10px;
+    
+    
+}
+.posted{
+    height:20px;
+    width: 200px;
+    /* border: 3px solid purple; */
+    display:flex;
+    position:relative; 
+    bottom:51px;
+    
+    
+}
+
+
+.edit__comment-edit{
+    height:25px;
+    width:25px;
+    
+    position:relative;
+    left:710px;
+    bottom:190px;
+    
+} 
+
+.edit__comment-delete{
+    height:25px;
+    width:25px;
+   
+    position:relative;
+    left:700px;
+    bottom:190px;
+    
+} 

@@ -15,12 +15,12 @@ function UpdateProductForm(){
     const history = useHistory();
     // const product = useSelector(state => state.product[productId])
   //   const products = useSelector((state) => Object.values(state.product))
-  const products = useSelector((state) => Object.values(state.product))
-  const sessionUser = useSelector(state => state.session.user);
+    const products = useSelector((state) => Object.values(state.product))
+    const sessionUser = useSelector(state => state.session.user);
 
  
-  const { id } = useParams()
-   console.log(sessionUser.id)
+    const { id } = useParams()
+   
     const [title, setTitle] = useState('');
     const [ownerId, setOwnerId] = useState('');
     const [imageUrl, setImageUrl] = useState('');

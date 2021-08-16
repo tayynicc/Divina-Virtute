@@ -14,10 +14,7 @@ function ProductDisplay(){
     const products = useSelector((state) => Object.values(state.product))
 
     
-<<<<<<< HEAD
-=======
     // console.log(products)
->>>>>>> 85d0ee951a5845e83fe481722b321ac81944fd07
 
     useEffect(() => {
         dispatch(getProducts());
