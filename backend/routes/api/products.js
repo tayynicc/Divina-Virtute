@@ -17,6 +17,9 @@ router.get('/', asyncHandler(async(req, res) => {
 }))
 
 
+// get the most recent products 
+
+
 
 // //get all images
 // router.get('/home', asyncHandler(async(req, res) => {

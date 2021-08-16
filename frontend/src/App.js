@@ -14,6 +14,7 @@ import Product from './components/Product'
 import AddProductForm from "./components/AddProductForm";
 import UpdateProductForm from './components/UpdateProductForm';
 import UsersProducts from './components/UsersProducts'
+import ProductDiscussion from "./components/ProductDiscussion";
 
 
 
@@ -51,6 +52,7 @@ function App() {
           </Route>
           <Route path='/products/:id' exact>
               <Product />
+              <ProductDiscussion />
       
           </Route>
           <Route path='/new'>

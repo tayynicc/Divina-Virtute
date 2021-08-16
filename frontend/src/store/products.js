@@ -67,6 +67,8 @@ export const getProducts = () => async (dispatch) => {
 
 }
 
+
+
 // get one product --> 1 Read
 export const getOneProduct = (id) => async (dispatch) => {
 	const response = await fetch(`/api/products/${id}`);
@@ -76,6 +78,7 @@ export const getOneProduct = (id) => async (dispatch) => {
 		dispatch(oneProduct(product));
 	}
 };
+
 
 
 

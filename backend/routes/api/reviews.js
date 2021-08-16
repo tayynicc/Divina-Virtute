@@ -3,15 +3,18 @@ const router = express.Router()
 const asyncHandler = require('express-async-handler'); 
 
 
-const { Reviews } = require('../../db/models/reviews')
+const { Product, Review, User } = require('../../db/models');
 
 
 
 
 
-router.get('', asyncHandler(async(req, res) => {
-    const reviews = await Reviews.findAll();
-    res.json(reviews)
+router.get('/:id', asyncHandler(async(req, res) => {
+    const reviews = await Review.findOne({
+        where: {productId:req.params.id}
+    });
+     
+    return res.json(reviews)
 }))
 
 

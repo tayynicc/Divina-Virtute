@@ -14,23 +14,7 @@ function Product(){
 
     const { id } = useParams()
 
-    // const singleProduct = products.find(product => product.id === +id)
-
-    // let singleProduct;
-    // console.log(id)
-    
-    // products.map(product => {
-    //     if (product.id === id){
-
-    //     }
-    // })
-    
-    // console.log("SINGLE AZZ PRODUCT", singleProduct)
-    // console.log(products)
-
-    // useEffect(() => {
-    //     dispatch(getProducts());
-    // }, [dispatch])
+  
 
     useEffect(() => {
         dispatch(getOneProduct(id));
@@ -70,6 +54,7 @@ function Product(){
                 <a className='link grow' href={`${product.purchaseLink}`}>Purchase</a>
             </div>
         )}
+
     </div> 
     )
 }                

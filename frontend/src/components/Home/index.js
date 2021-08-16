@@ -1,6 +1,8 @@
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router'
+import { getOneUser } from '../../store/session'
+import { getProducts } from '../../store/products'
 import './Home.css'
 // import Navigation from '../Navigation';
 
@@ -8,6 +10,35 @@ import './Home.css'
 
 
 function Home(){
+    const dispatch = useDispatch();
+
+    const { id } = useParams()
+    const users = useSelector((state) => (state.session[id]))
+    const products = useSelector((state) => Object.values(state.product))
+    const sessionUser = useSelector(state => state.session.user);
+
+    console.log('current user:', sessionUser.id)
+    // this is returning the current users id can be used to get products with that user id
+
+    console.log(`users home display:`, users)
+
+    console.log(`products home display`, products)
+
+    // const userProductsIds = users?.Products.map((product) => (
+    //    product.id
+    // ))
+    
+
+    // const userProducts = products.filter((product) => (
+    //     userProductsIds.includes(product.id)
+    // ))
+
+   
+    useEffect(() => {
+        dispatch(getOneUser(id));
+        dispatch(getProducts());
+    }, [dispatch, id])
+
   
     return (
         <div>
@@ -22,12 +53,16 @@ function Home(){
                     </div>
                 </div>
 
+    
+
                 <div className='newArival'>
-                    <div className='newArrivals__mockup'>
+                    {/* {userProducts.map((product) => (
+                      <div className='newArrivals__mockup'>
                         <div className='newArival__image'></div>
-                        <div className='newArival__name'></div>
-                        <div className='newArival__tagLine'></div>
-                    </div>    
+                        <div className='newArival__name'>{product.title}</div>
+                        <div className='newArival__tagLine'>{product.tagline}</div>
+                      </div>   
+                    ))} */}
                 </div>
 
                 

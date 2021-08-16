@@ -41,7 +41,7 @@ function UsersProducts (){
             {userProducts.map((product) => (
                 <div className='pd__mockup'>
                     <a href={`/products/${product.id}`} className='pd__title'>{product.title}</a>
-                    <p className='pd__tagLine'>{product.tagLine}</p>
+                    <p className='pd__tagLine'>{product.title}</p>
                     <p className='pd__price'>{`$ ${product.price}`}</p>
                     <a href={`/products/${product.id}/update`}><img className='edit__icons-edit'src="https://img.icons8.com/ios-glyphs/30/000000/edit--v2.png"/>
 </a>
