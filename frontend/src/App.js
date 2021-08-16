@@ -14,7 +14,8 @@ import Product from './components/Product'
 import AddProductForm from "./components/AddProductForm";
 import UpdateProductForm from './components/UpdateProductForm';
 import UsersProducts from './components/UsersProducts'
-
+import CollectionsLanding from "./components/CollectionsLanding";
+import SingleCollection from "./components/SingleCollection";
 
 
 function App() {
@@ -60,6 +61,12 @@ function App() {
           <Route path='/products/:id/update'>
               <UpdateProductForm />
               {/* <Product /> */}
+          </Route>
+          <Route path='/collections'>
+              <CollectionsLanding />
+          </Route>
+          <Route path='/collection/:id'>
+              <SingleCollection />
           </Route>
         </Switch>
       )}
