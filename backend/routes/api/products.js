@@ -102,6 +102,18 @@ router.delete("/:id", asyncHandler(async function (req, res) {
 }));
 
 
+// getting 4 most recent products 
+
+router.get('/updated/home', asyncHandler(async(req,res) => {
+    const newestProducts = await Product.findAll({
+        order: [['updatedAt', 'DESC']],
+        limit : 4
+    })
+    return res.json(newestProducts)
+}))
+
+
+
 
 // getting all products of specific user 
 

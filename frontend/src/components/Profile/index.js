@@ -44,7 +44,7 @@ function Profile(){
                         
                         <div className='pfp__image-div'>
                             {/* <img src={user.imageURL}></img> */}
-                            <img className='pfp__image'src='https://divinavitute.s3.us-west-1.amazonaws.com/userDefault-4.png' />
+                            <img className='pfp__image'src={user.imageUrl} />
                         </div>
 
                         <div className='pfp__name'>{user.username}</div>

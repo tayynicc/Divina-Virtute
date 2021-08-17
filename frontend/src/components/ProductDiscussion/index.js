@@ -24,7 +24,6 @@ function ProductDisplay(){
     const handleSubmit = async (e) => {
         e.preventDefault();
         
-        const textbox = document.getElementById('textbox')
         
         const payload = {
             userId: sessionUser.id,
@@ -33,12 +32,7 @@ function ProductDisplay(){
         }
 
         await dispatch(createReview(payload))
-        console.log(textbox)
-        
-        textbox.innerText = "";
-
-        
-        // history.push(`/products/${+id}`)
+        setReview('')
     }
 
     useEffect(() => {
@@ -77,11 +71,11 @@ function ProductDisplay(){
                         
                             <img className='edit__comment-delete' src="https://img.icons8.com/material-outlined/24/000000/trash--v1.png"/>
                             
-                            <img className='edit__comment-edit' src="https://img.icons8.com/ios-glyphs/30/000000/edit--v2.png"/>
+                            {/* <img className='edit__comment-edit' src="https://img.icons8.com/ios-glyphs/30/000000/edit--v2.png"/> */}
                     
                         
                         </div>
-                    )} 
+                    ).reverse()} 
                     
                 </div>
 

@@ -19,6 +19,8 @@ function UsersProducts (){
 
     console.log(`products`, products)
 
+    // create funciton to combine 24 and 29 because filter runs before the map bercause users state has not loaded on 
+
     const userProductsIds = users?.Products.map((product) => (
        product.id
     ))

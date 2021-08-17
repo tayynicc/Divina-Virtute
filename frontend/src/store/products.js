@@ -18,7 +18,7 @@ const UPDATE_PRODUCT = 'products/updateProduct'
 // removing product 
 const REMOVE_PRODUCT = 'products/removeProduct'
 
-
+const NEWEST_PRODUCTS = 'products/newestProducts'
 
 
 
@@ -61,9 +61,24 @@ const removeOne = (product) => ({
 })
 
 
+// new
+
+const newestProducts = (products) => ({
+    type:NEWEST_PRODUCTS,
+    products
+})
+
 
 
 // 4. Define THunks 
+
+// getting the 4 most recent products 
+export const updatedProducts = () => async (dispatch) => {
+    const res = await fetch('/api/products/updated/home')
+    const products = await res.json();
+    dispatch(newestProducts(products))
+}
+
 
 
 // getting all products --> home display
@@ -73,7 +88,6 @@ export const getProducts = () => async (dispatch) => {
     dispatch(setProducts(products))
 
 }
-
 
 
 // get one product --> 1 Read
@@ -135,6 +149,7 @@ export const updateProduct = (data) => async dispatch => {
     };
 
 
+// get the most recent products 
 // Delete Product --> Delete
 
 export const deleteProduct = (data) => async dispatch => {
@@ -184,6 +199,9 @@ const productReducer = ( state = initalState, action ) => {
 		case REMOVE_PRODUCT:
             delete state[action.productId]
             return {...state};
+        case NEWEST_PRODUCTS:
+            state.newest = action.products
+            return state
 
          default:
             return state; 

@@ -1,6 +1,6 @@
 .edit__form-div{
     width: 400px;
-    height:580px;
+    height:620px;
     border: 5px solid black;
     text-align: center;
     padding:20px;
@@ -8,7 +8,7 @@
     align-items:center;
     position:absolute;
     left:310px;
-    bottom:160px;
+    bottom:130px;
     border-radius:30px;
     background:lightgrey;
     box-shadow: 0 0 5px 5px grey;

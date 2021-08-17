@@ -1,8 +1,9 @@
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router'
-import { getOneUser } from '../../store/session'
-import { getProducts } from '../../store/products'
+// import { getOneUser } from '../../store/session'
+// import { getProducts } from '../../store/products'
+import { updatedProducts } from '../../store/products'
 import './Home.css'
 // import Navigation from '../Navigation';
 
@@ -13,16 +14,16 @@ function Home(){
     const dispatch = useDispatch();
 
     const { id } = useParams()
-    const users = useSelector((state) => (state.session[id]))
+    // const users = useSelector((state) => (state.session[id]))
     const products = useSelector((state) => Object.values(state.product))
     const sessionUser = useSelector(state => state.session.user);
 
     // console.log('current user:', sessionUser.id)
     // this is returning the current users id can be used to get products with that user id
 
-    console.log(`users home display:`, users)
+    // console.log(`users home display:`, users)
 
-    console.log(`products home display`, products)
+    console.log(`products home display`, products.newest)
 
     // const userProductsIds = users?.Products.map((product) => (
     //    product.id
@@ -35,9 +36,10 @@ function Home(){
 
    
     useEffect(() => {
-        dispatch(getOneUser(id));
-        dispatch(getProducts());
-    }, [dispatch, id])
+        // dispatch(getOneUser(id));
+        // dispatch(getProducts());
+        dispatch(updatedProducts())
+    }, [dispatch])
 
   
     return (
@@ -46,11 +48,14 @@ function Home(){
                 <div className='theme'></div>
                 
                 <div className='previous'>
-                    <div className='previous__mockup'>
+                    {products.newest && products.newest.map((product) => (
+                      <div className='previous__mockup'>
                         <div className='previous__image'></div>
-                        <div className='previous__name'></div>
+                        <div className='previous__name'>{product.title}</div>
                         <div className='previous__tagLine'></div>
-                    </div>
+                    </div>  
+                    ))}
+                    
                 </div>
 
     
