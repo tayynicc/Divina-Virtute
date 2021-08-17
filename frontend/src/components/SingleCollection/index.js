@@ -3,7 +3,6 @@ import Headers from '../Headers'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router'
-import { NavLink } from 'react-router-dom'
 
 import { getCollectionProduct } from '../../store/products'
 
@@ -69,7 +68,7 @@ function SingleCollection (){
                
 
                 {product.map((item) => 
-                     <a href={`/products/${item.id}`}><img className='image__bubble' src={item.imageUrl}></img></a>
+                     <a href={`/products/${item.id}`}><img className='image__bubble' alt='view items' src={item.imageUrl}></img></a>
                 )}
                 
                     <div className='bubbleLabels letters' >{bubblelables('Angel Phantom Quartz')}</div>

@@ -26,8 +26,8 @@ function ProductDisplay(){
         <div className='product__display'>
             
                
-            {products.map((product) => 
-                <div className='pd__mockup'>
+            {products?.map((product) => 
+                <div className='pd__mockup' key={`${product.title}-${product.id}`}>
                     
                     <a href={`/products/${product.id}`} className='pd__title'>{product.title}</a>
                     <p className='pd__tagLine'>{product.tagLine}</p>

@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom'
 
 
 import { getOneProduct } from '../../store/products'
-import { getProducts } from '../../store/products'
+
 
 function Product(){
     const dispatch = useDispatch();
@@ -18,12 +18,12 @@ function Product(){
 
     useEffect(() => {
         dispatch(getOneProduct(id));
-    }, [dispatch])
+    }, [dispatch, id])
 
     return (
     <div className='products__bkg-layer1'>
         <NavLink to='/home' className='back__button-home'>
-            <img className='back__button' src="https://img.icons8.com/plumpy/24/000000/back--v1.png"/>
+            <img alt='back button' className='back__button' src="https://img.icons8.com/plumpy/24/000000/back--v1.png"/>
         </NavLink>
         <div className='product__read-div'>
             {products.map((product) => 
@@ -31,7 +31,7 @@ function Product(){
                     <h1 className='product__title'>{product.title}</h1>
 
                     <div className='product__image-container'>
-                        <img className='product__image'src={product.imageUrl}></img>
+                        <img alt='product' className='product__image'src={product.imageUrl}></img>
                     </div>
 
                     <div className='price__container'>

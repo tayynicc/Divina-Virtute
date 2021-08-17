@@ -1,11 +1,7 @@
-// import React, { useState } from 'react';
-// import * as sessionActions from '../../store/session';
-// import { useDispatch, useSelector } from 'react-redux';
-// import { Redirect } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import './LandingPage.css'
 import LoginFormModal from '../LoginFormModal';
-//  import Navigation from '../Navigation';
+
 
 
 
@@ -19,9 +15,7 @@ const landingPage = () => {
         </>
       );
 
-    const onClick = () => {
-        // add className of slide to push content div to the left and display modal to the right
-    }
+  
 
   
         return(
@@ -42,19 +36,7 @@ const landingPage = () => {
                         </div>
                     </div>
                 </div>
-{/* 
-                <div className='bkg__layer3-coursel'>
-                    <div className='top__coursel'>
 
-
-                    </div>
-                    <div className='bottom__coursel'>
-                        <img className="mySlides" src="img_la.jpg" style="width:100%" />
-                        <img className="mySlides" src="img_ny.jpg" style="width:100%" />
-                        <img className="mySlides" src="img_chicago.jpg" style="width:100%" />
-                    </div>
-                    
-                </div> */}
         </div>
     )
 }

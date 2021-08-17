@@ -22,7 +22,6 @@ function UpdateProductForm(){
     const { id } = useParams()
    
     const [title, setTitle] = useState('');
-    const [ownerId, setOwnerId] = useState('');
     const [imageUrl, setImageUrl] = useState('');
     const [discription, setDiscription] = useState('');
     const [price, setPrice] = useState('');
@@ -33,7 +32,6 @@ function UpdateProductForm(){
 
 
     const updateTitle = (e) => setTitle(e.target.value);
-    const updateOwnerId = (e) => setOwnerId(e.target.value);
     const updateimageUrl = (e) => setImageUrl(e.target.value);
     const updatediscription = (e) => setDiscription(e.target.value);
     const updatePrice = (e) => setPrice(e.target.value);
@@ -67,13 +65,13 @@ function UpdateProductForm(){
 
       useEffect(() => {
         dispatch(getOneProduct(id));
-      }, [dispatch])
+      }, [dispatch, id])
 
     return (
         <div>
         <div className='outer__div'>
           <NavLink to={`/profile/${sessionUser.id}`} className='back__button-home'>
-              <img className='back__button' src="https://img.icons8.com/plumpy/24/000000/back--v1.png"/>
+              <img className='back__button' alt='back button' src="https://img.icons8.com/plumpy/24/000000/back--v1.png"/>
           </NavLink>
           <h1 className='form__label'>Update Your Listing</h1>
           
@@ -129,7 +127,7 @@ function UpdateProductForm(){
                         <h1 className='product__title'>{product.title}</h1>
 
                         <div className='product__image-container'>
-                            <img className='product__image'src={product.imageUrl}></img>
+                            <img alt='product views' className='product__image'src={product.imageUrl}></img>
                         </div>
 
                         <div className='price__container'>

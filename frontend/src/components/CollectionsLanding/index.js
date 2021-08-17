@@ -1,10 +1,9 @@
 import './CollectionsLanding.css'
 import Headers from '../Headers'
-import { NavLink } from 'react-router-dom'
 import {getProducts} from '../../store/products'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useParams } from 'react-router'
+
 
 
 // design layout 
@@ -12,7 +11,7 @@ import { useParams } from 'react-router'
 
 function CollectionsLanding(){
 
-    // const { id } = useParams()
+   
 
 
     const dispatch = useDispatch();
@@ -57,7 +56,7 @@ function CollectionsLanding(){
                 {tags.map((tag, idx) => 
                     <div className='collection__card'>
                         <div className='collection__title'>{tag}</div>
-                     <a href={`/collection/${images[idx]?.collectionId}`}><img className='collection__image' src={images[idx]?.imageUrl}></img></a>
+                     <a href={`/collection/${images[idx]?.collectionId}`}><img alt='Crystals'className='collection__image' src={images[idx]?.imageUrl}></img></a>
 
                     {console.log(`image ids `, images[idx].collectionId)}
                     

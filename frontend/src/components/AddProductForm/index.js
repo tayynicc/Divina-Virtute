@@ -1,11 +1,11 @@
 import './AddProductForm.css'
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { createProduct } from '../../store/products'
 import { NavLink } from 'react-router-dom'
-import { useParams } from 'react-router';
+
 
 import waterfallImage1 from '../../Images/waterfall-1.png'
 import waterfallImage2 from '../../Images/waterfall-2.png'
@@ -21,10 +21,9 @@ function AddProductForm(){
 
 
 
-  //   const products = useSelector((state) => Object.values(state.product))
 
+  
   const [title, setTitle] = useState('');
-  const [ownerId, setOwnerId] = useState('');
   const [imageUrl, setImageUrl] = useState('');
   const [discription, setDiscription] = useState('');
   const [price, setPrice] = useState('');
@@ -34,7 +33,6 @@ function AddProductForm(){
   
 
   const updateTitle = (e) => setTitle(e.target.value);
-  const updateOwnerId = (e) => setOwnerId(e.target.value);
   const updateimageUrl = (e) => setImageUrl(e.target.value);
   const updatediscription = (e) => setDiscription(e.target.value);
   const updatePrice = (e) => setPrice(e.target.value);
@@ -46,7 +44,7 @@ function AddProductForm(){
   const sessionUser = useSelector(state => state.session.user);
 
  
-  const { id } = useParams()
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -76,7 +74,7 @@ function AddProductForm(){
       <div>
         <div className='newPd__bkg-layer1'>
         <NavLink to='/home' className='back__button-newP'>
-            <img className='back__button-newProduct' src="https://img.icons8.com/plumpy/24/000000/back--v1.png"/>
+            <img className='back__button-newProduct' alt='new product tool' src="https://img.icons8.com/plumpy/24/000000/back--v1.png"/>
         </NavLink>
           
           
@@ -139,27 +137,27 @@ function AddProductForm(){
 
           <div className='waterfall__outter-div roll'>
             <div >
-              <img className='waterfall_image start'src={waterfallImage1}></img>
+              <img alt='crystal waterfall images' className='waterfall_image start'src={waterfallImage1}></img>
             </div>
 
             <div >
-              <img className='waterfall_image right'src={waterfallImage2}></img>
+              <img alt='crystal waterfall images'   className='waterfall_image right'src={waterfallImage2}></img>
             </div>
 
             <div >
-              <img className='waterfall_image left'src={waterfallImage3}></img>
+              <img alt='crystal waterfall images'  className='waterfall_image left'src={waterfallImage3}></img>
             </div>
 
             <div >
-              <img className='waterfall_image right2'src={waterfallImage6}></img>
+              <img alt='crystal waterfall images'  className='waterfall_image right2'src={waterfallImage6}></img>
             </div>
 
             <div >
-              <img className='waterfall_image left2'src={waterfallImage5}></img>
+              <img alt='crystal waterfall images'  className='waterfall_image left2'src={waterfallImage5}></img>
             </div>
 
             <div >
-              <img className='waterfall_image right3'src={waterfallImage4}></img>
+              <img alt='crystal waterfall images'  className='waterfall_image right3'src={waterfallImage4}></img>
             </div>
 
           </div>

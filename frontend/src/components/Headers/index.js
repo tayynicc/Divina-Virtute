@@ -1,19 +1,15 @@
-import React, { useState } from 'react';
-import { Modal } from '../../context/Modal';
 import './Header.css'
 import { useSelector } from 'react-redux';
-import { Redirect } from 'react-router-dom';
 import ProfileButton from '../Navigation/ProfileButton.js';
 import { NavLink } from 'react-router-dom'
 
 function Headers(){
-    const [showModal, setShowModal] = useState(false);
+
 
     const sessionUser = useSelector(state => state.session.user);
 
 
     
-    console.log(sessionUser)
     const sessionLinks = (
         <ProfileButton user={sessionUser} />
         
@@ -31,7 +27,7 @@ function Headers(){
                 <input type='text' placeholder='Search' className='search__input'></input>   
             </div>
             <button className='search__button'>
-                <img src="https://img.icons8.com/material-rounded/24/000000/search.png"/>
+                <img alt='search button' src="https://img.icons8.com/material-rounded/24/000000/search.png"/>
             </button>
 
             <NavLink to='/collections' className='collection__link'> Collections </NavLink>
@@ -43,16 +39,16 @@ function Headers(){
             <div className='home__links'>
                 <NavLink to='https://etsy.me/3i3jl2K' >
                    
-                    <img className='header__links etsy__link' src="https://img.icons8.com/clouds/100/000000/etsy.png"/>
+                    <img className='header__links etsy__link' alt='site links'src="https://img.icons8.com/clouds/100/000000/etsy.png"/>
                     
                 </NavLink>
 
                 <NavLink to='https://crystalgemstoneshop.com/' >
-                    <img className='header__links crystal__link ' src="https://img.icons8.com/color/48/000000/crystal.png"/>
+                    <img alt='site links' className='header__links crystal__link ' src="https://img.icons8.com/color/48/000000/crystal.png"/>
                 </NavLink>
 
                 <NavLink to='https://selenestone.com/' >
-                    <img className='header__links moon__link' src="https://img.icons8.com/ios-filled/50/000000/crescent-moon.png"/>  
+                    <img alt='site links' className='header__links moon__link' src="https://img.icons8.com/ios-filled/50/000000/crescent-moon.png"/>  
                 </NavLink>
             </div>
 

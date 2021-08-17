@@ -16,7 +16,7 @@ function Profile(){
 
     useEffect(() => {
         dispatch(getOneUser(id));
-    }, [dispatch])
+    }, [dispatch, id])
 
     // console.log(`users profile:`, users.userName)
 
@@ -37,14 +37,14 @@ function Profile(){
             <div className='pfp__bkg-layer1'>
 
                 <NavLink to='/home' className='back__button-home profile'>
-                    <img className='back__button' src="https://img.icons8.com/plumpy/24/000000/back--v1.png"/>
+                    <img alt='back button' className='back__button' src="https://img.icons8.com/plumpy/24/000000/back--v1.png"/>
                 </NavLink>
                 {users.map((user) => 
                     <div className='pfp__info'> 
                         
                         <div className='pfp__image-div'>
                             {/* <img src={user.imageURL}></img> */}
-                            <img className='pfp__image'src={user.imageUrl} />
+                            <img alt='user' className='pfp__image'src={user.imageUrl} />
                         </div>
 
                         <div className='pfp__name'>{user.username}</div>
@@ -55,7 +55,7 @@ function Profile(){
                         </div>
 
                         <div className='pfp__buttons'>
-                            <img src="https://img.icons8.com/ios-glyphs/30/000000/edit--v2.png"/>
+                            <img alt='edit profile buttons' src="https://img.icons8.com/ios-glyphs/30/000000/edit--v2.png"/>
                         </div>
                     </div>
                 )}
