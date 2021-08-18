@@ -16,6 +16,23 @@
 
 /*  in case you missed it  */
 /* newest products in db */
+
+.new__products-label{
+    
+     
+}
+
+.hidden{
+    display:none;
+}
+
+.hidden:hover{
+    position:fixed;
+    /* left:200px; */
+    top:190px;
+    border: 3px solid green;
+    padding:3px;
+}
 .previous{
     height: 221px;
     width: 60%;

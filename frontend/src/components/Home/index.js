@@ -30,16 +30,18 @@ function Home(){
             <div className='bkg__login-layer1'>
                 <div className='theme'></div>
                 
-                <div className='previous'>
-                    {products.newest && products.newest.map((product) => (
-                      <div className='previous__mockup' key={product.id}>
-                        <div><img className='previous__image'src={product.imageUrl}></img></div>
-                        <a href={`/products/${product.id}`}><div className='previous__name'>{product.title}</div></a>
-                        <div className='previous__tagLine'>{product.tagLine}</div>
-                    </div>  
-                    ))}
+                <h2 className="new__products-label hidden">New Additions</h2>    
+                    <div className='previous'>
                     
-                </div>
+                        {products.newest && products.newest.map((product) => (
+                        <div className='previous__mockup' key={product.id}>
+                            <div><img className='previous__image'src={product.imageUrl}></img></div>
+                            <a href={`/products/${product.id}`}><div className='previous__name'>{product.title}</div></a>
+                            <div className='previous__tagLine'>{product.tagLine}</div>
+                        </div>  
+                        ))}
+                        
+                    </div>
 
     
 
