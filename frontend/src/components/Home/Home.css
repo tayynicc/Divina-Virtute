@@ -15,6 +15,7 @@
 
 
 /*  in case you missed it  */
+/* newest products in db */
 .previous{
     height: 221px;
     width: 60%;
@@ -41,41 +42,46 @@
 .previous__image{
     grid-row-start: 1;
     grid-row-start: 1;
-    border:5px black solid;
+   
     box-shadow: 0 0 5px 5px grey;
-    height:70px;
-    width:70px;
+    height:80px;
+    width:80px;
     border-radius:50%;
     /* margin: 10px; */
-    position:fixed; 
-    left:15%;
-    top:21%;
-    margin:4px;
+    position:relative; 
+    left:3%;
+    top:7%;
+    margin-top:9px;
 
 }
 
 .previous__name{
     grid-row-start: 1;
     grid-row-start: 1;
-    border:5px black solid;
-    box-shadow: 0 0 5px 5px grey;
-    height:20px;
-    width:200px;
-    position:fixed;
-    left: 23%;
-    top:22%;
+    /* 
+    box-shadow: 0 0 5px 5px grey; */
+    height:23px;
+    width:250px;
+    position:relative;
+    left: 26%;
+    bottom:75px;
+    overflow:hidden;
+    font-size:20px;
 }
 
 .previous__tagLine{
     grid-row-start: 1;
     grid-row-start: 1;
-    border:5px black solid;
-    box-shadow: 0 0 5px 5px grey;
-    height:20px;
-    width:300px;
-    position:fixed;
-    left: 23%;
-    top:26%;
+    /* border-radius:10px; */
+    /* box-shadow: 0 0 5px 5px grey; */
+    height:31px;
+    width:400px;
+    position:relative;
+    left: 20%;
+    bottom:63px;
+    overflow:hidden;
+    padding:5px;
+    /* border:3px black solid; */
 }
 /* product display */
 

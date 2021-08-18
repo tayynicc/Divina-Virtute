@@ -15,7 +15,7 @@ function Home(){
     const products = useSelector((state) => state.product)
     
 
-    // console.log(`products home display`, products)
+    
 
 
    
@@ -33,9 +33,9 @@ function Home(){
                 <div className='previous'>
                     {products.newest && products.newest.map((product) => (
                       <div className='previous__mockup' key={product.id}>
-                        <div className='previous__image'></div>
-                        <div className='previous__name'>{product.title}</div>
-                        <div className='previous__tagLine'></div>
+                        <div><img className='previous__image'src={product.imageUrl}></img></div>
+                        <a href={`/products/${product.id}`}><div className='previous__name'>{product.title}</div></a>
+                        <div className='previous__tagLine'>{product.tagLine}</div>
                     </div>  
                     ))}
                     
