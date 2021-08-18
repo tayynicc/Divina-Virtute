@@ -23,7 +23,7 @@ function UpdateProductForm(){
    
     const [title, setTitle] = useState('');
     const [imageUrl, setImageUrl] = useState('');
-    const [discription, setDiscription] = useState('');
+    const [description, setDescription] = useState('');
     const [price, setPrice] = useState('');
     const [purchaseLink, setPurchaseLink] = useState('');
     const [tagLine, setTagLine] = useState('');
@@ -31,49 +31,105 @@ function UpdateProductForm(){
     const [errors, setErrors] = useState({});
 
 
-    const updateTitle = (e) => setTitle(e.target.value);
-    const updateimageUrl = (e) => setImageUrl(e.target.value);
-    const updatediscription = (e) => setDiscription(e.target.value);
-    const updatePrice = (e) => setPrice(e.target.value);
-    const updatePurchaseLink = (e) => setPurchaseLink(e.target.value);
-    const updateTagLine = (e) => setTagLine(e.target.value)
-    const updateCollectionId = (e) => setCollectionId(e.target.value)
+    const updateTitle = (e) => {
+      setTitle(e.target.value); 
+      if(title.length > 5 && title.length < 20){
+        let tempErrors = {...errors}
+        delete tempErrors.title
+        setErrors(tempErrors)
+      } 
+    }
+
+
+    const updateimageUrl = (e) => {
+        setImageUrl(e.target.value);
+        if(tagLine.length > 5 && tagLine.length < 20){
+            let tempErrors = {...errors}
+            delete tempErrors.tagLine
+            setErrors(tempErrors)
+        }
+    }
+
+
+    const updatedescription = (e) => {
+        setDescription(e.target.value);
+        if(description.length > 0){
+            let tempErrors = {...errors}
+            delete tempErrors.description
+            setErrors(tempErrors)
+        }
+    }
+
+
+    const updatePrice = (e) => {
+        setPrice(e.target.value);
+        if(price.length < 0){
+            let tempErrors = {...errors}
+            delete tempErrors.price
+            setErrors(tempErrors)
+        }
+    }
+
+    const updatePurchaseLink = (e) => {
+        setPurchaseLink(e.target.value);
+        if(purchaseLink.length < 0){
+            let tempErrors = {...errors}
+            delete tempErrors.purchaseLink
+            setErrors(tempErrors)
+        }
+    }
+    const updateTagLine = (e) => {
+        setTagLine(e.target.value)
+        if(price.length < 0){
+            let tempErrors = {...errors}
+            delete tempErrors.price
+            setErrors(tempErrors)
+        }
+    }
+    const updateCollectionId = (e) => {
+        setCollectionId(e.target.value)
+        if(price.length < 0){
+            let tempErrors = {...errors}
+            delete tempErrors.price
+            setErrors(tempErrors)
+        }
+
+    }
 
     console.log(typeof 1.2)
   
       const handleSubmit = async (e) => {
           e.preventDefault();
+          setErrors({})
 
           const validEntry = ['https', '.com']
           
           if(title.length < 5 || title.length > 20){
-              errors.title = 'Tile must be between 5 and 20 characters'
+            //   errors.title = 'Tile must be between 5 and 20 characters'
+              setErrors({...errors, title:'Tile must be between 5 and 20 characters' })
           } if(tagLine.length < 5 || tagLine.length > 20 ){
-              errors.tagLine = 'Tagline must be between 5 and 20 characters'
+              setErrors({...errors, tagLine:'Tagline must be between 5 and 20 characters' })
+              
           } if(!imageUrl.length){
-            errors.imageUrl = 'Please provide a valid image url'
+            setErrors({...errors, imageUrl:'Please provide a valid image url' })
+            
           }
           
-        //   if(validEntry.includes(imageUrl) === false){
-        //       errors.imageUrl = 'Please provide a valid image url'
-        //   }
-          
-          if(discription.length === 0 ){
-              errors.description = 'Please provide a product discription'
+      
+          if(description.length === 0 ){
+              
+                setErrors({...errors, description:'Please provide a product description' })
           } if(!price.length){
-              errors.price = 'Price must be a Numeric value, do not include "$" '
-          }
-        //   if(validEntry.includes(purchaseLink) === false){
-        //       errors.purchaseLink = 'Please provide valid purchase link '
-        //   }
-
-          if(!purchaseLink.length){
-            errors.purchaseLink = 'Please provide valid purchase link '
-          }
+                setErrors({...errors, price: 'Price must be a Numeric value, do not include "$" '})
+          } if(!purchaseLink.length){
+                setErrors({...errors, purchaseLink: 'Please provide valid purchase link '})
+          }if(!collectionId){
+                setErrors({...errors, collectionId: 'Please make a collection selection' })
+             
+          }  
+    
+         
           
-          if(!collectionId){
-              errors.collectionId ='Please make a collection selection' 
-          } 
           
       
           const tags = ["Unique Shape", "Raw", "Kits", "Tumbled Stones", "Holiday", "Jewlrey", "Point", "Geode", "Worry Stones", "Opal", "Slice" ]
@@ -84,7 +140,7 @@ function UpdateProductForm(){
           title,
           tagLine,
           imageUrl,
-          discription,
+          description,
           price,
           purchaseLink,
           collectionId: +collectionId,
@@ -97,7 +153,7 @@ function UpdateProductForm(){
         console.log(typeof price)
        
 
-        if(!errors){
+        if(!Object.keys(errors).length){
           const product = await dispatch(updateProduct(payload))
             if (product) {
                 history.push(`/products/${product.id}`);
@@ -139,7 +195,7 @@ function UpdateProductForm(){
 
                 <label className='updateForm__label'>Description</label>
                 { errors.description !== undefined && (<ul className='error__messages'>{errors.description}</ul>)}
-                <input type='text' value={discription} onChange={updatediscription} placeholder='Tell Us What You Got!'></input>
+                <input type='text' value={description} onChange={updatedescription} placeholder='Tell Us What You Got!'></input>
 
                 <label className='updateForm__label'>Price</label>
                 { errors.price !== undefined && (<ul className='error__messages'>{errors.price}</ul>)}

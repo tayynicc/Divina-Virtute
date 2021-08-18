@@ -23,24 +23,27 @@ function ProductDisplay(){
   
 
     return(
-        <div className='product__display'>
-            
-               
-            {products?.map((product) => 
-                <div className='pd__mockup' key={`${product.title}-${product.id}`}>
-                    
-                    <a href={`/products/${product.id}`} className='pd__title'>{product.title}</a>
-                    <p className='pd__tagLine'>{product.tagLine}</p>
-                    <p className='pd__price'>{`$ ${product.price}`}</p>
-                    <img className='pd__image' src={product.imageUrl} alt="BigCo Inc. logo"/>
-                    
-                    
-                </div>
-            )} 
+        <div>
+            <h2 className='product__display-label'>Products</h2>
+            <div className='product__display'>
+                
+                
+                
+                {products?.map((product) => 
+                    <div className='pd__mockup' key={`${product.title}-${product.id}`}>
+                        
+                        <a href={`/products/${product.id}`} className='pd__title'>{product.title}</a>
+                        <p className='pd__tagLine'>{product.tagLine}</p>
+                        <p className='pd__price'>{`$ ${product.price}`}</p>
+                        <img className='pd__image' src={product.imageUrl} alt="BigCo Inc. logo"/>
+                        
+                        
+                    </div>
+                )} 
 
-            
-        </div> 
-        
+                
+            </div> 
+        </div>
     )
 }
 

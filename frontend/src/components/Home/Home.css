@@ -18,20 +18,29 @@
 /* newest products in db */
 
 .new__products-label{
+    position:fixed;
+    top:140px;
+    left:760px;
+    /* border: 3px solid green; */
+    padding:3px;
+    color:white;
     
      
 }
 
-.hidden{
-    display:none;
+.users__products-label {
+    color: white;
+    position: relative;
+    left: 1510px;
+    top:230px;
 }
 
+/* .hidden{
+    display:none;
+} */
+
 .hidden:hover{
-    position:fixed;
-    /* left:200px; */
-    top:190px;
-    border: 3px solid green;
-    padding:3px;
+    
 }
 .previous{
     height: 225px;
@@ -84,6 +93,7 @@
     bottom:75px;
     overflow:hidden;
     font-size:20px;
+    color: black;
 }
 
 .previous__tagLine{
