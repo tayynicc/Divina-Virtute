@@ -37,6 +37,15 @@ function Headers(){
             {/* make site links into drop down menu  */}
 
             <div className='home__links'>
+                
+                {/* direct purchase links drop down */}
+
+                {/* <div>
+                    <select>
+                        <option value="Etsy"></option>
+                    </select>
+                </div>
+                 */}
                 <NavLink to='https://etsy.me/3i3jl2K' >
                    
                     <img className='header__links etsy__link' alt='site links'src="https://img.icons8.com/clouds/100/000000/etsy.png"/>
@@ -55,7 +64,7 @@ function Headers(){
             <div className='home__addProduct'>
             
                
-              <a className='add__link-header'href='/new'>Add Product</a>
+              <a className='add__link-header'href='/new'><img alt='add product button' src="https://img.icons8.com/ios-glyphs/30/000000/add--v1.png"/></a>
             
             </div>
             <div className='header__pfp'>

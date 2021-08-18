@@ -76,7 +76,7 @@
     justify-content: space-around;
 }
 
-button{
+/* button{
     background:lightgrey;
     font-weight:bold;
     border-radius:30px;
@@ -87,7 +87,7 @@ button:hover{
     cursor: pointer;
     background:#312E2D;
     color:white;
-}
+} */
 
 .signup_btn{
     color:black;

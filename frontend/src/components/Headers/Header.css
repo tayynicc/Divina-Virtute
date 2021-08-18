@@ -118,14 +118,14 @@
     padding:3px;
 }
 
-.home__addProduct:hover{
+/* .home__addProduct:hover{
     transition: all .1s ease-in-out; 
     transform: scale(1.1);
     cursor:pointer;
     background:black;
     border:3px solid black
 
-}
+} */
 
 .add__link-header:hover{
     

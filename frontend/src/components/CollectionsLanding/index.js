@@ -15,7 +15,7 @@ function CollectionsLanding(){
 
 
     const dispatch = useDispatch();
-    const products = useSelector((state) => Object.values(state.product))
+    const products = useSelector((state) => Object.values(state?.product))
 
 
     
@@ -35,7 +35,7 @@ function CollectionsLanding(){
         return images
     }
 
-    const tags = uniqueTags()
+    const tags = uniqueTags().filter((ele) => ele !== undefined)
 
     const images = uniqueTagImages()
     

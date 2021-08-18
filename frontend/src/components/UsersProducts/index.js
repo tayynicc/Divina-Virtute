@@ -55,8 +55,11 @@ function UsersProducts (){
                     <p className='pd__price'>{`$ ${product.price}`}</p>
                     <a href={`/products/${product.id}/update`}><img className='edit__icons-edit' alt='edit users products button' src="https://img.icons8.com/ios-glyphs/30/000000/edit--v2.png"/></a>
 
-                    <button onClick={() => handleDelete(+product.id)}><img className='edit__icons-delete' alt='delete user product button' src="https://img.icons8.com/material-outlined/24/000000/trash--v1.png"/></button>
                     <img alt='users product views' className='pd__image' src={product.imageUrl}></img>
+                    
+                    <button className='delete__button'onClick={() => handleDelete(+product.id)}><img className='edit__icons-delete' alt='delete user product button' src="https://img.icons8.com/material-outlined/24/000000/trash--v1.png"/></button>
+                    
+                    
                 </div>    
             ))}
         

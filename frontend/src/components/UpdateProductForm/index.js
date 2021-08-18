@@ -28,7 +28,7 @@ function UpdateProductForm(){
     const [purchaseLink, setPurchaseLink] = useState('');
     const [tagLine, setTagLine] = useState('');
     const [collectionId, setCollectionId] = useState()
-
+    const [errors, setErrors] = useState({});
 
 
     const updateTitle = (e) => setTitle(e.target.value);
@@ -38,9 +38,43 @@ function UpdateProductForm(){
     const updatePurchaseLink = (e) => setPurchaseLink(e.target.value);
     const updateTagLine = (e) => setTagLine(e.target.value)
     const updateCollectionId = (e) => setCollectionId(e.target.value)
+
+    console.log(typeof 1.2)
   
       const handleSubmit = async (e) => {
           e.preventDefault();
+
+          const validEntry = ['https', '.com']
+          
+          if(title.length < 5 || title.length > 20){
+              errors.title = 'Tile must be between 5 and 20 characters'
+          } if(tagLine.length < 5 || tagLine.length > 20 ){
+              errors.tagLine = 'Tagline must be between 5 and 20 characters'
+          } if(!imageUrl.length){
+            errors.imageUrl = 'Please provide a valid image url'
+          }
+          
+        //   if(validEntry.includes(imageUrl) === false){
+        //       errors.imageUrl = 'Please provide a valid image url'
+        //   }
+          
+          if(discription.length === 0 ){
+              errors.description = 'Please provide a product discription'
+          } if(!price.length){
+              errors.price = 'Price must be a Numeric value, do not include "$" '
+          }
+        //   if(validEntry.includes(purchaseLink) === false){
+        //       errors.purchaseLink = 'Please provide valid purchase link '
+        //   }
+
+          if(!purchaseLink.length){
+            errors.purchaseLink = 'Please provide valid purchase link '
+          }
+          
+          if(!collectionId){
+              errors.collectionId ='Please make a collection selection' 
+          } 
+          
       
           const tags = ["Unique Shape", "Raw", "Kits", "Tumbled Stones", "Holiday", "Jewlrey", "Point", "Geode", "Worry Stones", "Opal", "Slice" ]
 
@@ -56,12 +90,23 @@ function UpdateProductForm(){
           collectionId: +collectionId,
           collectionTag: tags[+collectionId -1]
         };
-    
-      const product = await dispatch(updateProduct(payload))
-        if (product) {
-          history.push(`/products/${product.id}`);
+        
+        console.log(!errors)
+        console.log(errors)
+        console.log(`title`, title.length)
+        console.log(typeof price)
+       
+
+        if(!errors){
+          const product = await dispatch(updateProduct(payload))
+            if (product) {
+                history.push(`/products/${product.id}`);
+            }  
         }
+        
       };
+
+    
 
       useEffect(() => {
         dispatch(getOneProduct(id));
@@ -79,26 +124,33 @@ function UpdateProductForm(){
             <form onSubmit={handleSubmit}>
                 {/* <label className='updateForm__label'>ownerId</label>
                 <input type='text'value={ownerId}onChange={updateOwnerId} ></input> */}
-
+        
                 <label className='updateForm__label'>Title</label>
-                <input type='text' value={title} onChange={updateTitle} placeHolder='Descriptive Title'></input>
+                { errors.title !== undefined && (<ul className='error__messages'>{errors.title}</ul>)}
+                <input type='text' value={title} onChange={updateTitle} placeholder='Descriptive Title'></input>
 
                 <label className='updateForm__label'>Tag Line</label>
-                <input type='text' value={tagLine} onChange={updateTagLine} placeHolder='Grab some attention!'></input>
+                { errors.tagLine !== undefined && (<ul className='error__messages'>{errors.tagLine}</ul>)}
+                <input type='text' value={tagLine} onChange={updateTagLine} placeholder='Grab some attention!'></input>
                 
                 <label className='updateForm__label'>Image Url</label>
-                <input type='text' value={imageUrl} onChange={updateimageUrl} placeHolder='Image Link'></input>
+                { errors.imageUrl !== undefined && (<ul className='error__messages'>{errors.imageUrl}</ul>)}
+                <input type='text' value={imageUrl} onChange={updateimageUrl} placeholder='Image Link'></input>
 
                 <label className='updateForm__label'>Description</label>
-                <input type='text' value={discription} onChange={updatediscription} placeHolder='Tell Us What You Got!'></input>
+                { errors.description !== undefined && (<ul className='error__messages'>{errors.description}</ul>)}
+                <input type='text' value={discription} onChange={updatediscription} placeholder='Tell Us What You Got!'></input>
 
                 <label className='updateForm__label'>Price</label>
-                <input type='text' value={price} onChange={updatePrice} placeHolder='Price'></input>
+                { errors.price !== undefined && (<ul className='error__messages'>{errors.price}</ul>)}
+                <input type='text' value={price} onChange={updatePrice} placeholder='Price'></input>
 
                 <label className='updateForm__label'>Purchase Link</label>
-                <input type='text' value={purchaseLink} onChange={updatePurchaseLink} placeHolder='Link to your other listings'></input>
+                { errors.purchaseLink !== undefined && (<ul className='error__messages'>{errors.purchaseLink} </ul>)}
+                <input type='text' value={purchaseLink} onChange={updatePurchaseLink} placeholder='Link to your other listings'></input>
 
                 <label className='addPd__label' > Collection Tag </label>
+                { errors.collectionId !== undefined && (<ul className='error__messages'>{errors.collectionId}</ul>)}
                   <select className='collectionTag__selector' onChange={updateCollectionId}>
                       <option className='collectionTag__option' value="1" > Unique Shape </option>
                       <option className='collectionTag__option' value='2' > Raw </option>
