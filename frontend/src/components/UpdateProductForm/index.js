@@ -96,28 +96,21 @@ function UpdateProductForm(){
 
     }
 
-    console.log(typeof 1.2)
+    
   
       const handleSubmit = async (e) => {
           e.preventDefault();
           setErrors({})
 
-          const validEntry = ['https', '.com']
+         
           
           if(title.length < 5 || title.length > 20){
-            //   errors.title = 'Tile must be between 5 and 20 characters'
               setErrors({...errors, title:'Tile must be between 5 and 20 characters' })
           } if(tagLine.length < 5 || tagLine.length > 20 ){
-              setErrors({...errors, tagLine:'Tagline must be between 5 and 20 characters' })
-              
+              setErrors({...errors, tagLine:'Tagline must be between 5 and 20 characters' }) 
           } if(!imageUrl.length){
             setErrors({...errors, imageUrl:'Please provide a valid image url' })
-            
-          }
-          
-      
-          if(description.length === 0 ){
-              
+          }if(description.length === 0 ){
                 setErrors({...errors, description:'Please provide a product description' })
           } if(!price.length){
                 setErrors({...errors, price: 'Price must be a Numeric value, do not include "$" '})
@@ -128,6 +121,9 @@ function UpdateProductForm(){
              
           }  
     
+          
+      
+          
          
           
           

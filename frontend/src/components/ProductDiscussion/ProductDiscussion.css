@@ -145,3 +145,16 @@
     bottom:170px;
     
 } 
+
+
+.edit__comment-delete:hover{
+    cursor:pointer;
+}
+
+/* .delete__review{
+    border:3px solid red;
+    color:red;
+    position:relative;
+    left:400px;
+    bottom:170px;
+} */

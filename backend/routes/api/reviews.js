@@ -37,13 +37,16 @@ router.post(
 )
 
 
-// router.delete(
-//     '/', 
-//     asyncHandler(async function (req, res) {
-//         const review 
-//     })
+router.delete(
+    '/:id', 
+    asyncHandler(async function (req, res) {
+        const reviewId = parseInt(req.params.id)
+        const currReview = await Review.findByPk(reviewId)
+        const review = await currReview.destroy()
+        return res.json(review)
+    })
 
-// )
+)
 
 
 

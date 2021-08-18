@@ -2,7 +2,7 @@ import './ProductDiscussion.css'
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector} from 'react-redux'
 import { useParams} from 'react-router-dom'
-import { getReview } from '../../store/reviews'
+import { deleteReview, getReview } from '../../store/reviews'
 import { createReview } from '../../store/reviews'
 
 
@@ -35,6 +35,12 @@ function ProductDisplay(){
         setReview('')
     }
 
+
+    const handleDelete = (id) => {
+        dispatch(deleteReview(Number(id)))
+    }
+
+
     useEffect(() => {
         dispatch(getReview(id))
     }, [dispatch, id])
@@ -55,11 +61,12 @@ function ProductDisplay(){
                 <div className='comments__container-outter'>
                     {reviews?.map((review) => 
                         <div className='comment' key={review.id}>
-                           <a href={`/profile/${review.User.id}`}>
-                           <img alt='users profile' className='pfp__image-comment' src={review.User.imageUrl}></img></a>
+                           {/* <a href={`/profile/${review.User.id}`}></a> */}
+                           <img alt='users profile' className='pfp__image-comment' src={review.User.imageUrl}></img>
                            
 
-                            <a href={`/profile/${review.User.id}`}><h4 className='pfp__username'>{review.User.username}</h4></a>
+                            {/* <a href={`/profile/${review.User.id}`}></a> */}
+                            <h4 className='pfp__username'>{review.User.username}</h4>
                             
                             <p className='posted'>{review.updatedAt}</p>
                            
@@ -69,7 +76,7 @@ function ProductDisplay(){
         
                             
                         
-                            <img alt='delete button' className='edit__comment-delete' src="https://img.icons8.com/material-outlined/24/000000/trash--v1.png"/>
+                            <button className='delete__review' onClick={() => handleDelete(+review.id)}><img alt='delete button' className='edit__comment-delete' src="https://img.icons8.com/material-outlined/24/000000/trash--v1.png"/></button>
                             
                             {/* <img className='edit__comment-edit' src="https://img.icons8.com/ios-glyphs/30/000000/edit--v2.png"/> */}
                     

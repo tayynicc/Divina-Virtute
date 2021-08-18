@@ -11,6 +11,9 @@ const SHOW_ONE = '/reviews/oneReview'
 // adding one review 
 const ADD_ONE = 'reviews/addOneReview'
 
+// remove review 
+const REMOVE_REVIEW = 'reviews/removeReview'
+
 
 
 
@@ -30,6 +33,10 @@ const addOneReview = (review) => ({
     review,
 })
 
+const removeReview = (review) => ({
+    type: REMOVE_REVIEW,
+    review
+})
 
 
 
@@ -65,7 +72,19 @@ export const createReview = data => async (dispatch) => {
     }
 }
 
+// deleting a review 
+export const deleteReview = (reviewId) => async dispatch => {
+    const response = await csrfFetch(`/api/reviews/${reviewId}`, {
+        method: 'delete'
+    });
 
+    if(response.ok){
+        dispatch(removeReview(reviewId))
+    }
+
+
+    return response
+}
 
 
 // inital state
@@ -91,7 +110,9 @@ const reviewReducer = (state = initalState, action ) => {
             }; 
 
             return addState;
-
+        case REMOVE_REVIEW:
+            delete state[action.productId]
+            return{...state};
         default:
             return state;
     }

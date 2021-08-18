@@ -31,7 +31,7 @@ function UsersProducts (){
     ))
 
     const handleDelete = (id) => {
-        console.log(id)
+    
         dispatch(deleteProduct(Number(id)))
             
     }

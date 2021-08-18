@@ -32,6 +32,7 @@ module.exports = {
         email: faker.internet.email(),
         username: 'citrineWinnie',
         hashedPassword: bcrypt.hashSync(faker.internet.password()),
+        imageUrl:'https://divinavitute.s3.us-west-1.amazonaws.com/download.jpg',
         discription:' associated with positivity and optimism, which is not surprising given its cheerful color. It\'s often used to assist in manifesting financial abundance and opportunities. It can also be used to awaken the solar plexus chakra, helping to cultivate confidence and personal power.'
       },
       {
