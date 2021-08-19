@@ -31,16 +31,20 @@
     height: 150px;
     width:800px;
     border-bottom: 3px solid black;
-    margin-top: 20px;
+    /* margin-top: 0px; */
 }
 
 .input__box{
     width:660px;
     height:100px;
-    margin:15px;
+    /* margin:15px; */
     border-radius:10px;
+    
     margin-left:65px;
+    margin-bottom:10px;
     background-color: honeydew;
+    position:relative;
+    top:30px;
 }
 
 .addComment__button{

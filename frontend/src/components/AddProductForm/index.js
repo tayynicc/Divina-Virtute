@@ -91,8 +91,6 @@ function AddProductForm(){
               
               
               <form className='addPD__form' onSubmit={handleSubmit}>
-                  {/* <label className='addPd__label'>ID</label>
-                  <input type='text'value={ownerId}onChange={updateOwnerId}></input> */}
 
                   <label className='addPd__label'> Title </label>
                   <input type='text' value={title} onChange={updateTitle}></input>

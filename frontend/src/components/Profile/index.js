@@ -1,33 +1,52 @@
 // import Navigation from '../Navigation'
 // import { getProducts } from '../../store/products'
 import './Profile.css'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom';
 import { useParams } from 'react-router'
-import { getOneUser } from '../../store/session'
+import { getOneUser, updateUser } from '../../store/session'
 
 function Profile(){
 
     const dispatch = useDispatch();
-    const users = useSelector((state) => Object.values(state.session))
+    const users = useSelector((state) => Object.values(state?.session))
 
     const { id } = useParams()
 
+
+    const [ name, setName ] = useState('')
+    const [ discription, setDiscription ] = useState('')
+    const [ imageUrl, setImageUrl ] = useState('')
+
+
+    const updateName = (e) => setName(e.target.value);
+    const updateDiscription = (e) => setDiscription(e.target.value);
+    const updateImageUrl = (e) => setImageUrl(e.target.value);
+
+
     useEffect(() => {
         dispatch(getOneUser(id));
+
     }, [dispatch, id])
 
-    // console.log(`users profile:`, users.userName)
-
-    const currentUser = users[0]
-
-
-    console.log(`currentUser`, currentUser.discription)
+    console.log('user profile id:',typeof +id)
     
-    // const pfpImage = currentUser.find((user) => {
-    //     return +id === user.id
-    // })
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        
+        console.log(`lemme submit`)
+        const payload = {
+            id: +id,
+            username: name,
+            discription,
+            imageUrl 
+        }
+
+        await dispatch(updateUser(payload))
+       
+    }
 
     return (
         <div>
@@ -59,7 +78,22 @@ function Profile(){
                         </div>
                     </div>
                 )}
-                
+                <div className='update__userInformaiton'>
+                    <form onSubmit={handleSubmit}>
+                        <label className='update__user-userName'>Name</label>
+                        <input type='text' value={name} onChange={updateName}></input>
+
+                        <label className='update__user-description'>Description</label>
+                        <input type='text' value={discription} onChange={updateDiscription}></input>
+
+                        <label className='update__user-imageUrl'>Image Url</label>
+                        <input type='text' value={imageUrl} onChange={updateImageUrl}></input>
+
+                        <button type="submit" className=''>Update</button>
+                    
+                    </form>
+
+                </div>
 
                 <div className='pfp__links-active'>
                     <a className='profile__newpd'href='/new'>Add Product</a>   

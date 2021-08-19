@@ -22,6 +22,9 @@ function ProductDisplay(){
 
     const updateReview = (e) => {
         setReview(e.target.value)
+        if(review.length <= 0 ){
+            setErrors("Input area has no content")
+        }
         if (review.length > 0){
             setErrors('')
         }
@@ -41,9 +44,8 @@ function ProductDisplay(){
             review
         }
 
-        console.log(errors.length)
-        console.log(typeof errors)
-        if(!errors.length){
+        
+        if(review.length !== 0){
             await dispatch(createReview(payload))
             setReview('')
         }
@@ -111,11 +113,11 @@ function ProductDisplay(){
                 <div className='comments__container-outter'>
                     {reviews?.map((review) => 
                         <div className='comment' key={review.id}>
-                           {/* <a href={`/profile/${review.User.id}`}></a> */}
-                           <img alt='users profile' className='pfp__image-comment' src={review.User.imageUrl}></img>
+                           
+                           <a href={`/profile/${review.User.id}`}><img alt='users profile' className='pfp__image-comment' src={review.User.imageUrl}></img></a>
                            
 
-                            {/* <a href={`/profile/${review.User.id}`}></a> */}
+                            {/* <a href={`/profile/${review.User.id}`}></a>*/}
                             <h4 className='pfp__username'>{review.User.username}</h4>
                             {/* {review.updatedAt.toDateString()} */}
                             <p className='posted'>{formatDate(review.updatedAt)}</p>

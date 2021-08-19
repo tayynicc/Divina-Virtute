@@ -110,9 +110,9 @@
 
 
 .collection__link{
-    position: fixed;
-    top:75px;
-    right: 255px;
+    position: absolute;
+    top:15px;
+    right: 155px;
     border:5px black solid;
 
 
@@ -131,9 +131,11 @@
 }
 
 .links__dropdown{
-    position:relative;
-    bottom:98px;
+    position:absolute;
+    bottom:18px;
     left:1380px;
+    /* border: 3px solid red; */
+    width:50px;
 
 }
 

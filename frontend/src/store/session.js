@@ -6,7 +6,8 @@ const REMOVE_USER = 'session/removeUser';
 // getting one user 
 const SHOW_ONE = 'session/oneUser'
 
-
+// updating the user
+const UPDATE_USER = 'users/updateUser'
 
 const setUser = (user) => {
   return {
@@ -27,6 +28,12 @@ const oneUser = (user) => ({
     user,
 })
 
+
+//update user 
+const update = (user) => ({
+    type: UPDATE_USER,
+    user
+})
 
 
 
@@ -55,7 +62,20 @@ export const getOneUser = (id) => async (dispatch) => {
 	}
 };
 
+export const updateUser = (data) => async (dispatch) => {
+    const res = await csrfFetch(`/api/users/${data.id}`, {
+        method: 'put',
+        headers: {
+        'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    }); 
 
+    if(res.ok) {
+        const userInfo = await res.json();
+        dispatch(update(userInfo))
+    }
+}
 
 const initialState = { user: null };
 
@@ -76,6 +96,13 @@ const sessionReducer = (state = initialState, action) => {
             [action.user.id]: action.user,
         }
         return userState
+    case UPDATE_USER:
+        const addState = {
+            ...state, 
+            [action.user.id]: action.user
+        }
+
+        return addState
     default:
       return state;
   }
