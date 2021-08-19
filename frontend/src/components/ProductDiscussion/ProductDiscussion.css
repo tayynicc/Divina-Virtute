@@ -158,3 +158,10 @@
     left:400px;
     bottom:170px;
 } */
+
+.error_message-review{
+    color:red;
+    border: 3px solid black;
+    /* width:200px; */
+    text-align: center;
+}

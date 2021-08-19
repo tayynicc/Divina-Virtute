@@ -18,11 +18,21 @@ function ProductDisplay(){
     const sessionUser = useSelector(state => state.session?.user);
 
     const [ review, setReview ] = useState('');
+    const [ errors, setErrors ] = useState('')
 
-    const updateReview = (e) => setReview(e.target.value); 
+    const updateReview = (e) => {
+        setReview(e.target.value)
+        if (review.length > 0){
+            setErrors('')
+        }
+    }; 
     
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        if(review.length <= 0 ){
+            setErrors("Input area has no content")
+        }
         
         
         const payload = {
@@ -31,9 +41,48 @@ function ProductDisplay(){
             review
         }
 
-        await dispatch(createReview(payload))
-        setReview('')
+        console.log(errors.length)
+        console.log(typeof errors)
+        if(!errors.length){
+            await dispatch(createReview(payload))
+            setReview('')
+        }
     }
+
+    const formatDate = (date) => {
+        const Transformededited = new Date(date)
+
+        const split = Transformededited.toString().split(" ")
+
+        const d = [split[0], split[1], split[2], split[3]]
+
+        const formattedDate = d.join(" ")  
+
+        const splitTime = split[4].split(":")
+        
+    
+        if(splitTime[0] > 12){
+            const hour = splitTime[0] % 12
+            const formattedTime = [hour, splitTime[1]].join(":") + " PM" 
+            const res = [formattedDate, formattedTime].join(", ")
+            return res 
+
+
+        }
+
+
+        const formattedTime = [splitTime[0], splitTime[1]].join(":") + " AM" 
+        const res = [formattedDate, formattedTime].join(", ") // completed 
+        return res
+       
+    }
+
+ 
+
+    
+
+
+
 
 
     const handleDelete = (id) => {
@@ -53,6 +102,7 @@ function ProductDisplay(){
             </div>
             <div className='product-discussion__outerDiv'>
                 <form onSubmit={handleSubmit} className='commentInput__container'>
+                    {errors.length && (<p className='error_message-review'>{errors}</p>)}
                     <textarea  id='textbox' value={review} onChange={updateReview}className='input__box'></textarea>
                     <button type='submit' className='addComment__button'>Add Comment</button>
 
@@ -67,8 +117,8 @@ function ProductDisplay(){
 
                             {/* <a href={`/profile/${review.User.id}`}></a> */}
                             <h4 className='pfp__username'>{review.User.username}</h4>
-                            
-                            <p className='posted'>{review.updatedAt.toLocaleString()}</p>
+                            {/* {review.updatedAt.toDateString()} */}
+                            <p className='posted'>{formatDate(review.updatedAt)}</p>
                            
 
                             <p className='comment__body'>{review.review}</p>
