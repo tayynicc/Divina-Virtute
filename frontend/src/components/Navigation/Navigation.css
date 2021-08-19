@@ -50,8 +50,20 @@ ul{
 
 .profile__icon-button{
     position:fixed;
-    top:7%;
-    
+    top:79px;
+    border:transparent;
+    background:transparent;
+    right:190px;
+
+}
+
+.profile__icon-button:hover{
+    cursor:pointer;
+}
+
+.icon{
+    height:45px;
+    width:50px;
 }
 
 i{

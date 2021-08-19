@@ -27,12 +27,13 @@ function Headers(){
                 <input type='text' placeholder='Search' className='search__input'></input>   
             </div>
             <button className='search__button'>
-                <img alt='search button' src="https://img.icons8.com/material-rounded/24/000000/search.png"/>
+                <img className='search__icon' alt='search button' src="https://img.icons8.com/doodle/48/000000/search--v1.png"/>
             </button>
 
-            <NavLink to='/collections' className='collection__link'> Collections </NavLink>
+            <NavLink to='/collections' className='collection__link'><img src="https://img.icons8.com/ios/50/000000/collectibles.png"/></NavLink>
 
-            
+            <div className='links__dropdown'><img src="https://img.icons8.com/ios/50/000000/menu--v6.png"/></div>
+
 
             {/* make site links into drop down menu  */}
 
@@ -46,7 +47,9 @@ function Headers(){
                     </select>
                 </div>
                  */}
-                <NavLink to='https://etsy.me/3i3jl2K' >
+                
+                
+                {/* <NavLink to='https://etsy.me/3i3jl2K' >
                    
                     <img className='header__links etsy__link' alt='site links'src="https://img.icons8.com/clouds/100/000000/etsy.png"/>
                     
@@ -58,13 +61,13 @@ function Headers(){
 
                 <NavLink to='https://selenestone.com/' >
                     <img alt='site links' className='header__links moon__link' src="https://img.icons8.com/ios-filled/50/000000/crescent-moon.png"/>  
-                </NavLink>
+                </NavLink> */}
             </div>
 
             <div className='home__addProduct'>
             
                
-              <a className='add__link-header'href='/new'><img alt='add product button' src="https://img.icons8.com/ios-glyphs/30/000000/add--v1.png"/></a>
+              <a className='add__link-header'href='/new'><img className='add__link-header' alt='add product button' src="https://img.icons8.com/ios/50/000000/add--v1.png"/></a>
             
             </div>
             <div className='header__pfp'>

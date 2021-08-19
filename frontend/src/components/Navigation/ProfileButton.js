@@ -42,7 +42,7 @@ function ProfileButton({ user }) {
     <>
         <div className='home__pfp'>
           <button className='profile__icon-button'onClick={openMenu}>
-            <i className="fas fa-user-circle" />
+          <img className='icon' src="https://img.icons8.com/ios/50/000000/user--v1.png"/>
           </button>
         </div>  
         {showMenu && (

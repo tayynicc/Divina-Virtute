@@ -68,7 +68,7 @@ function ProductDisplay(){
                             {/* <a href={`/profile/${review.User.id}`}></a> */}
                             <h4 className='pfp__username'>{review.User.username}</h4>
                             
-                            <p className='posted'>{review.updatedAt}</p>
+                            <p className='posted'>{review.updatedAt.toLocaleString()}</p>
                            
 
                             <p className='comment__body'>{review.review}</p>

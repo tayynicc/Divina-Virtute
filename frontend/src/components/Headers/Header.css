@@ -12,13 +12,19 @@
 }
 
 .home__logo{
-    border:2px black solid;
-    box-shadow: 0 0 5px 5px grey;
-    height:70px;
-    width:70px;
-    position:fixed;
+    border:1px black solid;
+    /* box-shadow: 0 0 5px 5px grey; */
+    height:90px;
+    width:90px;
+    border-radius: 50%;
+    /* position:fixed;
     top:5%;
-    left:7%;
+    left:7%; */
+    display:flex;
+    margin-top:4px;
+    margin-left:20px;
+
+
     background-image: url('./night-flicker.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -28,9 +34,9 @@
 .home__search{
     height:30px;
     width:450px;
-    position:fixed;
-    top:6%;
-    left:17%;
+    position:relative;
+    bottom:75px;
+    left:160px;
 }
 
 .search__input{
@@ -42,13 +48,20 @@
     height:40px;
     width:40px;
     position: fixed;
-    left:13%;
-    top:69px;
+    left:720px;
+    top:80px;
+    border:transparent;
+    background:transparent;
+    
+
     /* background-image: url('./search__icon.png');
     background-repeat: no-repeat;
     background-size: 100% 100%; */
 }
 
+.search__button:hover{
+    cursor:pointer
+}
 .home__links{
     /* border:5px black solid; */
     /* box-shadow: 0 0 5px 5px grey; */
@@ -97,27 +110,36 @@
 
 
 .collection__link{
-    position: absolute;
-    top:40px;
-    right: 920px;
+    position: fixed;
+    top:75px;
+    right: 255px;
+    border:5px black solid;
 
+
+}
+
+.collection__link:hover{
+    cursor:pointer
 }
 
 .home__addProduct{
     /* border:5px black solid; */
-    height:40px;
-    width:150px;
     position:fixed;
-    top:7%;
-    left:75%;
-    text-align:center;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    border-radius:30px;
-    padding:3px;
+    top:77px;
+    right:320px;
+   
 }
 
+.links__dropdown{
+    position:relative;
+    bottom:98px;
+    left:1380px;
+
+}
+
+.links__dropdown:hover{
+    cursor:pointer
+}
 /* .home__addProduct:hover{
     transition: all .1s ease-in-out; 
     transform: scale(1.1);
