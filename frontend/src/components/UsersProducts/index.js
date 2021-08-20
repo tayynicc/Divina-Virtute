@@ -3,7 +3,6 @@ import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router'
 import { getOneUser } from '../../store/session'
-import { getProducts } from '../../store/products'
 import { deleteProduct } from '../../store/products'
 
 function UsersProducts (){
@@ -11,25 +10,10 @@ function UsersProducts (){
     const dispatch = useDispatch();
 
     const { id } = useParams()
-    const users = useSelector((state) => (state.session[id]))
-    const products = useSelector((state) => Object.values(state.product))
+
+    const users = useSelector((state) => (state?.session[id]))
     
-
-    console.log(`users:`, users)
-
-    console.log(`products`, products)
-
-    // create funciton to combine 24 and 29 because filter runs before the map bercause users state has not loaded on 
-
-    const userProductsIds = users?.Products.map((product) => (
-       product.id
-    ))
-    
-
-    const userProducts = products.filter((product) => (
-        userProductsIds.includes(product.id)
-    ))
-
+ 
     const handleDelete = (id) => {
     
         dispatch(deleteProduct(Number(id)))
@@ -39,7 +23,6 @@ function UsersProducts (){
    
     useEffect(() => {
         dispatch(getOneUser(id));
-        dispatch(getProducts());
         
     }, [dispatch, id])
 
@@ -48,7 +31,7 @@ function UsersProducts (){
     return (
         <div className='pfp__upvotes'>
             
-            {userProducts.map((product) => (
+            {users?.Products?.map((product) => (
                 <div className='pd__mockup'>
                     <a href={`/products/${product.id}`} className='pd__title'>{product.title}</a>
                     <p className='pd__tagLine'>{product.title}</p>
@@ -59,8 +42,7 @@ function UsersProducts (){
                     
                     <button className='delete__button'onClick={() => handleDelete(+product.id)}><img className='edit__icons-delete' alt='delete user product button' src="https://img.icons8.com/material-outlined/24/000000/trash--v1.png"/></button>
                     
-                    
-                </div>    
+                </div>     
             ))}
         
 

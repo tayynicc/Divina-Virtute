@@ -62,11 +62,16 @@ router.get('/:id', asyncHandler(async (req, res) => {
 }));
 
 
+
+// updating the users information 
 router.put(
-    '/:id',
+    '/profile/:id',
     asyncHandler(async function (req, res) {
         const userId = parseInt(req.params.id)
-        const userInfo = await User.findByPk(userId);
+        const userInfo = await User.findByPk(userId, {
+            include: { model:Product },
+            where: {ownerId: userId}
+        });
         const updatedUserInfo = await userInfo.update(req.body)
 
         return res.json(updatedUserInfo)

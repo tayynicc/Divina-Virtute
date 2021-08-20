@@ -7,7 +7,7 @@ const REMOVE_USER = 'session/removeUser';
 const SHOW_ONE = 'session/oneUser'
 
 // updating the user
-const UPDATE_USER = 'users/updateUser'
+const UPDATE_USER = 'session/updateUser'
 
 const setUser = (user) => {
   return {
@@ -62,8 +62,13 @@ export const getOneUser = (id) => async (dispatch) => {
 	}
 };
 
+
+
+
+// update user information 
+
 export const updateUser = (data) => async (dispatch) => {
-    const res = await csrfFetch(`/api/users/${data.id}`, {
+    const res = await csrfFetch(`/api/users/profile/${data.id}`, {
         method: 'put',
         headers: {
         'Content-Type': 'application/json',

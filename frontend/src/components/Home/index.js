@@ -1,6 +1,8 @@
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { useParams } from 'react-router'
 import { updatedProducts } from '../../store/products'
+import { getOneUser } from '../../store/session'
 import './Home.css'
 
 
@@ -10,19 +12,26 @@ import './Home.css'
 function Home(){
     const dispatch = useDispatch();
 
+    // const { id } = useParams()
     
     
     const products = useSelector((state) => state.product)
-    
+    const users = useSelector((state) => (state?.session.user))
 
-    
+    const sessionUser = useSelector((state) => (state?.session))
 
+    console.log(users)
+    const userId = users.id 
+    console.log(userId)
 
+    // console.log(sessionUser[1].Products)
    
+    const currUsersProducts = sessionUser[1]?.Products
+
     useEffect(() => {
-     
+        dispatch(getOneUser(userId));
         dispatch(updatedProducts())
-    }, [dispatch])
+    }, [dispatch, userId])
 
   
     return (
@@ -47,13 +56,13 @@ function Home(){
     
                 <h2 className="users__products-label ">My Products</h2>   
                 <div className='newArival'>
-                    {/* {userProducts.map((product) => (
+                    {currUsersProducts?.map((product) => (
                       <div className='newArrivals__mockup'>
-                        <div className='newArival__image'></div>
-                        <div className='newArival__name'>{product.title}</div>
-                        <div className='newArival__tagLine'>{product.tagline}</div>
+                        <div ><img className='newArival__image' src={product.imageUrl}></img></div>
+                        <a href={`/products/${product.id}`}><div className='newArival__name'>{product.title}</div></a>
+                        <div className='newArival__tagLine'>{product.tagLine}</div>
                       </div>   
-                    ))} */}
+                    ))}
                 </div>
 
                 

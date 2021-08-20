@@ -12,24 +12,45 @@
 
 .pfp__info{
     height: 400px;
-    width: 70%;
+    
     border-radius: 30px;
     box-shadow: 0 0 5px 5px grey;
     background: lightgray;
-    position:absolute;
+    /* position:relative;
+    overflow:hidden;
     left:250px;
-    top:10%;
+    top:10%; */
+    border:5px solid black;
+    margin-bottom:30px;
+}
+
+.info-container{
+    height: 410px;
+    width: 1200px;
+    padding:20px;
+    position:relative;
+    bottom:20px;
+    left: 300px;
+    overflow:hidden
 }
 
 .pfp__image{
     height:250px;
-    width:250px;
+    width:250px; 
     border-radius:50%;
     border:5px solid black;
     box-shadow: 0 0 5px 5px grey;
-    position:fixed;
+    position:fixed; 
     top:17%;
     left:17%;
+    margin-left:15px;
+}
+
+.pfp__image-div{
+    height:200px;
+    width:200px;
+    position:relative;
+    
 }
 
 .pfp__name{
