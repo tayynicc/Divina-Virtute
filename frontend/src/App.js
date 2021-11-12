@@ -4,6 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import SignupFormPage from "./components/SignupFormPage";
 import * as sessionActions from "./store/session";
 
+
 import LandingPage from './components/LandingPage'
 import SlideShow from './components/SlideShow'
 import Home from './components/Home'
@@ -15,7 +16,7 @@ import AddProductForm from "./components/AddProductForm";
 import UpdateProductForm from './components/UpdateProductForm';
 import UsersProducts from './components/UsersProducts'
 import ProductDiscussion from "./components/ProductDiscussion";
-
+import GuideStone from "./components/GuideStone";
 import CollectionsLanding from "./components/CollectionsLanding";
 import SingleCollection from "./components/SingleCollection";
 
@@ -70,6 +71,9 @@ function App() {
           </Route>
           <Route path='/collection/:id'>
               <SingleCollection />
+          </Route>
+          <Route path='/GuideStone'>
+              <GuideStone />
           </Route>
         </Switch>
       )}

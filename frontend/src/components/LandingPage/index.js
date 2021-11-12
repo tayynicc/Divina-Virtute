@@ -1,20 +1,37 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, Redirect } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+
 import './LandingPage.css'
 import LoginFormModal from '../LoginFormModal';
 
+import { login } from '../../store/session';
 
 
+const LandingPage = () => {
 
-const landingPage = () => {
+    
+    const user = useSelector(state => state.session.user);
+    
+    const dispatch = useDispatch()
 
+    const demoLogin = () => {
+        let demoUser = ['demo@user.io', 'password']
+        dispatch(login(demoUser));
+    }
+
+    console.log(user)
 
     const sessionLinks = (
         <>
           <LoginFormModal />
+          <button onClick={(() => demoLogin())}>Demo Login</button>
           <NavLink className='signup_btn' to="/signup">Sign Up</NavLink>
         </>
       );
 
+      if (user) {
+        return <Redirect to='/home' />;
+      }
   
 
   
@@ -62,4 +79,4 @@ const landingPage = () => {
 
 
 
-export default landingPage;
+export default LandingPage;

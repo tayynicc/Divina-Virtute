@@ -30,11 +30,13 @@ function Headers(){
                 <img className='search__icon' alt='search button' src="https://img.icons8.com/doodle/48/000000/search--v1.png"/>
             </button>
 
+            
+
             <NavLink to='/collections' className='collection__link'><img src="https://img.icons8.com/ios/50/000000/collectibles.png"/></NavLink>
 
             <div className='links__dropdown'><img src="https://img.icons8.com/ios/50/000000/menu--v6.png"/></div>
 
-
+            <NavLink to='/GuideStone'>Glossary</NavLink>
             {/* make site links into drop down menu  */}
 
             <div className='home__links'>

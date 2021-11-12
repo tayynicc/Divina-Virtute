@@ -1,0 +1,98 @@
+
+.tableOfContents{
+    border: 3px solid red; 
+    height: 75vh;
+    width: 20%;
+    position: absolute; 
+    top: 20%;
+    left: 3%;
+
+}
+
+.menu__name{
+    border: 3px solid;
+    height: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.itemInformation__container{
+    border: 3px solid green;
+    width: 70%;
+    height: 75vh;
+    position: absolute; 
+    right: 3%;
+    top: 20%;
+
+}
+
+.item__image-container{
+    border: 3px solid blue;
+    width: 35%;
+    height: 80%;
+    position: relative; 
+    top: 9%;
+    left: 3%;
+}
+
+.item__name{
+    border: 3px solid purple; 
+    width: 55%;
+    height: 10%;
+    position: absolute;
+    right: 3%;
+    top:9%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.item__elements{
+    border: 3px solid pink; 
+    width: 45%;
+    height: 10%;
+    position: absolute;
+    right: 8%;
+    top:22%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.item__origin{
+    border: 3px solid hotpink; 
+    width: 35%;
+    height: 10%;
+    position: absolute;
+    right: 13%;
+    top:35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item__description{
+    border: 3px solid orange; 
+    width: 55%;
+    height: 39%;
+    position: absolute;
+    right: 3%;
+    top:50%;
+    /* padding-left: 20px */
+}
+
+.item__specialInstructions{
+    border: 3px solid purple; 
+    width: 93.5%;
+    height: 5%;
+    position: absolute;
+    right: 3%;
+    bottom:2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
