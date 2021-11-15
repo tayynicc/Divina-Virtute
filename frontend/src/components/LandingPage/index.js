@@ -37,23 +37,21 @@ const LandingPage = () => {
   
         return(
         <div className='bkg__layer1'>
-            <div className='bkg__logo blink' >
-            </div> 
-                <div className='bkg__layer2'>
-                    
-                    <div className='content'>
-                        <div className='txt__name'>
-                            <h1>Divina Vitute</h1>
-                        </div>
-                        <div className='txt__phrase'>
-                            
-                        </div>
-                        <div className='links' >
-                            {sessionLinks}
-                        </div>
+            {/* <div className='bkg__logo blink' ></div>  */}
+            <div className='bkg__layer2'>
+                
+                {/* <div className='content'>
+                    <div className='txt__name'>
+                        <h1>Divina Vitute</h1>
                     </div>
-                </div>
-
+                    <div className='txt__phrase'>
+                        
+                    </div>
+                    <div className='links' >
+                        {sessionLinks}
+                    </div>
+                </div> */}
+            </div>
         </div>
     )
 }

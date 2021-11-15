@@ -1,5 +1,8 @@
-/* coursels */
 
+@import url('https://fonts.googleapis.com/css2?family=Praise&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Praise&display=swap');
+/* coursels */
+/* 
 .bkg__layer3-coursel{
     
     width:590px;
@@ -16,17 +19,17 @@
 }
 
 .top__coursel{
-    border-radius:20px;
-    width: 376px;
-    height: 250px;
-    margin-bottom: 70px;
-    margin-left:40px;
+    border: 3px solid red;
+    width: 100%;
+    margin-top: 70px;
     display:flex;
     justify-content: center;
     overflow: hidden;
-    box-shadow: 0 0 5px 5px grey;
-
-    
+    position: absolute;
+    left: 0;
+    right:0;
+    bottom: 0;
+    top:3%;
 }
 
 
@@ -40,12 +43,14 @@
 
 }
  
-
+/* 
 .img__1{
-    height:250px;
-}
+    height:100%;
+    opacity: 0.5;
+    z-index:1;
+} */
 
-.img__container{
+/* .img__container{
     display:flex;
     justify-content: center;
     margin-left: 751px
@@ -55,7 +60,9 @@
 .img__container-bottom{
     display:flex;
     justify-content: center;
-    margin-left: 577px
+    margin-left: 577px;
+    background-color: black;
+    z-index: 2;
     
 }
 
@@ -66,7 +73,7 @@
 
 
  
-.slide:hover{
+.slide{
     animation: slide 5s infinite;
     animation-direction:  normal; 
     
@@ -93,4 +100,117 @@
 .hover_div:hover{
     animation: slide 6s infinite;
     animation-direction:  normal;
+} */ */
+
+.section{
+    border: 3px solid orange;
 }
+
+
+.img__1{
+    /* height:fill; */
+    /* height:100%; */
+    width: 100%;
+    height: 100%;
+    /* opacity: 0.5; */
+    z-index:1;
+} 
+
+.position{
+    width: 1903px;
+    
+}
+
+
+.slideshow {
+    width:fill;
+
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    top:5%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    z-index:1;
+}
+
+.container {
+    width:100vw;
+    height:fill;
+    position:relative;
+   top:0;
+   left:0;
+   bottom:0;
+    animation:slide 70s ease-in-out infinite;
+    display: flex;
+    flex-direction: row;
+    z-index:2;
+    opacity: .5;
+    
+
+}
+
+
+
+.container section {
+    width:100%;
+    float:left;
+}
+
+
+.text-container{
+    height: 70vh;
+    width:30%;
+    border:3px solid red;
+    position:absolute;
+    left:35%;
+    top:15%;
+    background-color: #333333;
+    border-radius:31% 69% 38% 62% / 20% 48% 52% 80%;
+    z-index:3;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+    flex-direction:column;
+    /* opacity: 1; */
+}
+
+
+.title{
+    font-family: 'Praise', cursive;
+    font-size:73px; 
+    color: #989898;
+}
+
+.slogan{
+    font-size: 33px;
+    margin-left:60px;
+    font-family: 'Praise', cursive;
+    font-weight:lighter;
+    color: #989898;
+}
+
+.crysimage{
+    background-image: url('../Images/')
+}
+/* .container section:nth-child(1) {background-color:green;}
+.container section:nth-child(2) {background-color:orange;}
+.container section:nth-child(3) {background-color:blue;}
+.container section:nth-child(4) {background-color:red;} */
+
+/* .container:hover {
+   animation-play-state:paused;
+} */
+
+@keyframes slide {
+    0% {left:0;} 
+    25% {left:-1920px;}
+    50% {left:-3840px;} 
+    75% {left:-5760px;}
+    100% {left:-7680px;}
+} 
+
+
+
