@@ -1,47 +1,5 @@
-/* .bkg__layer1{
-    height: 100vh;
-    background-image: url(bkg__layer1.png);
-    background-repeat: no-repeat; 
-    background-size: 100% 100%;
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
+@import url('https://fonts.googleapis.com/css2?family=Praise&display=swap');
 
-} */
-/* 
-.bkg__layer2{
-    display: flex;
-    justify-content: center;
-    align-items:center;
-} */
-
-.bkg__logo{
-    height: 60px;
-    width: 70px;
-    position: fixed;
-    top:20px;
-    left:10px;
-    background-image: url(lightbulb.png);
-    background-repeat: no-repeat; 
-    background-size: 100% 100%;
-    animation: blink .40s linear infinite;
-}
-
-.bkg__logo:hover{
-    cursor: pointer;
-}
-
-@keyframes blink{
-    0%{opacity: 0;}
-    15%{opacity: .3;}
-    50%{opacity: .5;}
-    60%{opacity: .3;}
-    100%{opacity: 1;}
-}
 
 .content{
     
@@ -75,20 +33,7 @@
     display: flex;
     justify-content: space-around;
 }
-
-/* button{
-    background:lightgrey;
-    font-weight:bold;
-    border-radius:30px;
-    font-size: 25px;
-    border: 1px solid lightgrey;
-}
-button:hover{
-    cursor: pointer;
-    background:#312E2D;
-    color:white;
-} */
-
+/* 
 .signup_btn{
     color:black;
     background:lightgrey;
@@ -106,24 +51,72 @@ button:hover{
     cursor: pointer;
     background:#312E2D;
     color:white;
+} */
+
+.landing-header{
+    /* border: 3px solid red; */
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    height:5%;
+    background-color:#333333 ;
+    z-index: 3;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.landing-header:hover {
+    cursor: pointer;
 }
 
 
-/* a{
-    text-decoration: none;
-    font-size: 25px; 
+
+.demoLogin__button{
+    background: transparent;
+    border: none;
+    font-size: 33px;
+    font-family: 'Praise', cursive;
+    color: 	#BDB5D5;
+}
+
+
+.signup_btn{
+    background: transparent;
+    border: none;
+    font-size: 33px;
+    font-family: 'Praise', cursive;
+    color: 	#BDB5D5;
+}
+
+
+.login__btn{
+    background: transparent;
+    border: none;
+    font-size: 33px;
+    font-family: 'Praise', cursive;
+    color: 	#BDB5D5;
+}
+
+.dev_Footer{
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    height:3%;
+    background-color:#333333 ;
+    z-index: 3;
     display: flex;
+    justify-content: center;
     align-items: center;
-    color: black;
-    padding:3px;
-    
+}
 
-} */
 
-/* a:hover{
-    border:3px solid #312E2D;
-    padding:3px;
-    border-radius:30px;
-    background:#312E2D;
-    color:white;
-} */
+.github__link{
+    margin-left: 10px;
+}
+
+.linkedin__link{
+    margin-left: 10px;
+}

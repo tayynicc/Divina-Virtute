@@ -163,7 +163,6 @@
 .text-container{
     height: 70vh;
     width:30%;
-    border:3px solid red;
     position:absolute;
     left:35%;
     top:15%;
@@ -171,7 +170,7 @@
     border-radius:31% 69% 38% 62% / 20% 48% 52% 80%;
     z-index:3;
     display:flex;
-    justify-content:space-evenly;
+    justify-content:center;
     align-items:center;
     flex-direction:column;
     /* opacity: 1; */
@@ -181,7 +180,10 @@
 .title{
     font-family: 'Praise', cursive;
     font-size:73px; 
-    color: #989898;
+    color: 	#BDB5D5;
+    position: absolute;
+    top:4%;
+    left: 10%;
 }
 
 .slogan{
@@ -189,20 +191,22 @@
     margin-left:60px;
     font-family: 'Praise', cursive;
     font-weight:lighter;
-    color: #989898;
+    color: 	#BDB5D5;
+    position: absolute;
+    bottom:20%;
 }
 
 .crysimage{
-    background-image: url('../Images/')
+    background-image: url('../../Images/crystals.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height:200px;
+    width:200px;
+    /* border: 3px solid green; */
+    position: absolute;
+    top:30%;
+    left: 35%;
 }
-/* .container section:nth-child(1) {background-color:green;}
-.container section:nth-child(2) {background-color:orange;}
-.container section:nth-child(3) {background-color:blue;}
-.container section:nth-child(4) {background-color:red;} */
-
-/* .container:hover {
-   animation-play-state:paused;
-} */
 
 @keyframes slide {
     0% {left:0;} 
@@ -211,6 +215,5 @@
     75% {left:-5760px;}
     100% {left:-7680px;}
 } 
-
 
 
