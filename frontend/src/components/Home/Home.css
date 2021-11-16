@@ -1,12 +1,26 @@
+html{
+    background-color: #333333;
+
+}
+
 .bkg__login-layer1{
-    background-image: url('./bkg__home.png');
+    /* background-image: url('./bkg__home.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     position: absolute;
     top: 0;
     right: 0;
+    left: 0; */
+    /* bottom: 0; */
+    /* overflow:scroll; */
+    background-color: #333333;
+    height: 100vh;
+    overflow: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
     left: 0;
-    bottom: 0;
+
 }
 
 
@@ -46,7 +60,7 @@
     border-radius: 30px;
     box-shadow: 0 0 5px 5px grey;
     background: lightgray;
-    position:fixed;
+    position:absolute;
     left:18%;
     top:10%;
     display: grid;
@@ -114,6 +128,15 @@
     display: flex;
     align-items: center;
     color: Green;
+}
+
+.divider{
+    border-top: 3px solid lightgrey;
+    height: 10%;
+    width: 90%;
+    position: absolute; 
+    top: 40%;
+    left: 5%;
 }
 
 /* product display */
