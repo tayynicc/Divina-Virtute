@@ -22,9 +22,7 @@ function Product(){
 
     return (
     <div className='products__bkg-layer1'>
-        <NavLink to='/home' className='back__button-home'>
-            <img alt='back button' className='back__button' src="https://img.icons8.com/plumpy/24/000000/back--v1.png"/>
-        </NavLink>
+        
         <div className='product__read-div'>
             {products.map((product) => 
                 <div className='pd__display'>
