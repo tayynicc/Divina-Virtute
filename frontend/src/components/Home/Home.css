@@ -1,9 +1,9 @@
 .bkg__login-layer1{
-    height:100vh;
+    /* height:100vh; */
     background-image: url('./bkg__home.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     left: 0;

@@ -1,178 +1,86 @@
-/*  header  */
-.header{
-    height: 100px;
-    width: 90%;
-    border-radius: 30px;
-    box-shadow: 0 0 5px 5px grey;
-    background: lightgray;
-    margin:30px;
-    position:fixed;
-    left:70px;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #272727;
+  font-family: "Montserrat", sans-serif;
+}
+
+.navMenu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-evenly;
+    width: 60%;
 
 }
 
-.home__logo{
-    border:1px black solid;
-    /* box-shadow: 0 0 5px 5px grey; */
-    height:90px;
-    width:90px;
-    border-radius: 50%;
-    /* position:fixed;
-    top:5%;
-    left:7%; */
-    display:flex;
-    margin-top:4px;
-    margin-left:20px;
-
-
-    background-image: url('./night-flicker.png');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-color: #312E2D;
+.navMenu a {
+  color: #f6f4e6;
+  text-decoration: none;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: inline-block;
+  width: 150px;
+  transition: all 0.2s ease-in-out;
 }
 
-.home__search{
-    height:30px;
-    width:450px;
-    position:relative;
-    bottom:75px;
-    left:160px;
+.navMenu a:hover {
+  color: #BDB5D5;
 }
 
-.search__input{
-    box-shadow: 0 0 5px 5px grey
+.navMenu .dot {
+  width: 6px;
+  height: 6px;
+  background: #BDB5D5;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.2s ease-in-out;
 }
 
-.search__button{
-    
-    height:40px;
-    width:40px;
-    position: fixed;
-    left:720px;
-    top:80px;
-    border:transparent;
-    background:transparent;
-    
-
-    /* background-image: url('./search__icon.png');
-    background-repeat: no-repeat;
-    background-size: 100% 100%; */
+.navMenu a:nth-child(1):hover ~ .dot {
+  transform: translateX(30px);
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
 }
 
-.search__button:hover{
-    cursor:pointer
-}
-.home__links{
-    /* border:5px black solid; */
-    /* box-shadow: 0 0 5px 5px grey; */
-    /* height:30px; */
-    width:400px;
-    position:fixed;
-    padding:3px;
-    top:5%;
-    left:47%;
-    display: flex;
-    justify-content: space-around;
+.navMenu a:nth-child(2):hover ~ .dot {
+  transform: translateX(310px);
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
 }
 
-/* .link__label{
-    
-    position:fixed;
-    top:4px;
-    color:transparent;
-    padding:0px;
+.navMenu a:nth-child(3):hover ~ .dot {
+  transform: translateX(550px);
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
 }
 
-.link__label:hover{
-    color:black;
-} */
-
-.header__links{
-    width:60px;
-}
-
-.etsy__link{
-    height:80px;
-    width:80px;
-    margin:0px;
-}
-
-.moon__link{
-    height:50px;
-    width:50px;
-    margin-top:12px;
-}
-
-.crystal__link{
-    margin-top:7px;
-    height:60px;
+.navMenu a:nth-child(4):hover ~ .dot {
+  transform: translateX(770px);
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
 }
 
 
-.collection__link{
+.navPositon{
+    height: 5%;
     position: absolute;
-    top:15px;
-    right: 155px;
-    border:5px black solid;
-
-
+    top:3%;
+    left: 50%;
 }
 
-.collection__link:hover{
-    cursor:pointer
+
+.dot{
+    position: relative; 
+    top:70%;
+    right: 84%;
 }
-
-.home__addProduct{
-    /* border:5px black solid; */
-    position:fixed;
-    top:77px;
-    right:320px;
-   
-}
-
-.links__dropdown{
-    position:absolute;
-    bottom:18px;
-    left:1380px;
-    /* border: 3px solid red; */
-    width:50px;
-
-}
-
-.links__dropdown:hover{
-    cursor:pointer
-}
-/* .home__addProduct:hover{
-    transition: all .1s ease-in-out; 
-    transform: scale(1.1);
-    cursor:pointer;
-    background:black;
-    border:3px solid black
-
-} */
-
-.add__link-header:hover{
-    
-    color:white;
-}
-
-/* .home__pfp{
-    border:5px black solid; 
-    box-shadow: 0 0 5px 5px grey;
-    height:70px;
-    width:70px;
-    border-radius:50%;
-    position:fixed;
-    top:4%;
-    left:90%; 
-} */
-
-.add__link-header{
-    font-size:26px;
-    font-weight:bold;
-    color:black;
-}
-
-/* .header__pfp{
-    border: 3px solid blue;
-} */

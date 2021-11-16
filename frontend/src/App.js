@@ -72,7 +72,7 @@ function App() {
           <Route path='/collection/:id'>
               <SingleCollection />
           </Route>
-          <Route path='/GuideStone'>
+          <Route path='/guide-stone'>
               <GuideStone />
           </Route>
         </Switch>
