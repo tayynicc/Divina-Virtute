@@ -28,7 +28,7 @@ body {
   text-transform: uppercase;
   font-weight: 500;
   display: inline-block;
-  width: 150px;
+  width: 155px;
   transition: all 0.2s ease-in-out;
 }
 
@@ -47,28 +47,34 @@ body {
 }
 
 .navMenu a:nth-child(1):hover ~ .dot {
-  transform: translateX(30px);
+  transform: translateX(-40px);
   transition: all 0.2s ease-in-out;
   opacity: 1;
 }
 
 .navMenu a:nth-child(2):hover ~ .dot {
-  transform: translateX(310px);
+  transform: translateX(200px);
   transition: all 0.2s ease-in-out;
   opacity: 1;
 }
 
 .navMenu a:nth-child(3):hover ~ .dot {
-  transform: translateX(550px);
+  transform: translateX(405px);
   transition: all 0.2s ease-in-out;
   opacity: 1;
 }
 
 .navMenu a:nth-child(4):hover ~ .dot {
-  transform: translateX(770px);
+  transform: translateX(590px);
   transition: all 0.2s ease-in-out;
   opacity: 1;
 }
+
+.navMenu a:nth-child(5):hover ~ .dot {
+    transform: translateX(830px);
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+  }
 
 
 .navPositon{

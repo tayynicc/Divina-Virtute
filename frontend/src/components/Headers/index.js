@@ -19,6 +19,8 @@ function Headers(){
                 <NavLink to="/guide-stone">Guide Stone</NavLink>
                 <NavLink to="/collections">Collections</NavLink>
                 <NavLink to={`/profile/${id}`}>Account</NavLink>
+                <NavLink to="/new">New Product</NavLink>
+
                 <div class="dot"></div>
             </nav>
         </>
