@@ -45,7 +45,7 @@ function Home(){
             <div className='bkg__login-layer1'>
                 <div className='theme'></div>
                 
-                {/* <h2 className="new__products-label hidden">New Arrivals</h2>     */}
+                <h2 className="new__products-label ">New Arrivals</h2>    
                     
                     <div className='previous'>
                     

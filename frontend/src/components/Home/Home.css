@@ -11,11 +11,26 @@
 
 
 .new__products-label{
-    position:fixed;
-    top:140px;
-    left:760px;
+    display:none;
+}
+
+.previous:hover \ .new__products-label{
     padding:3px;
     color:white;
+    position: absolute;
+    top: 10%;
+    border: 3px solid blue;
+    background-color:grey;
+    left: 43.5%;
+    z-index: 3;
+    opacity:.9;
+}
+
+.new__products-label{
+    /* position:fixed;
+    top:140px;
+    left:760px; */
+     
 }
 
 .users__products-label {
