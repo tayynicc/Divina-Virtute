@@ -1,5 +1,4 @@
 .bkg__login-layer1{
-    /* height:100vh; */
     background-image: url('./bkg__home.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -11,21 +10,12 @@
 }
 
 
-
-
-
-/*  in case you missed it  */
-/* newest products in db */
-
 .new__products-label{
     position:fixed;
     top:140px;
     left:760px;
-    /* border: 3px solid green; */
     padding:3px;
     color:white;
-    
-     
 }
 
 .users__products-label {
@@ -35,9 +25,6 @@
     top:230px;
 }
 
-
-
-
 .previous{
     height: 225px;
     width: 60%;
@@ -45,13 +32,14 @@
     box-shadow: 0 0 5px 5px grey;
     background: lightgray;
     position:fixed;
-    left:14%;
-    top:20%;
+    left:18%;
+    top:10%;
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
     overflow: hidden;
 }
+
 
 .previous__mockup{
     border: 3px solid black;
@@ -64,12 +52,10 @@
 .previous__image{
     grid-row-start: 1;
     grid-row-start: 1;
-   
     box-shadow: 0 0 5px 5px grey;
     height:80px;
     width:80px;
     border-radius:50%;
-    /* margin: 10px; */
     position:relative; 
     left:3%;
     top:7%;
@@ -80,35 +66,42 @@
 .previous__name{
     grid-row-start: 1;
     grid-row-start: 1;
-    /* 
-    box-shadow: 0 0 5px 5px grey; */
-    height:23px;
-    width:250px;
+    height:27px;
+    width:70%;
     position:relative;
-    left: 26%;
-    bottom:75px;
+    left: 20%;
+    bottom:90px;
     overflow:hidden;
     font-size:20px;
     color: black;
+    overflow:hidden;
 }
 
 .previous__tagLine{
     grid-row-start: 1;
     grid-row-start: 1;
-    /* border-radius:10px; */
-    /* box-shadow: 0 0 5px 5px grey; */
-    height:31px;
-    width:400px;
+    height:26px;
+    width:fit-content;
+    max-width:330px;
     position:relative;
     left: 20%;
-    bottom:63px;
+    bottom:73px;
     overflow:hidden;
     padding:5px;
-    /* border:3px black solid; */
 }
+
+.learnMore{
+    height: 26px;
+    width: 120px;
+    position:relative;
+    left: 78%;
+    bottom:99px;
+    display: flex;
+    align-items: center;
+    color: Green;
+}
+
 /* product display */
-
-
 
 /* new arivals  */
 .newArival{
@@ -127,7 +120,6 @@
     overflow:hidden;
 }
 
-
 .newArrivals__mockup{
     border: 3px solid black;
     height:160px;
@@ -135,11 +127,7 @@
     margin:5px;
 }
 
-
 .newArival__image{
-    /* grid-row-start: 1;
-    grid-column-start:1; */
-    /* border:5px black solid; */
     box-shadow: 0 0 5px 5px grey;
     height:90px;
     width:90px;
@@ -151,10 +139,6 @@
 }
 
 .newArival__name{
-    /* grid-row-start: 1;
-    grid-column-start:1; */
-    /* border:5px black solid;
-    box-shadow: 0 0 5px 5px grey; */
     font-size:22px;
     height:30px;
     width:200px;
@@ -167,8 +151,6 @@
 }
 
 .newArival__tagLine{
-    /* border:5px black solid;
-    box-shadow: 0 0 5px 5px grey; */
     height:70px;
     width:230px;
     position:relative;
