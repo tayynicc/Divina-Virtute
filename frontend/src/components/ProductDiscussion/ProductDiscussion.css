@@ -1,17 +1,15 @@
 .product-discussion__label-div{
     position: fixed;
-    right:550px;
+    right:520px;
     top: 430px;
     height: 50px;
-    width:300px;
-    
     display: flex;
     align-items: center;
 }
 
 .product-display__label{
     font-size:33px;
-    color: lightgray
+    color: lightgray;
 }
 
 .product-discussion__outerDiv{
@@ -28,7 +26,7 @@
 }
 
 .commentInput__container{
-    height: 150px;
+    height: 180px;
     width:800px;
     border-bottom: 3px solid black;
     /* margin-top: 0px; */
@@ -50,7 +48,18 @@
 .addComment__button{
     position:fixed;
     right:140px;
-    bottom: 280px;
+    bottom: 295px;
+    font-size:22px;
+    padding: 5px;
+    border-radius: 10px;
+    background: transparent;
+    border: none
+}
+
+.addComment__button:hover{
+    background-color: green; 
+    border: 3px solid green; 
+    color: white; 
 }
 
 .comments__container-outter{
@@ -87,46 +96,37 @@
 .pfp__username{
     height:20px;
     width: 150px;
-    /* border: 3px solid orange; */
     position:relative;
-    bottom: 110px;
+    bottom: 95px;
     left:80px;
     display:flex; 
     justify-content: center;
     
-    
-
-    /*margin-top:9px;
-    margin-left:10px; */
 
 }
 
 .comment__body{
-    /* border: 3px solid blue; */
     border-radius:10px;
-    background-color: honeydew;
-    border: 1px solid black;
+    background-color: transparent;
+    border: none;
     height: 70px;
     width: 680px;
-    /* display:flex;
-    margin-left:80px;
-    margin-bottom: 80px;
-    justify-content: center; 
-     */
     position:relative;
-    bottom:160px;
+    bottom:110px;
     left:80px;
     padding-left:10px;
+    padding-top: 20px;
     
     
 }
 .posted{
     height:20px;
-    width: 200px;
+    /* width: 200px; */
     /* border: 3px solid purple; */
     display:flex;
     position:relative; 
-    bottom:30px;
+    /* bottom:0px; */
+    margin-left: 10px;
     
 }
 
@@ -141,14 +141,14 @@
     
 } 
 
-.edit__comment-delete{
+/* .edit__comment-delete{
     height:25px;
     width:25px;
     position:relative;
     left:700px;
     bottom:170px;
     
-} 
+}  */
 
 
 .edit__comment-delete:hover{
@@ -168,4 +168,14 @@
     border: 3px solid black;
     /* width:200px; */
     text-align: center;
+}
+
+.delete__review{
+    background: transparent;
+    border: none;
+    /* border: 3px solid green; */
+    position: relative; 
+    left:90%; ;
+    bottom:100px;
+    
 }
