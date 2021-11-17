@@ -47,41 +47,9 @@ function SingleCollection (){
             <Headers />
 
             <div className='singleCollection__product-container'>
-                <div className='right__toggle-arrow'></div>
-                {/* mapped */}
-                {/* not sure how i want to scroll them yet
-                    currently thingking large cards 3 per row clicked taken to individual product page with all details
-                */}
-{/* 
-                {products.map((product) => 
-                    <div className='SC__product-card'>
-                        <img className='SC__product-image' src={product.imageUrl}></img>
-                        
-                        <div className='SC__product-title'>{product.title}</div>
-                    
-                        
-                        
-                        <div className='SC__product-tagLine'>{product.tagLine}</div>
-                    </div>
-                )} */}
-
-               
-
                 {product.map((item) => 
                      <a href={`/products/${item.id}`}><img className='image__bubble' alt='view items' src={item.imageUrl}></img></a>
                 )}
-                
-                    <div className='bubbleLabels letters' >{bubblelables('Angel Phantom Quartz')}</div>
-
-                    {bubblelables('Angel Phantom Quartz').map((letter) => 
-                        <div className='letter rotate'>{letter}</div>
-
-                        // {function identifyLetter()}
-                    )}
-               
-               
-                
-
             </div>
 
 

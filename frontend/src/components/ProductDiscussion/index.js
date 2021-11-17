@@ -81,11 +81,6 @@ function ProductDisplay(){
 
  
 
-    
-
-
-
-
 
     const handleDelete = (id) => {
         dispatch(deleteReview(Number(id)))

@@ -61,20 +61,6 @@ function Home(){
 
                     <div className='divider' ></div>
 
-    
-                {/* <h2 className="users__products-label ">My Products</h2>   
-                <div className='newArival'>
-                    {currUsersProducts?.map((product) => (
-                      <div className='newArrivals__mockup'>
-                        <div ><img className='newArival__image' src={product.imageUrl}></img></div>
-                        <a href={`/products/${product.id}`}><div className='newArival__name'>{product.title}</div></a>
-                        <div className='newArival__tagLine'>{product.tagLine}</div>
-                      </div>   
-                    ))}
-                </div> */}
-
-                
-                
             </div>
         </div>
         

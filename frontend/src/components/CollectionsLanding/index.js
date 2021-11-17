@@ -38,9 +38,6 @@ function CollectionsLanding(){
     const tags = uniqueTags().filter((ele) => ele !== undefined)
 
     const images = uniqueTagImages()
-    
-
-    console.log(`tags`, tags, `images`, images)
 
     return(
         <div className='collectionsLanding__bkg-layer1'>
@@ -50,18 +47,13 @@ function CollectionsLanding(){
 
             <div className='collections__container'>
 
-                {/* these cards will be mapped */}
                 
                 
                 {tags.map((tag, idx) => 
                     <div className='collection__card'>
                         <div className='collection__title'>{tag}</div>
-                     <a href={`/collection/${images[idx]?.collectionId}`}><img alt='Crystals'className='collection__image' src={images[idx]?.imageUrl}></img></a>
+                        <a href={`/collection/${images[idx]?.collectionId}`}><img alt='Crystals'className='collection__image' src={images[idx]?.imageUrl}></img></a>
 
-                    {console.log(`image ids `, images[idx].collectionId)}
-                    
-                
-                        
 
                     </div>
                 )}
