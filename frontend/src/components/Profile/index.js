@@ -15,16 +15,6 @@ function Profile(){
     const { id } = useParams()
 
 
-    // const [ name, setName ] = useState('')
-    // const [ discription, setDiscription ] = useState('')
-    // const [ imageUrl, setImageUrl ] = useState('')
-
-
-    // const updateName = (e) => setName(e.target.value);
-    // const updateDiscription = (e) => setDiscription(e.target.value);
-    // const updateImageUrl = (e) => setImageUrl(e.target.value);
-
-
     useEffect(() => {
         dispatch(getOneUser(id));
 
@@ -32,39 +22,18 @@ function Profile(){
 
    
     
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault();
-
-        
-    //     console.log(`lemme submit`)
-    //     const payload = {
-    //         id: +id,
-    //         username: name,
-    //         imageUrl, 
-    //         discription,
-    //     }
-
-    //     await dispatch(updateUser(payload))
-       
-    // }
+   
 
     return (
         <div>
             
-            
-
             <div className='pfp__bkg-layer1'>
 
-                <NavLink to='/home' className='back__button-home profile'>
-                    <img alt='back button' className='back__button' src="https://img.icons8.com/plumpy/24/000000/back--v1.png"/>
-                </NavLink>
-
-                <div className='info-container'>
+                {/* <div className='info-container'>
                     {users.map((user) => 
                         <div className='pfp__info'> 
                             
                             <div className='pfp__image-div'>
-                                {/* <img src={user.imageUrl}></img> */}
                                 <img  className='pfp__image' src={user.imageUrl} />
                             </div>
 
@@ -75,12 +44,12 @@ function Profile(){
                                 <p className='user__bio pfp__discription'>{user.discription}</p>
                             </div>
 
-                            {/* <div className='pfp__buttons'>
-                                <img alt='edit profile buttons' src="https://img.icons8.com/ios-glyphs/30/000000/edit--v2.png"/>
-                            </div> */}
+                            
                         </div>
                     )}
-                </div>
+                </div> */}
+
+                
                 {/* <div className='update__userInformaiton'>
                     <form onSubmit={handleSubmit}>
                         <label className='update__user-userName'>Name</label>
@@ -97,14 +66,12 @@ function Profile(){
                     </form>
 
                 </div> */}
-
+{/* 
                 <div className='pfp__links-active'>
                     <a className='profile__newpd'href='/new'>Add Product</a>   
                 </div>
-                
-                {/* <div className='pfp__upvotes'>
-
-                </div> */}
+                 */}
+               
 
             </div>
 
