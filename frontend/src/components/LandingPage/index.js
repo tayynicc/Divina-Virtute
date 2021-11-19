@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import './LandingPage.css'
 import LoginFormModal from '../LoginFormModal';
-import Slideshow from '../SlideShow';
 
 import { login } from '../../store/session';
 
@@ -20,7 +19,6 @@ const LandingPage = () => {
         dispatch(login(demoUser));
     }
 
-    console.log(user)
 
     const sessionLinks = (
         <>

@@ -20,7 +20,7 @@ function Slideshow(){
     return (
         <>      
                 <div className="slideshow">
-                <div className='text-container'>
+                <div className='text-container hidden'>
                     <h1 className='title'> Divia Virtute</h1>
                     <div className='crysimage'></div>
                     <h3 className='slogan'>The one stop shop for crystals and gems. </h3>

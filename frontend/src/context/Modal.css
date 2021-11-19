@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+     z-index:3 ; 
 } 
   
 #modal-background {
@@ -32,6 +32,7 @@
     width: 500px;
     border-radius: 30px;
     padding:30px;
+   
 
 }
 

@@ -195,3 +195,125 @@ html{
     left: 130px;
     bottom:80px;
 }
+
+
+@media screen and (max-width:1629px){
+    .previous__tagLine{
+        grid-row-start: 1;
+        grid-row-start: 1;
+        height:26px;
+        width:fit-content;
+        max-width:230px;
+        position:relative;
+        left: 20%;
+        bottom:73px;
+        overflow:hidden;
+        padding:5px;
+        /* border: 3px solid red; */
+    }
+
+    .learnMore{
+        height: 26px;
+        width: 120px;
+        position:relative;
+        left: 68%;
+        bottom:99px;
+        display: flex;
+        align-items: center;
+        color: Green;
+    }
+}
+
+
+@media screen and (max-width:1546px){
+    .previous__tagLine{
+        grid-row-start: 1;
+        grid-row-start: 1;
+        height:26px;
+        width:fit-content;
+        max-width:200px;
+        position:relative;
+        left: 25%;
+        bottom:73px;
+        overflow:hidden;
+        padding:5px;
+        /* border: 3px solid red; */
+    }
+
+    .learnMore{
+        height: 26px;
+        width: 120px;
+        position:relative;
+        left: 68%;
+        bottom:99px;
+        display: flex;
+        align-items: center;
+        color: Green;
+    }
+}
+
+@media screen and (max-width:1464px){
+
+    .previous__name{
+        grid-row-start: 1;
+        grid-row-start: 1;
+        height:27px;
+        width:65%;
+        position:relative;
+        left: 25%;
+        bottom:90px;
+        overflow:hidden;
+        font-size:20px;
+        color: black;
+        overflow:hidden;
+    }
+
+    .previous__tagLine{
+        display: none;
+    }
+
+    .learnMore{
+        height: 26px;
+        width: 120px;
+        position:relative;
+        left: 38%;
+        bottom:75px;
+        display: flex;
+        align-items: center;
+        color: Green;
+    }
+}
+
+
+
+@media screen and (max-width:1028px){
+
+    .previous__name{
+        grid-row-start: 1;
+        grid-row-start: 1;
+        height:27px;
+        width:65%;
+        position:relative;
+        left: 30%;
+        bottom:90px;
+        overflow:hidden;
+        font-size:20px;
+        color: black;
+        overflow:hidden;
+    }
+
+    .previous__tagLine{
+        display: none;
+    }
+
+    .learnMore{
+        height: 26px;
+        width: 120px;
+        position:relative;
+        left: 38%;
+        bottom:75px;
+        display: flex;
+        align-items: center;
+        color: Green;
+    }
+}
