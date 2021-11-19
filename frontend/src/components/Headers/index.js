@@ -15,7 +15,7 @@ function Headers(){
 
         <>
             <nav class="navMenu navPositon">
-                <NavLink to='/home' >Home</NavLink>
+                <NavLink to='/home'>Home</NavLink>
                 <NavLink to="/guide-stone">Guide Stone</NavLink>
                 <NavLink to="/collections">Collections</NavLink>
                 <NavLink to={`/profile/${id}`}>Account</NavLink>

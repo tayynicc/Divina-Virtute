@@ -24,14 +24,13 @@ function ProductDisplay(){
 
     return(
         <div>
-            {/* <h2 className='product__display-label'>Products</h2> */}
             <div className='product__display'>
                 
                 
                 
                 {products?.map((product) => 
                     <div className='pd__tile-home' key={`${product.title}-${product.id}`}>
-{/*                         
+                        {/*                         
                         <a href={`/products/${product.id}`} className='pd__title'>{product.title}</a>
                         <p className='pd__tagLine'>{product.tagLine}</p>*/}
                         <p className='pd__price-home'>{`$ ${product.price}`}</p>
