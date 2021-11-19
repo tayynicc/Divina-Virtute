@@ -90,3 +90,60 @@ body {
     top:70%;
     right: 84%;
 }
+
+
+
+@media screen and (max-width: 1200px), (min-width:1025px){
+    .navMenu {
+        position: absolute;
+        top: 3%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: space-evenly;
+          width: fit-content;
+          /* border: 3px solid purple; */
+      
+      }
+    .navMenu a {
+        color: #f6f4e6;
+        text-decoration: none;
+        font-size: 1.2em;
+        text-transform: uppercase;
+        font-weight: 500;
+        display: inline-block;
+        width: 155px;
+        transition: all 0.2s ease-in-out;
+      }
+
+    .navMenu a:nth-child(1):hover ~ .dot {
+        transform: translateX(-90px);
+        transition: all 0.2s ease-in-out;
+        opacity: 1;
+      }
+      
+      .navMenu a:nth-child(2):hover ~ .dot {
+        transform: translateX(100px);
+        transition: all 0.2s ease-in-out;
+        opacity: 1;
+      }
+      
+      .navMenu a:nth-child(3):hover ~ .dot {
+        transform: translateX(265px);
+        transition: all 0.2s ease-in-out;
+        opacity: 1;
+      }
+      
+      .navMenu a:nth-child(4):hover ~ .dot {
+        transform: translateX(390px);
+        transition: all 0.2s ease-in-out;
+        opacity: 1;
+      }
+      
+      .navMenu a:nth-child(5):hover ~ .dot {
+        transform: translateX(580px);
+        transition: all 0.2s ease-in-out;
+        opacity: 1;
+      }
+      
+}
