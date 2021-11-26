@@ -54,7 +54,6 @@
 } */
 
 .landing-header{
-    /* border: 3px solid red; */
     position: absolute;
     top:0;
     left:0;
@@ -67,9 +66,9 @@
 
 }
 
-.landing-header:hover {
+/* .landing-header:hover {
     cursor: pointer;
-}
+} */
 
 
 
@@ -81,6 +80,10 @@
     color: 	#BDB5D5;
 }
 
+.demoLogin__button:hover{
+    cursor: pointer
+}
+
 
 .signup_btn{
     background: transparent;
@@ -90,6 +93,10 @@
     color: 	#BDB5D5;
 }
 
+.signup_btn:hover{
+    cursor:pointer;
+}
+
 
 .login__btn{
     background: transparent;
@@ -97,6 +104,10 @@
     font-size: 33px;
     font-family: 'Praise', cursive;
     color: 	#BDB5D5;
+}
+
+.login__btn:hover{
+    cursor:pointer;
 }
 
 .dev_Footer{

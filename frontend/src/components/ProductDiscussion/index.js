@@ -93,7 +93,7 @@ function ProductDisplay(){
    
 
     return(
-        <div>
+        <div className='comments__container'>
             <div className='product-discussion__label-div'>
                 <h4 className='product-display__label'>Let's Taco Bout It...</h4>
             </div>
@@ -123,7 +123,6 @@ function ProductDisplay(){
                     ).reverse()} 
                     
                 </div>
-
 
             </div>
         </div>

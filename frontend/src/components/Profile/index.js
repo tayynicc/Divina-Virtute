@@ -6,6 +6,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom';
 import { useParams } from 'react-router'
 import { getOneUser, updateUser } from '../../store/session'
+import Header from '../Headers'
+
 
 function Profile(){
 
@@ -14,6 +16,11 @@ function Profile(){
 
     const { id } = useParams()
 
+    const currentUser = users.filter((usr) => usr.id === +id)
+    const usr = currentUser[0]
+
+        
+   
 
     useEffect(() => {
         dispatch(getOneUser(id));
@@ -25,33 +32,36 @@ function Profile(){
    
 
     return (
+        <>
+
+        <Header />
         <div>
             
             <div className='pfp__bkg-layer1'>
 
-                {/* <div className='info-container'>
-                    {users.map((user) => 
+                 <div className='info-container'>
+                    {/* {usr.map((user) =>  */}
                         <div className='pfp__info'> 
                             
-                            <div className='pfp__image-div'>
-                                <img  className='pfp__image' src={user.imageUrl} />
-                            </div>
+                            <img  className='pfp__image' src={usr.imageUrl} />
+ 
+                            <div className='pfp__name'>{usr.username}</div>
 
-                            <div className='pfp__name'>{user.username}</div>
-
+                            
                             <label className='bio__label'> Biography </label>
-                            <div className=''>
-                                <p className='user__bio pfp__discription'>{user.discription}</p>
-                            </div>
+                            {/* <div className=''> */}
+                            <p className='user__bio pfp__discription'>{usr.discription}</p>
+                            {/* </div>  */}
+
 
                             
                         </div>
-                    )}
-                </div> */}
+                    {/* )}  */}
+                </div>
 
                 
-                {/* <div className='update__userInformaiton'>
-                    <form onSubmit={handleSubmit}>
+               {/* <div className='update__userInformaiton'> */}
+                    {/* <form onSubmit={handleSubmit}>
                         <label className='update__user-userName'>Name</label>
                         <input type='text' value={name} onChange={updateName}></input>
 
@@ -65,7 +75,7 @@ function Profile(){
                     
                     </form>
 
-                </div> */}
+                </div>  */} */}
 {/* 
                 <div className='pfp__links-active'>
                     <a className='profile__newpd'href='/new'>Add Product</a>   
@@ -76,7 +86,7 @@ function Profile(){
             </div>
 
         </div>
-        
+        </>
     )
 }
 

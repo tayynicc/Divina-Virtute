@@ -12,7 +12,7 @@
 }
 
 .pfp__info{
-    height: 400px;
+    height: 80%;
     
     border-radius: 30px;
     box-shadow: 0 0 5px 5px grey;
@@ -26,68 +26,60 @@
 }
 
 .info-container{
-    height: 410px;
+    height: 22%;
     width: 1200px;
     padding:20px;
     position:relative;
     bottom:20px;
-    left: 300px;
-    overflow:hidden
+    left: 19%;
+    top:5%;
+    overflow:hidden;
+    border: 3px solid orange;
 }
 
 .pfp__image{
     height:250px;
     width:250px; 
     border-radius:50%;
-    border:5px solid black;
-    box-shadow: 0 0 5px 5px grey;
-    position:fixed; 
-    top:17%;
-    left:17%;
+    border:3px solid black;
+    /* box-shadow: 0 0 5px 3px grey; */
+    position:relative; 
+    top:6%;
+    left:35%;
     margin-left:15px;
+    /* border: 3px solid red; */
 }
 
-.pfp__image-div{
-    height:200px;
-    width:200px;
-    position:relative;
-    
-}
+/*  */
 
 .pfp__name{
    
     height: 50px;
-    width:400px;
-    position:fixed;
-    left:35%;
-    top:20%;
+    width:fit-content;
+    position:relative;
+    left:10%;
+    top:-80%;
     text-align:center;
-    padding:5px;
     color:teal;
     font-size:40px;
 
 }
 
 .bio__label{
-    position: fixed;
-    top:287px;
-    left:650px;
-    
-    box-shadow: 0 0 5px 5px grey;
-    border-radius:30px;
+    position: relative;
+    bottom:99%;
+    left:75%;
     padding:5px;
 }   
 .pfp__discription{
-    
-    box-shadow: 0 0 5px 5px grey;
-    height: 100px;
-    width:650px;
-    position: fixed;
-    top:310px;
-    left:610px;
+    height: fit-content;
+    width:350px;
+    position: relative;
+    top:-95%;
+    left:63%;
     padding:20px;
-    border-radius:30px;
     margin-right:20px;
+    text-align: center;
 }
 
 .user__bio{
@@ -99,11 +91,7 @@
     font-size:22px;
     color:black;
 }
-.user__bio{
-    position: fixed;
-    top:310px;
-    left:630px;
-}
+
 
 
 
@@ -149,3 +137,6 @@
     color:white;
     height: 50px;
 }
+
+
+

@@ -27,10 +27,33 @@ function UsersProducts (){
     }, [dispatch, id])
 
 
-    const titleFormat = (title) => {
-        
-    }
+    // const titleFormat = (title) => {
+    //     console.log(222, title.length)
+    //     if(title.length >= 17){
+    //     // console.log(333, title)
 
+    //         for(let i = 0; i <= title.length; i++){
+    //             let limit = 16;
+    //             // console.log(444, title.length, title)
+    //             // console.log(555, i)
+    //                 // console.log(`!!!!!`, title[i])
+
+    //             if(i === limit){
+    //                 console.log(`!!!`, i)
+    //                 const 
+    //                 const idx = title.splice(title[i])
+    //                 console.log(`$$$`,idx)
+    //                 // let reformatted = title.splice()
+    //                 console.log(`&&`,title.split(title[i]))
+    //                 // console.log(111,title)
+    //                 // return title.join()
+    //             }
+    //         }
+    //     }
+    //     return title
+    // }
+
+// console.log(titleFormat('Beginners Crystal Kit, 10 pcs In Velvet Pouch'))
     
 
     return (

@@ -55,7 +55,7 @@ function App() {
           </Route>
           <Route path='/products/:id' exact>
               <Product />
-              <ProductDiscussion />
+              {/* <ProductDiscussion /> */}
       
           </Route>
           <Route path='/new'>
